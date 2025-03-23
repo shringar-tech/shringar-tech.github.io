@@ -1,0 +1,68 @@
+{
+  "products": [
+    {
+      "id": "saree-001",
+      "name": "Alia Banarasi Silk",
+      "price": 12000,
+      "image": "/placeholder.svg?height=600&width=400",
+      "description": "Handwoven Banarasi silk saree with intricate gold zari work. This luxurious piece features traditional motifs and a rich pallu, perfect for weddings and special occasions."
+    },
+    {
+      "id": "saree-002",
+      "name": "Magnolia Kanjivaram",
+      "price": 15000,
+      "image": "/placeholder.svg?height=600&width=400",
+      "description": "Classic Kanjivaram silk saree in vibrant colors with temple border and traditional motifs. The contrasting border and pallu make this a timeless addition to your collection."
+    },
+    {
+      "id": "saree-003",
+      "name": "Riya Chanderi",
+      "price": 8500,
+      "image": "/placeholder.svg?height=600&width=400",
+      "description": "Lightweight Chanderi silk saree with delicate silver zari work. The subtle elegance of this piece makes it perfect for both formal and semi-formal occasions."
+    },
+    {
+      "id": "anarkali-001",
+      "name": "Magnolia Royal",
+      "price": 12500,
+      "image": "/placeholder.svg?height=600&width=400",
+      "description": "Floor-length Anarkali suit with intricate embroidery and mirror work. The flared silhouette and rich fabric create a regal look for festive occasions."
+    },
+    {
+      "id": "anarkali-002",
+      "name": "Zara Embellished",
+      "price": 18000,
+      "image": "/placeholder.svg?height=600&width=400",
+      "description": "Designer Anarkali with heavy embellishments and a net dupatta. The bodice features detailed handwork while the skirt flows gracefully with each movement."
+    },
+    {
+      "id": "lehenga-001",
+      "name": "Alia Bridal",
+      "price": 25000,
+      "image": "/placeholder.svg?height=600&width=400",
+      "description": "Bridal lehenga with heavy embroidery, sequins, and stone work. The rich velvet fabric and traditional design make this perfect for wedding ceremonies."
+    },
+    {
+      "id": "lehenga-002",
+      "name": "Diya Festive",
+      "price": 18500,
+      "image": "/placeholder.svg?height=600&width=400",
+      "description": "Contemporary lehenga with a crop top and digital prints. The fusion of modern design with traditional silhouette makes it ideal for sangeet and reception events."
+    },
+    {
+      "id": "suit-001",
+      "name": "Magnolia Palazzo",
+      "price": 12000,
+      "image": "/placeholder.svg?height=600&width=400",
+      "description": "Elegant palazzo suit with gota patti work and a flowing silhouette. The comfortable yet stylish design makes it perfect for festive gatherings and celebrations."
+    },
+    {
+      "id": "suit-002",
+      "name": "Noor Sharara",
+      "price": 14500,
+      "image": "/placeholder.svg?height=600&width=400",
+      "description": "Designer sharara suit with intricate embroidery and mirror work. The combination of traditional craftsmanship with contemporary design makes this a versatile choice."
+    }
+  ]
+}
+
