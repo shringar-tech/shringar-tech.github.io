@@ -11,45 +11,43 @@ This project is an e-commerce website designed for showcasing and selling Indian
 ├── build
 │   ├── asset-manifest.json
 │   ├── index.html
+│   ├── data
+│   │   ├── kurtis.json
+│   │   ├── lehengas.json
+│   │   └── sarees.json
+│   ├── images
+│   │   ├── kurti
+│   │   ├── lehenga
+│   │   └── saree
 │   └── static
 │       ├── css
-│       │   └── main.420b0f01.chunk.css
+│       │   └── main.aedb4c12.chunk.css
 │       ├── js
-│       │   ├── runtime-main.e3c1cfab.js
-│       │   └── 2.68a821ab.chunk.js
-│       └── data
-│           ├── kurtis.json
-│           ├── lehengas.json
-│           └── sarees.json
-│       └── images
-│           ├── kurti
-│           ├── lehenga
-│           └── saree
+│       └── media
 ├── public
 │   ├── index.html
-│   └── data
-│       ├── kurtis.json
-│       ├── lehengas.json
-│       └── sarees.json
-│   └── images
-│       ├── kurti
-│       ├── lehenga
-│       └── saree
+│   ├── data
+│   │   ├── kurtis.json
+│   │   ├── lehengas.json
+│   │   └── sarees.json
+│   ├── images
+│   │   ├── kurti
+│   │   ├── lehenga
+│   │   └── saree
 ├── src
 │   ├── App.js
 │   ├── index.js
 │   ├── main.css
-│   └── components
-│       ├── CategoryPage.css
-│       ├── CategoryPage.js
-│       ├── ContactPage.css
-│       ├── ContactPage.js
-│       ├── HomePage.js
-│       ├── ItemDetailPage.css
-│       └── ItemDetailPage.js
-│   └── image
-│       └── background
-```
+│   ├── components
+│   │   ├── CategoryPage.css
+│   │   ├── CategoryPage.js
+│   │   ├── ContactPage.css
+│   │   ├── ContactPage.js
+│   │   ├── HomePage.js
+│   │   ├── ItemDetailPage.css
+│   │   └── ItemDetailPage.js
+│   ├── image
+│   │   └── background
 
 ## Features
 - **Home Page**: Displays a list of product categories and featured items.
