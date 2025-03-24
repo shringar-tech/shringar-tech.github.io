@@ -1,0 +1,26 @@
+.contact-page {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: var(--box-shadow);
+  }
+  
+.contact-details {
+margin-top: 20px;
+}
+
+.contact-details p {
+margin: 10px 0;
+}
+
+.contact-page h2 {
+  font-size: 2.5em;
+  color: #080808; /* Retro tomato color */
+  margin-bottom: 20px;
+}
+
+.contact-page p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+}

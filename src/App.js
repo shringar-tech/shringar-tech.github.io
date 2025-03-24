@@ -27,10 +27,11 @@ function App() {
   return (
     <Router basename={process.env.PUBLIC_URL}>
       <div>
-        <header>
-          E-Commerce Website - Indian Ethnic Clothes
+        <header className="hero-section">
+          <h1>Indian Ethnic Clothes</h1>
+          <p>Discover the beauty of traditional Indian attire</p>
         </header>
-        <nav>
+        <nav className="navbar">
           <Link to="/">Home</Link>
           <Link to="/sarees">Sarees</Link>
           <Link to="/lehengas">Lehengas</Link>
@@ -54,7 +55,7 @@ function App() {
               <section id="sarees" className="category-section">
                 <h2>Sarees</h2>
                 <div className="category-container">
-                  {sarees.map(item => (
+                  {sarees.slice(0, 6).map(item => (
                     <Link to={`/sarees/${item.id}`} className="category" key={item.id}>
                       <img src={item.img} alt={item.name} />
                       <h3>{item.name}</h3>
@@ -65,7 +66,7 @@ function App() {
               <section id="lehengas" className="category-section">
                 <h2>Lehengas</h2>
                 <div className="category-container">
-                  {lehengas.map(item => (
+                  {lehengas.slice(0, 6).map(item => (
                     <Link to={`/lehengas/${item.id}`} className="category" key={item.id}>
                       <img src={item.img} alt={item.name} />
                       <h3>{item.name}</h3>
@@ -76,7 +77,7 @@ function App() {
               <section id="kurtis" className="category-section">
                 <h2>Kurtis</h2>
                 <div className="category-container">
-                  {kurtis.map(item => (
+                  {kurtis.slice(0, 6).map(item => (
                     <Link to={`/kurtis/${item.id}`} className="category" key={item.id}>
                       <img src={item.img} alt={item.name} />
                       <h3>{item.name}</h3>
