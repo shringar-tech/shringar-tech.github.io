@@ -2,7 +2,7 @@
   "name": "shringar-tech.github.io",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://shringar-tech.github.io",
+  "homepage": "https://shringar-tech.github.io",  
   "description": "An e-commerce website for Indian ethnic clothes.",
   "main": "src/index.js",
   "scripts": {
