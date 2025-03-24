@@ -4,21 +4,51 @@
 This project is an e-commerce website designed for showcasing and selling Indian ethnic clothes, including categories like sarees and lehengas. The website allows users to browse items, view details, and make purchases.
 
 ## Project Structure
-```
-/Users/rajeshkrjha/Documents/GitHub/shringar-tech.github.io
+/GitHub/shringar-tech.github.io
+├── .gitignore
+├── package.json
+├── README.md
+├── build
+│   ├── asset-manifest.json
+│   ├── index.html
+│   └── static
+│       ├── css
+│       │   └── main.420b0f01.chunk.css
+│       ├── js
+│       │   ├── runtime-main.e3c1cfab.js
+│       │   └── 2.68a821ab.chunk.js
+│       └── data
+│           ├── kurtis.json
+│           ├── lehengas.json
+│           └── sarees.json
+│       └── images
+│           ├── kurti
+│           ├── lehenga
+│           └── saree
 ├── public
 │   ├── index.html
-│   └── styles
-│       └── main.css
+│   └── data
+│       ├── kurtis.json
+│       ├── lehengas.json
+│       └── sarees.json
+│   └── images
+│       ├── kurti
+│       ├── lehenga
+│       └── saree
 ├── src
-│   ├── index.js
 │   ├── App.js
+│   ├── index.js
 │   ├── main.css
 │   └── components
-│       ├── HomePage.js
+│       ├── CategoryPage.css
 │       ├── CategoryPage.js
+│       ├── ContactPage.css
+│       ├── ContactPage.js
+│       ├── HomePage.js
+│       ├── ItemDetailPage.css
 │       └── ItemDetailPage.js
-└── package.json
+│   └── image
+│       └── background
 ```
 
 ## Features
