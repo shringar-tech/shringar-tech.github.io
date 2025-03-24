@@ -11,8 +11,9 @@ This document outlines the functionality requirements for the e-commerce website
 - **Description**: The landing page of the website.
 - **Features**:
   - Display a welcoming message and a brief description of the store.
-  - Showcase product categories (e.g., Sarees, Lehengas, Kurtis, etc.).
-  - Highlight featured items with images and prices.
+  - Showcase product categories (e.g., Sarees, Lehengas, Kurtis, etc.) in horizontally scrollable carousels.
+  - Navigation arrows with ethnic-themed design for browsing through product categories.
+  - Highlight featured items with images and prices in an elegant, space-efficient layout.
   - Provide navigation links to other sections of the website.
 
 ### 2. Category Page

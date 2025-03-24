@@ -7,6 +7,7 @@ import ItemDetailPage from './components/ItemDetailPage';
 import CategoryPage from './components/CategoryPage';
 import ContactPage from './components/ContactPage';
 import ProductCard from './elements/ProductCard';
+import ProductCarousel from './elements/ProductCarousel';
 import ScrollToTop from './elements/ScrollToTop';
 import Footer from './components/layout/Footer';
 
@@ -48,36 +49,21 @@ function App() {
             </Route>
             <Route path="/">
               <HeroSection />
-              <section id="sarees" className="category-section">
-                <h2>Sarees</h2>
-                <div className="category-container">
-                  {sarees.slice(0, 6).map(item => (
-                    <Link to={`/sarees/${item.id}`} className="category-link" key={item.id}>
-                      <ProductCard item={item} category="sarees" />
-                    </Link>
-                  ))}
-                </div>
-              </section>
-              <section id="lehengas" className="category-section">
-                <h2>Lehengas</h2>
-                <div className="category-container">
-                  {lehengas.slice(0, 6).map(item => (
-                    <Link to={`/lehengas/${item.id}`} className="category-link" key={item.id}>
-                      <ProductCard item={item} category="lehengas" />
-                    </Link>
-                  ))}
-                </div>
-              </section>
-              <section id="kurtis" className="category-section">
-                <h2>Kurtis</h2>
-                <div className="category-container">
-                  {kurtis.slice(0, 6).map(item => (
-                    <Link to={`/kurtis/${item.id}`} className="category-link" key={item.id}>
-                      <ProductCard item={item} category="kurtis" />
-                    </Link>
-                  ))}
-                </div>
-              </section>
+              <ProductCarousel 
+                items={sarees} 
+                category="sarees" 
+                title="Sarees" 
+              />
+              <ProductCarousel 
+                items={lehengas} 
+                category="lehengas" 
+                title="Lehengas" 
+              />
+              <ProductCarousel 
+                items={kurtis} 
+                category="kurtis" 
+                title="Kurtis" 
+              />
             </Route>
           </Switch>
         </main>

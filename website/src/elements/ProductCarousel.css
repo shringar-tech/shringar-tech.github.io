@@ -1,0 +1,109 @@
+.carousel-container {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.carousel-items {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 20px 0;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  gap: 24px;
+  cursor: grab;
+}
+
+/* Hide scrollbars */
+.carousel-items::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-items.dragging {
+  cursor: grabbing;
+  scroll-behavior: auto;
+}
+
+.carousel-item {
+  flex: 0 0 auto;
+  width: 280px; /* Match the current card width */
+}
+
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 45px;
+  height: 45px;
+  border-radius: 0;
+  background-color: rgba(255, 255, 255, 0.85);
+  border: 2px solid #d4af37; /* Gold border for ethnic feel */
+  box-shadow: 0 4px 12px rgba(139, 69, 19, 0.25); /* Soft brown shadow */
+  color: #8b4513; /* Saddlebrown color for ethnic theme */
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 100;
+  opacity: 0.95;
+  pointer-events: auto;
+  transition: all 0.3s ease;
+  /* Decorative pattern for ethnic look */
+  background-image: linear-gradient(45deg, rgba(210, 105, 30, 0.05) 25%, transparent 25%, transparent 50%, rgba(210, 105, 30, 0.05) 50%, rgba(210, 105, 30, 0.05) 75%, transparent 75%);
+  background-size: 10px 10px;
+}
+
+.carousel-arrow:hover {
+  background-color: #f9f1dc; /* Light cream/beige for hover */
+  color: #8b0000; /* Darkred for hover */
+  transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-arrow:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(25, 118, 210, 0.3);
+}
+
+.arrow-left {
+  left: 0;
+}
+
+.arrow-right {
+  right: 0;
+}
+
+.carousel-arrow span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+  .carousel-item {
+    width: 250px;
+  }
+
+  .carousel-arrow {
+    width: 36px;
+    height: 36px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-item {
+    width: 220px;
+  }
+
+  .carousel-arrow {
+    width: 32px;
+    height: 32px;
+    font-size: 0.9rem;
+  }
+}

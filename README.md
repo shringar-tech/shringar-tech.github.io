@@ -52,9 +52,10 @@ This project is an e-commerce website designed for showcasing and selling Indian
 ```
 
 ## Features
-- **Home Page**: Displays a list of product categories and featured items.
+- **Home Page**: Displays product categories in horizontally scrollable carousels with navigation arrows, styled with an ethnic theme.
 - **Category Page**: Shows items belonging to a specific category (e.g., sarees, lehengas).
 - **Item Detail Page**: Provides detailed information about a selected item, including images, descriptions, and pricing.
+- **Interactive UI Elements**: Modern carousel navigation with custom-designed ethnic-themed controls.
 
 ## Setup Instructions
 1. Clone the repository:
