@@ -1,11 +1,12 @@
+// filepath: /Users/rajeshkrjha/Documents/GitHub/shringar-tech.github.io/src/index.js
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter } from 'react-router-dom';
 import App from './App';
-import './main.css';
 
 ReactDOM.render(
-  <React.StrictMode>
+  <BrowserRouter basename={process.env.PUBLIC_URL}>
     <App />
-  </React.StrictMode>,
+  </BrowserRouter>,
   document.getElementById('root')
 );
