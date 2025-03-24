@@ -5,22 +5,20 @@ This project is an e-commerce website designed for showcasing and selling Indian
 
 ## Project Structure
 ```
-ecommerce-website
+/Users/rajeshkrjha/Documents/GitHub/shringar-tech.github.io
 ├── public
-│   ├── index.html          # Main HTML file
-│   ├── styles
-│   │   └── main.css       # CSS styles for the website
-│   └── images             # Directory for image assets
+│   ├── index.html
+│   └── styles
+│       └── main.css
 ├── src
-│   ├── components
-│   │   ├── HomePage.js    # Home page component
-│   │   ├── CategoryPage.js # Category page component
-│   │   └── ItemDetailPage.js # Item detail page component
-│   ├── App.js             # Main application component
-│   └── index.js           # Entry point for the React application
-├── package.json           # npm configuration file
-├── .gitignore             # Git ignore file
-└── README.md              # Project documentation
+│   ├── index.js
+│   ├── App.js
+│   ├── main.css
+│   └── components
+│       ├── HomePage.js
+│       ├── CategoryPage.js
+│       └── ItemDetailPage.js
+└── package.json
 ```
 
 ## Features

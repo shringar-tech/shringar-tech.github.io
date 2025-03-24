@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "name": "Silk Saree",
+    "img": "../images/saree/img_1.png",
+    "price": 120,
+    "dateOfManufacture": "2025-01-15",
+    "material": "Silk",
+    "description": "A beautiful silk saree with intricate designs."
+  },
+  {
+    "id": 2,
+    "name": "Cotton Saree",
+    "img": "../images/saree/img_2.png",
+    "price": 80,
+    "dateOfManufacture": "2025-02-10",
+    "material": "Cotton",
+    "description": "A comfortable cotton saree perfect for daily wear."
+  },
+  {
+    "id": 3,
+    "name": "Georgette Saree",
+    "img": "../images/saree/img_3.png",
+    "price": 100,
+    "dateOfManufacture": "2025-03-05",
+    "material": "Georgette",
+    "description": "A stylish georgette saree with modern patterns."
+  },
+  {
+    "id": 4,
+    "name": "Chiffon Saree",
+    "img": "../images/saree/img_4.png",
+    "price": 90,
+    "dateOfManufacture": "2025-01-25",
+    "material": "Chiffon",
+    "description": "A lightweight chiffon saree perfect for summer."
+  },
+  {
+    "id": 5,
+    "name": "Banarasi Saree",
+    "img": "../images/saree/img_1.png",
+    "price": 150,
+    "dateOfManufacture": "2025-02-20",
+    "material": "Silk",
+    "description": "A traditional Banarasi saree with rich embroidery."
+  },
+  {
+    "id": 6,
+    "name": "Kanjivaram Saree",
+    "img": "../images/saree/img_2.png",
+    "price": 200,
+    "dateOfManufacture": "2025-03-10",
+    "material": "Silk",
+    "description": "A luxurious Kanjivaram saree with gold zari work."
+  },
+  {
+    "id": 7,
+    "name": "Tussar Silk Saree",
+    "img": "../images/saree/img_3.png",
+    "price": 130,
+    "dateOfManufacture": "2025-01-30",
+    "material": "Tussar Silk",
+    "description": "A unique Tussar silk saree with natural texture."
+  },
+  {
+    "id": 8,
+    "name": "Linen Saree",
+    "img": "../images/saree/img_4.png",
+    "price": 70,
+    "dateOfManufacture": "2025-02-15",
+    "material": "Linen",
+    "description": "A comfortable linen saree for casual wear."
+  },
+  {
+    "id": 9,
+    "name": "Net Saree",
+    "img": "../images/saree/img_1.png",
+    "price": 110,
+    "dateOfManufacture": "2025-03-01",
+    "material": "Net",
+    "description": "A fashionable net saree with sequins work."
+  },
+  {
+    "id": 10,
+    "name": "Crepe Saree",
+    "img": "../images/saree/img_2.png",
+    "price": 95,
+    "dateOfManufacture": "2025-01-20",
+    "material": "Crepe",
+    "description": "A smooth crepe saree with elegant drape."
+  }
+]

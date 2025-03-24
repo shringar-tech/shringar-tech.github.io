@@ -1,31 +1,30 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import './CategoryPage.css'; // Import the new CSS file
 
-const CategoryPage = ({ match }) => {
-    const categoryName = match.params.categoryName; // Assuming category name is passed as a URL parameter
+function CategoryPage({ category }) {
+  const [items, setItems] = useState([]);
 
-    // Sample data for demonstration purposes
-    const items = [
-        { id: 1, name: 'Saree 1', price: '₹2000', image: '/images/saree1.jpg' },
-        { id: 2, name: 'Saree 2', price: '₹2500', image: '/images/saree2.jpg' },
-        { id: 3, name: 'Lehenga 1', price: '₹5000', image: '/images/lehenga1.jpg' },
-        { id: 4, name: 'Lehenga 2', price: '₹6000', image: '/images/lehenga2.jpg' },
-    ].filter(item => item.name.toLowerCase().includes(categoryName.toLowerCase()));
+  useEffect(() => {
+    fetch(`/data/${category}.json`)
+      .then(response => response.json())
+      .then(data => setItems(data));
+  }, [category]);
 
-    return (
-        <div className="category-page">
-            <h1>{categoryName.charAt(0).toUpperCase() + categoryName.slice(1)} Collection</h1>
-            <div className="item-list">
-                {items.map(item => (
-                    <div key={item.id} className="item-card">
-                        <img src={item.image} alt={item.name} />
-                        <h2>{item.name}</h2>
-                        <p>{item.price}</p>
-                        <button>Add to Cart</button>
-                    </div>
-                ))}
-            </div>
-        </div>
-    );
-};
+  return (
+    <div className="category-page">
+      <h1>{category.charAt(0).toUpperCase() + category.slice(1)}</h1>
+      <div className="category-grid">
+        {items.map(item => (
+          <Link to={`/${category}/${item.id}`} className="category-item" key={item.id}>
+            <img src={item.img} alt={item.name} />
+            <h3>{item.name}</h3>
+            <p>${item.price}</p>
+          </Link>
+        ))}
+      </div>
+    </div>
+  );
+}
 
 export default CategoryPage;
