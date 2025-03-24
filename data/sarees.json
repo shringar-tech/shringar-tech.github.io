@@ -2,7 +2,7 @@
   {
     "id": 1,
     "name": "Silk Saree",
-    "img": "../images/saree/img_1.png",
+    "img": "../images/saree/img_6.png",
     "price": 120,
     "dateOfManufacture": "2025-01-15",
     "material": "Silk",
@@ -11,7 +11,7 @@
   {
     "id": 2,
     "name": "Cotton Saree",
-    "img": "../images/saree/img_2.png",
+    "img": "../images/saree/img_5.png",
     "price": 80,
     "dateOfManufacture": "2025-02-10",
     "material": "Cotton",
@@ -20,7 +20,7 @@
   {
     "id": 3,
     "name": "Georgette Saree",
-    "img": "../images/saree/img_3.png",
+    "img": "../images/saree/img_4.png",
     "price": 100,
     "dateOfManufacture": "2025-03-05",
     "material": "Georgette",
@@ -29,7 +29,7 @@
   {
     "id": 4,
     "name": "Chiffon Saree",
-    "img": "../images/saree/img_4.png",
+    "img": "../images/saree/img_3.png",
     "price": 90,
     "dateOfManufacture": "2025-01-25",
     "material": "Chiffon",
@@ -38,7 +38,7 @@
   {
     "id": 5,
     "name": "Banarasi Saree",
-    "img": "../images/saree/img_1.png",
+    "img": "../images/saree/img_2.png",
     "price": 150,
     "dateOfManufacture": "2025-02-20",
     "material": "Silk",
@@ -47,7 +47,7 @@
   {
     "id": 6,
     "name": "Kanjivaram Saree",
-    "img": "../images/saree/img_2.png",
+    "img": "../images/saree/img_1.png",
     "price": 200,
     "dateOfManufacture": "2025-03-10",
     "material": "Silk",

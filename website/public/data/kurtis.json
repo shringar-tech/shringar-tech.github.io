@@ -2,7 +2,7 @@
   {
     "id": 1,
     "name": "Casual Kurti",
-    "img": "../images/kurti/img_1.png",
+    "img": "../images/kurti/img_6.png",
     "price": 50,
     "dateOfManufacture": "2025-01-25",
     "material": "Cotton",
@@ -11,7 +11,7 @@
   {
     "id": 2,
     "name": "Designer Kurti",
-    "img": "../images/kurti/img_2.png",
+    "img": "../images/kurti/img_5.png",
     "price": 100,
     "dateOfManufacture": "2025-02-15",
     "material": "Silk",

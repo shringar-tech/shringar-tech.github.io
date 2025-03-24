@@ -1,4 +1,5 @@
 import React from 'react';
+import './HomePage.css';
 
 const HomePage = () => {
     const categories = ['Sarees', 'Lehengas', 'Kurtas', 'Ethnic Wear', 'Accessories'];

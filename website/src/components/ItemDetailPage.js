@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import './ItemDetailPage.css'; // Import the new CSS file
+import './ItemDetailPage.css';
 
 function ItemDetailPage() {
   const { category, id } = useParams();
@@ -16,20 +16,33 @@ function ItemDetailPage() {
   }, [category, id]);
 
   if (!item) {
-    return <div>Loading...</div>;
+    return <div className="loading">Loading...</div>;
   }
 
   return (
     <div className="item-detail-container">
-      <div className="item-image">
-        <img src={item.img} alt={item.name} />
-      </div>
-      <div className="item-details">
-        <h1>{item.name}</h1>
-        <p><strong>Price:</strong> ${item.price}</p>
-        <p><strong>Date of Manufacture:</strong> {item.dateOfManufacture}</p>
-        <p><strong>Material:</strong> {item.material}</p>
-        <p><strong>Description:</strong> {item.description}</p>
+      <div className="item-card">
+        <div className="item-image">
+          <img src={item.img} alt={item.name} />
+        </div>
+        <div className="item-details">
+          <h1>{item.name}</h1>
+          <div className="price-tag">${item.price}</div>
+          <div className="details-grid">
+            <div className="detail-item">
+              <span className="label">Date of Manufacture</span>
+              <span className="value">{item.dateOfManufacture}</span>
+            </div>
+            <div className="detail-item">
+              <span className="label">Material</span>
+              <span className="value">{item.material}</span>
+            </div>
+          </div>
+          <div className="description">
+            <h2>Description</h2>
+            <p>{item.description}</p>
+          </div>
+        </div>
       </div>
     </div>
   );

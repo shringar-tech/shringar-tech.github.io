@@ -1,39 +1,125 @@
 .item-detail-container {
+  padding: 40px 20px;
+  min-height: calc(100vh - 64px);
+  background-color: #f5f5f5;
+}
+
+.item-card {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  align-items: flex-start;
-  padding: 20px;
-  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  overflow: hidden;
+  animation: fadeIn 0.3s ease-out;
 }
 
 .item-image {
-  flex: 1 1 300px;
-  max-width: 500px;
+  flex: 1 1 400px;
+  position: relative;
+  overflow: hidden;
 }
 
 .item-image img {
   width: 100%;
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.item-image:hover img {
+  transform: scale(1.05);
 }
 
 .item-details {
-  flex: 1 1 300px;
-  max-width: 500px;
+  flex: 1 1 400px;
+  padding: 32px;
 }
 
 .item-details h1 {
-  font-size: 2em;
-  margin-bottom: 10px;
+  font-size: 2.5rem;
+  color: #424242;
+  margin: 0 0 16px 0;
+  font-weight: 500;
 }
 
-.item-details p {
-  font-size: 1.2em;
-  margin: 5px 0;
+.price-tag {
+  font-size: 2rem;
+  color: #1976d2;
+  margin-bottom: 24px;
+  font-weight: 500;
 }
 
-.item-details strong {
-  color: #333;
+.details-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.detail-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.label {
+  font-size: 0.9rem;
+  color: #757575;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.value {
+  font-size: 1.1rem;
+  color: #424242;
+}
+
+.description h2 {
+  font-size: 1.5rem;
+  color: #424242;
+  margin: 0 0 16px 0;
+  font-weight: 500;
+}
+
+.description p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #616161;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 64px);
+  font-size: 1.2rem;
+  color: #757575;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .item-details {
+    padding: 24px;
+  }
+
+  .item-details h1 {
+    font-size: 2rem;
+  }
+
+  .price-tag {
+    font-size: 1.5rem;
+  }
 }

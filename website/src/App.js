@@ -26,18 +26,23 @@ function App() {
 
   return (
     <Router basename={process.env.PUBLIC_URL}>
-      <div>
-        <header className="hero-section">
-          <h1>Indian Ethnic Clothes</h1>
-          <p>Discover the beauty of traditional Indian attire</p>
-        </header>
-        <nav className="navbar">
-          <Link to="/">Home</Link>
-          <Link to="/sarees">Sarees</Link>
-          <Link to="/lehengas">Lehengas</Link>
-          <Link to="/kurtis">Kurtis</Link>
-          <Link to="/contact">Contact</Link>
-        </nav>
+    <div>
+      <header className="hero-section">
+        <div className="hero-content">
+          <h1 className="hero-title">Indian Ethnic Clothes</h1>
+          <p className="hero-subtitle">Discover the beauty of traditional Indian attire</p>
+        </div>
+      </header>
+      <nav className="navbar material-nav">
+        <div className="nav-container">
+          <Link to="/" className="nav-link">Home</Link>
+          <Link to="/sarees" className="nav-link">Sarees</Link>
+          <Link to="/lehengas" className="nav-link">Lehengas</Link>
+          <Link to="/kurtis" className="nav-link">Kurtis</Link>
+          <Link to="/contact" className="nav-link">Contact</Link>
+          <div className="nav-indicator"></div>
+        </div>
+      </nav>
         <main>
           <Switch>
             <Route path="/contact" component={ContactPage} />
