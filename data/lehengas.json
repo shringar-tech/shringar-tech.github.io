@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "name": "Bridal Lehenga",
+    "img": "../images/lehenga/img_1.png",
+    "price": 300,
+    "dateOfManufacture": "2025-01-20",
+    "material": "Silk and Velvet",
+    "description": "A stunning bridal lehenga with heavy embroidery."
+  },
+  {
+    "id": 2,
+    "name": "Party Wear Lehenga",
+    "img": "../images/lehenga/img_2.png",
+    "price": 200,
+    "dateOfManufacture": "2025-02-05",
+    "material": "Georgette",
+    "description": "A stylish lehenga perfect for parties and events."
+  },
+  {
+    "id": 3,
+    "name": "Designer Lehenga",
+    "img": "../images/lehenga/img_3.png",
+    "price": 250,
+    "dateOfManufacture": "2025-03-10",
+    "material": "Silk",
+    "description": "A designer lehenga with intricate patterns."
+  },
+  {
+    "id": 4,
+    "name": "Traditional Lehenga",
+    "img": "../images/lehenga/img_4.png",
+    "price": 220,
+    "dateOfManufacture": "2025-01-25",
+    "material": "Silk and Cotton",
+    "description": "A traditional lehenga with rich cultural designs."
+  },
+  {
+    "id": 5,
+    "name": "Embroidered Lehenga",
+    "img": "../images/lehenga/img_1.png",
+    "price": 280,
+    "dateOfManufacture": "2025-02-15",
+    "material": "Velvet",
+    "description": "An embroidered lehenga with detailed craftsmanship."
+  },
+  {
+    "id": 6,
+    "name": "Casual Lehenga",
+    "img": "../images/lehenga/img_2.png",
+    "price": 150,
+    "dateOfManufacture": "2025-03-05",
+    "material": "Cotton",
+    "description": "A casual lehenga suitable for everyday wear."
+  },
+  {
+    "id": 7,
+    "name": "Festive Lehenga",
+    "img": "../images/lehenga/img_3.png",
+    "price": 230,
+    "dateOfManufacture": "2025-01-30",
+    "material": "Silk",
+    "description": "A festive lehenga perfect for celebrations."
+  },
+  {
+    "id": 8,
+    "name": "Modern Lehenga",
+    "img": "../images/lehenga/img_4.png",
+    "price": 210,
+    "dateOfManufacture": "2025-02-20",
+    "material": "Georgette",
+    "description": "A modern lehenga with contemporary designs."
+  },
+  {
+    "id": 9,
+    "name": "Printed Lehenga",
+    "img": "../images/lehenga/img_1.png",
+    "price": 170,
+    "dateOfManufacture": "2025-03-01",
+    "material": "Cotton",
+    "description": "A printed lehenga with vibrant colors."
+  },
+  {
+    "id": 10,
+    "name": "Velvet Lehenga",
+    "img": "../images/lehenga/img_2.png",
+    "price": 260,
+    "dateOfManufacture": "2025-01-20",
+    "material": "Velvet",
+    "description": "A luxurious velvet lehenga with elegant designs."
+  }
+]
