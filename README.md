@@ -4,6 +4,7 @@
 This project is an e-commerce website designed for showcasing and selling Indian ethnic clothes, including categories like sarees and lehengas. The website allows users to browse items, view details, and make purchases.
 
 ## Project Structure
+```
 /GitHub/shringar-tech.github.io
 ├── .gitignore
 ├── package.json
@@ -35,19 +36,20 @@ This project is an e-commerce website designed for showcasing and selling Indian
 │   │   ├── lehenga
 │   │   └── saree
 ├── src
-│   ├── App.js
-│   ├── index.js
-│   ├── main.css
-│   ├── components
-│   │   ├── CategoryPage.css
-│   │   ├── CategoryPage.js
-│   │   ├── ContactPage.css
-│   │   ├── ContactPage.js
-│   │   ├── HomePage.js
-│   │   ├── ItemDetailPage.css
-│   │   └── ItemDetailPage.js
-│   ├── image
-│   │   └── background
+    ├── App.js
+    ├── index.js
+    ├── main.css
+    ├── components
+    │   ├── CategoryPage.css
+    │   ├── CategoryPage.js
+    │   ├── ContactPage.css
+    │   ├── ContactPage.js
+    │   ├── HomePage.js
+    │   ├── ItemDetailPage.css
+    │   └── ItemDetailPage.js
+    ├── image
+        └── background
+```
 
 ## Features
 - **Home Page**: Displays a list of product categories and featured items.
@@ -56,21 +58,49 @@ This project is an e-commerce website designed for showcasing and selling Indian
 
 ## Setup Instructions
 1. Clone the repository:
-   ```
-   git clone <repository-url>
+   ```bash
+   git clone https://github.com/shringar-tech/shringar-tech.github.io.git
    ```
 2. Navigate to the project directory:
-   ```
-   cd ecommerce-website
+   ```bash
+   cd shringar-tech.github.io
    ```
 3. Install dependencies:
-   ```
+   ```bash
    npm install
+   npm install gh-pages --save-dev
    ```
-4. Start the development server:
+4. Update package.json with:
+   ```json
+   {
+     "homepage": "https://shringar-tech.github.io",
+     "scripts": {
+       "predeploy": "npm run build",
+       "deploy": "gh-pages -d build",
+       // ...existing scripts...
+     }
+   }
    ```
+5. Start development server:
+   ```bash
    npm start
    ```
+
+## Build and Deploy
+1. Build the project:
+   ```bash
+   npm run build
+   ```
+2. Deploy to GitHub Pages:
+   ```bash
+   npm run deploy
+   ```
+3. Configure GitHub Pages:
+   - Go to repository Settings > Pages
+   - Select 'gh-pages' branch as source
+   - Save the changes
+
+The site will be available at https://shringar-tech.github.io after deployment.
 
 ## Usage
 - Navigate to the home page to browse categories.
