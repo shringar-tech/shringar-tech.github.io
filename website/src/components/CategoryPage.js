@@ -1,29 +1,41 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import './CategoryPage.css'; // Import the new CSS file
+import ProductCard from '../elements/ProductCard';
+import './CategoryPage.css';
 
 function CategoryPage({ category }) {
   const [items, setItems] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    setLoading(true);
     fetch(`/data/${category}.json`)
       .then(response => response.json())
-      .then(data => setItems(data));
+      .then(data => {
+        setItems(data);
+        setLoading(false);
+      })
+      .catch(error => {
+        console.error('Error fetching data:', error);
+        setLoading(false);
+      });
   }, [category]);
 
+  if (loading) {
+    return <div className="loading">Loading...</div>;
+  }
+
   return (
-    <div className="category-page">
-      <h1>{category.charAt(0).toUpperCase() + category.slice(1)}</h1>
-      <div className="category-grid">
+    <section className="category-section">
+      <h2>{category.charAt(0).toUpperCase() + category.slice(1)}</h2>
+      <div className="category-container">
         {items.map(item => (
-          <Link to={`/${category}/${item.id}`} className="category-item" key={item.id}>
-            <img src={item.img} alt={item.name} />
-            <h3>{item.name}</h3>
-            <p>${item.price}</p>
+          <Link to={`/${category}/${item.id}`} className="category-link" key={item.id}>
+            <ProductCard item={item} category={category} />
           </Link>
         ))}
       </div>
-    </div>
+    </section>
   );
 }
 

@@ -1,9 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 import './main.css';
+import Navbar from './elements/NavBar';
+import HeroSection from './elements/HeroSection';
 import ItemDetailPage from './components/ItemDetailPage';
 import CategoryPage from './components/CategoryPage';
 import ContactPage from './components/ContactPage';
+import ProductCard from './elements/ProductCard';
+import ScrollToTop from './elements/ScrollToTop';
 
 function App() {
   const [sarees, setSarees] = useState([]);
@@ -26,23 +30,8 @@ function App() {
 
   return (
     <Router basename={process.env.PUBLIC_URL}>
-    <div>
-      <header className="hero-section">
-        <div className="hero-content">
-          <h1 className="hero-title">Indian Ethnic Clothes</h1>
-          <p className="hero-subtitle">Discover the beauty of traditional Indian attire</p>
-        </div>
-      </header>
-      <nav className="navbar material-nav">
-        <div className="nav-container">
-          <Link to="/" className="nav-link">Home</Link>
-          <Link to="/sarees" className="nav-link">Sarees</Link>
-          <Link to="/lehengas" className="nav-link">Lehengas</Link>
-          <Link to="/kurtis" className="nav-link">Kurtis</Link>
-          <Link to="/contact" className="nav-link">Contact</Link>
-          <div className="nav-indicator"></div>
-        </div>
-      </nav>
+      <div>
+        <Navbar />
         <main>
           <Switch>
             <Route path="/contact" component={ContactPage} />
@@ -57,13 +46,13 @@ function App() {
               <CategoryPage category="kurtis" />
             </Route>
             <Route path="/">
+              <HeroSection />
               <section id="sarees" className="category-section">
                 <h2>Sarees</h2>
                 <div className="category-container">
                   {sarees.slice(0, 6).map(item => (
-                    <Link to={`/sarees/${item.id}`} className="category" key={item.id}>
-                      <img src={item.img} alt={item.name} />
-                      <h3>{item.name}</h3>
+                    <Link to={`/sarees/${item.id}`} className="category-link" key={item.id}>
+                      <ProductCard item={item} category="sarees" />
                     </Link>
                   ))}
                 </div>
@@ -72,9 +61,8 @@ function App() {
                 <h2>Lehengas</h2>
                 <div className="category-container">
                   {lehengas.slice(0, 6).map(item => (
-                    <Link to={`/lehengas/${item.id}`} className="category" key={item.id}>
-                      <img src={item.img} alt={item.name} />
-                      <h3>{item.name}</h3>
+                    <Link to={`/lehengas/${item.id}`} className="category-link" key={item.id}>
+                      <ProductCard item={item} category="lehengas" />
                     </Link>
                   ))}
                 </div>
@@ -83,9 +71,8 @@ function App() {
                 <h2>Kurtis</h2>
                 <div className="category-container">
                   {kurtis.slice(0, 6).map(item => (
-                    <Link to={`/kurtis/${item.id}`} className="category" key={item.id}>
-                      <img src={item.img} alt={item.name} />
-                      <h3>{item.name}</h3>
+                    <Link to={`/kurtis/${item.id}`} className="category-link" key={item.id}>
+                      <ProductCard item={item} category="kurtis" />
                     </Link>
                   ))}
                 </div>
@@ -93,6 +80,7 @@ function App() {
             </Route>
           </Switch>
         </main>
+        <ScrollToTop />
       </div>
     </Router>
   );
