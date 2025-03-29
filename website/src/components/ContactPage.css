@@ -136,6 +136,7 @@
   background: white;
   border-radius: 12px;
   box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  color: #2c3e50; /* Add this line to ensure text is visible */
 }
 
 .terms-content > div {
@@ -150,6 +151,16 @@
   transform: translateY(-4px);
   background: white;
   border-color: #1976d2;
+}
+
+.terms-content > div h3 {
+  color: #1976d2; /* Add this line to style headings */
+  margin-bottom: 12px; /* Add this line for better spacing */
+}
+
+.terms-content > div p {
+  color: #546e7a; /* Add this line to style paragraphs */
+  line-height: 1.6; /* Add this line for better readability */
 }
 
 @media (max-width: 768px) {
