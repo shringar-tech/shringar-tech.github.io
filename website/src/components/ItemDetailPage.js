@@ -22,12 +22,27 @@ function ItemDetailPage() {
   return (
     <div className="item-detail-container">
       <div className="item-card">
-        <div className="item-image">
-          <img src={item.img} alt={item.name} />
+        <div className="item-image-container">
+          <div className="item-image">
+            <img src={item.img} alt={item.name} />
+          </div>
+          <div className="image-gallery-dots">
+            {/* Placeholder for multiple image dots */}
+            <span className="dot active"></span>
+            <span className="dot"></span>
+            <span className="dot"></span>
+          </div>
         </div>
         <div className="item-details">
+          <div className="category-badge">{category}</div>
           <h1>{item.name}</h1>
-          <div className="price-tag">${item.price}</div>
+          <div className="price-section">
+            <div className="price-tag">${item.price}</div>
+            <button className="add-to-cart-btn">
+              Add to Cart
+              <span className="material-icons">shopping_cart</span>
+            </button>
+          </div>
           <div className="details-grid">
             <div className="detail-item">
               <span className="label">Date of Manufacture</span>
