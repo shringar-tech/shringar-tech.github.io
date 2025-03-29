@@ -3,6 +3,9 @@ body {
     margin: 0;
     padding: 0;
     background-color: #8b895d; /* Canvas background color */
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(to bottom, #f0f0f0, #e0e0e0);
+    color: #333;
   }
   
   .hero-section {
@@ -24,10 +27,15 @@ body {
   }
   
   .hero-title {
-    font-size: 2.5rem;  /* Reduced from 3.5rem to 2.5rem */
+    font-size: 3rem;
+    transition: transform 0.3s ease;
     font-weight: 600;
     margin-bottom: 16px;  /* Reduced from 20px to 16px */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  .hero-title:hover {
+    transform: scale(1.05);
   }
   
   .hero-subtitle {
@@ -62,7 +70,7 @@ body {
     padding: 20px 30px;
     font-weight: 500;
     position: relative;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease, background-color 0.3s ease;
   }
   
   .nav-link:hover {
@@ -137,6 +145,7 @@ body {
     text-decoration: none;  /* Remove underline from Link component */
     color: inherit;  /* Inherit text color */
     display: block;  /* Ensure proper block display */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
   
   .category h3 {
@@ -159,6 +168,8 @@ body {
   .category:hover {
     transform: translateY(-4px);
     box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
   }
   
   .category:hover img {
