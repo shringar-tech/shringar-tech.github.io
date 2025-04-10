@@ -10,11 +10,13 @@ This document outlines the functionality requirements for the e-commerce website
 ### 1. Home Page
 - **Description**: The landing page of the website.
 - **Features**:
-  - Display a welcoming message and a brief description of the store.
-  - Showcase product categories (e.g., Sarees, Lehengas, Kurtis, etc.) in horizontally scrollable carousels.
-  - Navigation arrows with ethnic-themed design for browsing through product categories.
-  - Highlight featured items with images and prices in an elegant, space-efficient layout.
-  - Provide navigation links to other sections of the website.
+  - Hero section with welcoming message and brief description of the store
+  - Latest collection showcase
+  - Product categories (Sarees, Lehengas, Kurtis, etc.) displayed in horizontally scrollable carousels
+  - Navigation arrows with ethnic-themed design for browsing through product categories
+  - Highlight featured items with images and prices in an elegant, space-efficient layout using ProductCard components
+  - Responsive navigation bar with links to other sections
+  - Seamless product browsing with ProductCarousel component
 
 ### 2. Category Page
 - **Description**: Displays items belonging to a specific category.
@@ -63,8 +65,9 @@ This document outlines the functionality requirements for the e-commerce website
 ### 1. Data Management
 - **Description**: Use JSON files to store product data.
 - **Files**:
-  - `sarees.json`, `lehengas.json`, `kurtis.json`.
-  - Include fields like `id`, `name`, `img`, `price`, `material`, and `description`.
+  - `sarees.json`, `lehengas.json`, `kurtis.json`, `latestcollection.json`
+  - Include fields like `id`, `name`, `img`, `price`, `material`, and `description`
+  - Latest collection data for featuring new arrivals and trending items
 
 ### 2. Frameworks and Libraries
 - **React**: For building the user interface.

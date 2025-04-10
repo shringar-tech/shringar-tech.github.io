@@ -41,3 +41,41 @@
   font-size: 0.9rem;
   opacity: 0.9;
 }
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 32px 16px;
+  }
+
+  .footer-social {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  .social-icon {
+    font-size: 20px;
+    min-width: 140px;
+    justify-content: center;
+    padding: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+  }
+
+  .copyright {
+    font-size: 0.85rem;
+    text-align: center;
+    padding: 0 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-social {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .social-icon {
+    min-width: 100%;
+  }
+}

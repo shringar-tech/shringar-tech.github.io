@@ -14,6 +14,7 @@ This project is an e-commerce website designed for showcasing and selling Indian
 │   ├── index.html
 │   ├── data
 │   │   ├── kurtis.json
+│   │   ├── latestcollection.json
 │   │   ├── lehengas.json
 │   │   └── sarees.json
 │   ├── images
@@ -44,11 +45,28 @@ This project is an e-commerce website designed for showcasing and selling Indian
     │   ├── CategoryPage.js
     │   ├── ContactPage.css
     │   ├── ContactPage.js
+    │   ├── HomePage.css
     │   ├── HomePage.js
     │   ├── ItemDetailPage.css
-    │   └── ItemDetailPage.js
+    │   ├── ItemDetailPage.js
+    │   └── layout
+    ├── data
+    ├── elements
+    │   ├── HeroSection.css
+    │   ├── HeroSection.js
+    │   ├── NavBar.css
+    │   ├── NavBar.js
+    │   ├── ProductCard.css
+    │   ├── ProductCard.js
+    │   ├── ProductCarousel.css
+    │   ├── ProductCarousel.js
+    │   ├── ScrollToTop.css
+    │   └── ScrollToTop.js
     ├── image
-        └── background
+    │   └── hero
+    └── styles
+        ├── mixins.css
+        └── variables.css
 ```
 
 ## Features
