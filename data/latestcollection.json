@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "name": "Casual Kurti",
+    "img": "../images/kurti/img_6.png",
+    "price": 50,
+    "dateOfManufacture": "2025-01-25",
+    "material": "Cotton",
+    "description": "A casual kurti suitable for everyday wear."
+  },
+  {
+    "id": 2,
+    "name": "Bridal Lehenga",
+    "img": "../images/lehenga/img_6.png",
+    "price": 300,
+    "dateOfManufacture": "2025-01-20",
+    "material": "Silk and Velvet",
+    "description": "A stunning bridal lehenga with heavy embroidery."
+  },
+  {
+    "id": 3,
+    "name": "Party Wear Lehenga",
+    "img": "../images/lehenga/img_5.png",
+    "price": 200,
+    "dateOfManufacture": "2025-02-05",
+    "material": "Georgette",
+    "description": "A stylish lehenga perfect for parties and events."
+  },
+  {
+    "id": 4,
+    "name": "Printed Kurti",
+    "img": "../images/kurti/img_3.png",
+    "price": 60,
+    "dateOfManufacture": "2025-03-05",
+    "material": "Cotton",
+    "description": "A printed kurti with vibrant designs."
+  },
+  {
+    "id": 5,
+    "name": "Georgette Saree",
+    "img": "../images/saree/img_4.png",
+    "price": 100,
+    "dateOfManufacture": "2025-03-05",
+    "material": "Georgette",
+    "description": "A stylish georgette saree with modern patterns."
+  },
+  {
+    "id": 6,
+    "name": "Chiffon Saree",
+    "img": "../images/saree/img_3.png",
+    "price": 90,
+    "dateOfManufacture": "2025-01-25",
+    "material": "Chiffon",
+    "description": "A lightweight chiffon saree perfect for summer."
+  },
+  {
+    "id": 7,
+    "name": "Long Kurti",
+    "img": "../images/kurti/img_1.png",
+    "price": 70,
+    "dateOfManufacture": "2025-02-20",
+    "material": "Cotton",
+    "description": "A long kurti perfect for formal occasions."
+  },
+  {
+    "id": 8,
+    "name": "Short Kurti",
+    "img": "../images/kurti/img_2.png",
+    "price": 55,
+    "dateOfManufacture": "2025-03-10",
+    "material": "Linen",
+    "description": "A short kurti suitable for casual wear."
+  }
+]
