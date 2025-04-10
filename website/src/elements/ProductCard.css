@@ -138,26 +138,6 @@
     text-decoration: line-through;
   }
   
-  .product-rating {
-    display: flex;
-    align-items: center;
-  }
-  
-  .star {
-    color: #e0e0e0;
-    font-size: 1rem;
-  }
-  
-  .star.filled {
-    color: #ffc107;
-  }
-  
-  .rating-count {
-    margin-left: 4px;
-    font-size: 0.8rem;
-    color: #757575;
-  }
-  
   /* Responsive adjustments */
   @media (max-width: 768px) {
     .product-card {

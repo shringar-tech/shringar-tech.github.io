@@ -51,19 +51,6 @@ const ProductCard = ({ item, category }) => {
               <span className="product-price">{formatPrice(item.price || 2999)}</span>
             )}
           </div>
-          
-          {/* Rating */}
-          <div className="product-rating">
-            {[...Array(5)].map((_, i) => (
-              <span 
-                key={i} 
-                className={`star ${i < (item.rating || 4) ? 'filled' : ''}`}
-              >
-                ★
-              </span>
-            ))}
-            <span className="rating-count">({item.ratingCount || 24})</span>
-          </div>
         </div>
       </div>
     </div>
