@@ -11,6 +11,8 @@ const ProductCarousel = ({ items, category, title }) => {
   const [startX, setStartX] = useState(0);
   const [scrollLeft, setScrollLeft] = useState(0);
 
+  const isLatestCollection = title === "Our Latest Collections";
+  
   const checkArrowVisibility = () => {
     if (carouselRef.current) {
       const { scrollLeft, scrollWidth, clientWidth } = carouselRef.current;
@@ -86,7 +88,7 @@ const ProductCarousel = ({ items, category, title }) => {
   };
 
   return (
-    <section className="category-section">
+    <section className={`category-section ${isLatestCollection ? 'latest-collection' : ''}`}>
       <h2>{title}</h2>
       <div className="carousel-container">
         {showLeftArrow && (

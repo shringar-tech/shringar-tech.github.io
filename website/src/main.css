@@ -10,10 +10,9 @@ body {
   font-family: 'Montserrat', sans-serif;
   margin: 0;
   padding: 0;
-  color: var(--text);
-  background: linear-gradient(to right, #000428, #004e92);
+  color: #2c3e50;
+  background: linear-gradient(135deg, #faf7f2 0%, #fff9f0 100%);
   min-height: 100vh;
-  color: #fff; 
 }
 
 /* Animation keyframes used by multiple components */
@@ -31,22 +30,23 @@ to {
 /* Category sections styling */
 
 .container {
-  background: rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(10px);
-  border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  border-radius: 12px;
+  border: 1px solid rgba(212, 175, 55, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);
   padding: 20px;
   margin: 20px;
 }
 
 .category-section {
-padding: 40px 20px;
-text-align: center;
-width: 100%;
-background-color: #f5f5f5;
-animation: sectionFadeIn 0.5s ease-out forwards;
-padding: 20px 0 40px;
+  padding: 40px 20px;
+  text-align: center;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.7);
+  animation: sectionFadeIn 0.5s ease-out forwards;
+  padding: 20px 0 40px;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.1);
 }
 
 .category-container {
