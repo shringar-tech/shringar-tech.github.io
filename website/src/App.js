@@ -15,6 +15,7 @@ function App() {
   const [sarees, setSarees] = useState([]);
   const [lehengas, setLehengas] = useState([]);
   const [kurtis, setKurtis] = useState([]);
+  const [latestCollection, setLatestCollection] = useState([]);
 
   useEffect(() => {
     fetch('/data/sarees.json')
@@ -28,6 +29,11 @@ function App() {
     fetch('/data/kurtis.json')
       .then(response => response.json())
       .then(data => setKurtis(data));
+    
+    fetch('/data/latestcollection.json')
+      .then(response => response.json())
+      .then(data => setLatestCollection(data));
+
   }, []);
 
   return (
@@ -49,6 +55,11 @@ function App() {
             </Route>
             <Route path="/">
               <HeroSection />
+              <ProductCarousel 
+                items={latestCollection} 
+                category="sarees" 
+                title="Our Latest Collections" 
+              />
               <ProductCarousel 
                 items={sarees} 
                 category="sarees" 
