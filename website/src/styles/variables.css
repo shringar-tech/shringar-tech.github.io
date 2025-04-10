@@ -1,0 +1,8 @@
+/* Define CSS variables for consistent styling */
+:root {
+  --primary-color: #1976d2;
+  --secondary-color: #424242;
+  --background-color: #f5f5f5;
+  --text-color: #212121;
+  --font-family: 'Montserrat', sans-serif;
+}

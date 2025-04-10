@@ -1,0 +1,10 @@
+/* Define reusable CSS mixins */
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin box-shadow($color) {
+  box-shadow: 0 4px 6px rgba($color, 0.1), 0 1px 3px rgba($color, 0.06);
+}

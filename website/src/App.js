@@ -8,6 +8,7 @@ import CategoryPage from './components/CategoryPage';
 import ContactPage from './components/ContactPage';
 import ProductCard from './elements/ProductCard';
 import ScrollToTop from './elements/ScrollToTop';
+import Footer from './components/layout/Footer';
 
 function App() {
   const [sarees, setSarees] = useState([]);
@@ -81,6 +82,7 @@ function App() {
           </Switch>
         </main>
         <ScrollToTop />
+        <Footer />
       </div>
     </Router>
   );
