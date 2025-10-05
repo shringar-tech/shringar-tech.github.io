@@ -1,11 +1,12 @@
 .contact-container {
   min-height: calc(100vh - 64px);
-  background-color: #fafafa;
+  background: linear-gradient(135deg, #faf7f2 0%, #fff9f0 100%);
   padding-bottom: 40px;
+  font-family: 'Alice', serif;
 }
 
 .contact-header {
-  background: linear-gradient(145deg, #1976d2 0%, #2196f3 100%);
+  background: linear-gradient(145deg, #d4af37 0%, #f4d03f 100%);
   padding: 60px 20px;
   color: white;
   text-align: center;
@@ -20,7 +21,7 @@
   left: 0;
   right: 0;
   height: 100px;
-  background: #fafafa;
+  background: linear-gradient(135deg, #faf7f2 0%, #fff9f0 100%);
   transform: skewY(-3deg);
 }
 
@@ -34,8 +35,9 @@
 .header-content h1 {
   font-size: 2.5rem;
   margin-bottom: 16px;
-  font-weight: 500;
-  letter-spacing: -0.5px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  font-family: 'Alice', serif;
 }
 
 .header-content p {
@@ -69,11 +71,12 @@
 }
 
 .info-section h2 {
-  color: #1976d2;
+  color: #d4af37;
   margin-bottom: 32px;
-  font-weight: 600;
+  font-weight: 400;
   font-size: 1.75rem;
   position: relative;
+  font-family: 'Alice', serif;
 }
 
 .info-section h2::after {
@@ -83,7 +86,7 @@
   left: 0;
   width: 40px;
   height: 3px;
-  background: #1976d2;
+  background: #d4af37;
   border-radius: 2px;
 }
 
@@ -108,10 +111,10 @@
 }
 
 .contact-item i {
-  color: #1976d2;
+  color: #d4af37;
   font-size: 24px;
   padding: 8px;
-  background: rgba(25, 118, 210, 0.1);
+  background: rgba(212, 175, 55, 0.1);
   border-radius: 50%;
 }
 
@@ -131,18 +134,20 @@
 .terms-content {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 24px;
-  padding: 32px;
+  gap: 16px;
+  padding: 20px;
   background: white;
   border-radius: 12px;
   box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-  color: #2c3e50; /* Add this line to ensure text is visible */
+  color: #2c3e50;
+  max-width: 1200px;
+  margin: 20px auto 0;
 }
 
 .terms-content > div {
-  padding: 24px;
+  padding: 16px;
   background: #f8f9fa;
-  border-radius: 10px;
+  border-radius: 8px;
   transition: all 0.3s ease;
   border: 1px solid #e0e0e0;
 }
@@ -150,17 +155,22 @@
 .terms-content > div:hover {
   transform: translateY(-4px);
   background: white;
-  border-color: #1976d2;
+  border-color: #d4af37;
 }
 
 .terms-content > div h3 {
-  color: #1976d2; /* Add this line to style headings */
-  margin-bottom: 12px; /* Add this line for better spacing */
+  color: #d4af37;
+  margin-bottom: 8px;
+  font-family: 'Alice', serif;
+  font-weight: 400;
+  font-size: 1.1rem;
 }
 
 .terms-content > div p {
-  color: #546e7a; /* Add this line to style paragraphs */
-  line-height: 1.6; /* Add this line for better readability */
+  color: #546e7a;
+  line-height: 1.4;
+  font-size: 0.9rem;
+  margin: 0;
 }
 
 @media (max-width: 768px) {
