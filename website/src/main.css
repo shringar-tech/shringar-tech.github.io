@@ -149,7 +149,16 @@ margin-bottom: 30px;
 }
 
 .main-content {
-  margin-top: 50px;
+  margin-top: 40px;
+}
+
+.category-section {
+  padding: 30px 15px;
+}
+
+.category-section h2 {
+  font-size: 1.6rem;
+  margin: 20px 0 24px;
 }
 }
 

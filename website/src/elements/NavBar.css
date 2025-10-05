@@ -187,12 +187,56 @@
     background-color: #424242;
     transition: all 0.3s ease;
   }
+
+  .search-icon {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  }
+
+  .search-icon:hover {
+    color: #ffd700;
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: scale(1.1);
+  }
+
+  .navbar-other-pages .search-icon {
+    color: #333;
+    text-shadow: none;
+  }
+
+  .navbar-other-pages .search-icon:hover {
+    color: #1976d2;
+    background-color: rgba(25, 118, 210, 0.1);
+  }
+
+  .desktop-search-icon {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
   
   @media (max-width: 768px) {
+    .navbar {
+      top: 22px;
+    }
+    
     .navbar-container {
+      position: relative;
       grid-template-columns: 1fr;
-      height: 60px;
-      text-align: center;
+      height: 70px;
+      padding: 0 15px;
+      align-items: center;
     }
     
     .navbar-left,
@@ -205,19 +249,37 @@
     }
     
     .logo-text {
-      font-size: 1.5rem;
+      font-size: 1.8rem;
+      letter-spacing: 1px;
+    }
+    
+    .desktop-search-icon {
+      display: none;
+    }
+    
+    .search-icon {
+      position: absolute;
+      right: 60px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 1.3rem;
+      padding: 10px;
+      display: flex;
     }
     
     .navbar-menu-icon {
-      display: flex;
       position: absolute;
-      right: 20px;
+      right: 15px;
       top: 50%;
       transform: translateY(-50%);
-      z-index: 1200;
+      display: flex;
+      width: 30px;
+      height: 24px;
+      padding: 8px;
     }
     
     .navbar-menu-icon span {
       background-color: white;
+      height: 3px;
     }
   }

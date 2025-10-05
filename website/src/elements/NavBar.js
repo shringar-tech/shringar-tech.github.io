@@ -2,11 +2,13 @@ import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { debounce } from '../utils/helpers';
 import { NAVBAR_SCROLL_THRESHOLD, DEBOUNCE_DELAYS, ROUTES } from '../utils/constants';
+import SearchModal from '../components/SearchModal';
 import './NavBar.css';
 
 const Navbar = React.memo(() => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [searchOpen, setSearchOpen] = useState(false);
   const location = useLocation();
   const isHomePage = location.pathname === '/';
   
@@ -32,6 +34,10 @@ const Navbar = React.memo(() => {
 
   const toggleMobileMenu = useCallback(() => {
     setMobileMenuOpen(prev => !prev);
+  }, []);
+
+  const toggleSearch = useCallback(() => {
+    setSearchOpen(prev => !prev);
   }, []);
 
   return (
@@ -77,6 +83,10 @@ const Navbar = React.memo(() => {
             </ul>
           </div>
           
+          <button className="search-icon desktop-search-icon" onClick={toggleSearch} aria-label="Search products">
+            <span className="material-icons">search</span>
+          </button>
+          
           <div className={`navbar-menu-icon ${mobileMenuOpen ? 'active' : ''}`} onClick={toggleMobileMenu}>
             <span></span>
             <span></span>
@@ -84,6 +94,7 @@ const Navbar = React.memo(() => {
           </div>
         </div>
       </nav>
+      <SearchModal isOpen={searchOpen} onClose={() => setSearchOpen(false)} />
     </>
   );
 });

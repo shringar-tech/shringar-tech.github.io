@@ -86,54 +86,73 @@
 /* Media queries for responsive design */
 @media (max-width: 768px) {
   .carousel-container {
-    padding: 0 12px;
+    padding: 0 8px;
   }
 
   .carousel-items {
-    gap: 12px;
-    padding: 12px 0;
+    gap: 16px;
+    padding: 16px 0;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
   }
 
   .carousel-item {
     scroll-snap-align: start;
-    width: 220px;
+    width: 260px;
+  }
+
+  .carousel-arrow {
+    width: 40px;
+    height: 40px;
+    opacity: 0.9;
+    background-color: rgba(255, 255, 255, 0.95);
+    font-size: 1.1rem;
+  }
+
+  .arrow-left {
+    left: 2px;
+  }
+
+  .arrow-right {
+    right: 2px;
+  }
+
+  .category-section.latest-collection {
+    padding: 30px 0;
+  }
+
+  .category-section.latest-collection h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-container {
+    padding: 0 5px;
+  }
+  
+  .carousel-items {
+    gap: 12px;
+    padding: 12px 0;
+  }
+  
+  .carousel-item {
+    width: 240px;
   }
 
   .carousel-arrow {
     width: 36px;
     height: 36px;
-    opacity: 0.8;
-    background-color: rgba(255, 255, 255, 0.95);
+    font-size: 1rem;
   }
-
+  
   .arrow-left {
-    left: 4px;
+    left: 1px;
   }
 
   .arrow-right {
-    right: 4px;
-  }
-
-  .category-section.latest-collection {
-    padding: 40px 0;
-  }
-
-  .category-section.latest-collection h2 {
-    font-size: 1.8rem;
-    margin-bottom: 24px;
-  }
-}
-
-@media (max-width: 480px) {
-  .carousel-item {
-    width: 180px;
-  }
-
-  .carousel-arrow {
-    width: 32px;
-    height: 32px;
+    right: 1px;
   }
 }
 
