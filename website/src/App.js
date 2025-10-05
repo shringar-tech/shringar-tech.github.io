@@ -9,6 +9,7 @@ import HeroSection from './elements/HeroSection';
 import ProductCarousel from './elements/ProductCarousel';
 import ScrollToTop from './elements/ScrollToTop';
 import Footer from './components/layout/Footer';
+import WhatsAppButton from './elements/WhatsAppButton';
 
 // Lazy load components
 const ItemDetailPage = lazy(() => import('./components/ItemDetailPage'));
@@ -93,6 +94,7 @@ const AppContent = () => {
           </Suspense>
         </main>
         <ScrollToTop />
+        <WhatsAppButton />
         <Footer />
       </div>
   );

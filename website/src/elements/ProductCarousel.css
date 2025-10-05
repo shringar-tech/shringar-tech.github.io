@@ -1,19 +1,19 @@
 .carousel-container {
   position: relative;
   width: 100%;
-  max-width: 1200px;
+  max-width: 1600px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 60px;
 }
 
 .carousel-items {
   display: flex;
   overflow-x: auto;
   scroll-behavior: smooth;
-  padding: 20px 0;
+  padding: 40px 0;
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none; /* IE and Edge */
-  gap: 24px;
+  gap: 32px;
   cursor: grab;
 }
 
@@ -29,7 +29,7 @@
 
 .carousel-item {
   flex: 0 0 auto;
-  width: 280px; /* Match the current card width */
+  width: 400px;
 }
 
 .carousel-arrow {
@@ -86,19 +86,19 @@
 /* Media queries for responsive design */
 @media (max-width: 768px) {
   .carousel-container {
-    padding: 0 8px;
+    padding: 0 20px;
   }
 
   .carousel-items {
     gap: 16px;
-    padding: 16px 0;
+    padding: 24px 0;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
   }
 
   .carousel-item {
     scroll-snap-align: start;
-    width: 260px;
+    width: 280px;
   }
 
   .carousel-arrow {
@@ -129,16 +129,16 @@
 
 @media (max-width: 480px) {
   .carousel-container {
-    padding: 0 5px;
+    padding: 0 16px;
   }
   
   .carousel-items {
     gap: 12px;
-    padding: 12px 0;
+    padding: 20px 0;
   }
   
   .carousel-item {
-    width: 240px;
+    width: 260px;
   }
 
   .carousel-arrow {
