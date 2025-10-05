@@ -17,10 +17,12 @@ const ProductCard = React.memo(({ item, category }) => {
   const onImageError = useCallback(handleImageError(), []);
 
   return (
-    <div 
+    <article 
       className="product-card"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
+      role="group"
+      aria-label={`Product: ${item.name}, Price: ${formattedPrice}`}
     >
       <div className="product-card-inner">
         <div className="product-image-container">
@@ -28,12 +30,17 @@ const ProductCard = React.memo(({ item, category }) => {
             src={item.img} 
             alt={item.name} 
             className="product-image"
+            loading="lazy"
             onError={onImageError}
           />
           
           {/* Quick actions overlay */}
           <div className={`product-actions ${isHovered ? 'visible' : ''}`}>
-            <Link to={`/${category}/${item.id}`} className="view-details-btn">
+            <Link 
+              to={`/${category}/${item.id}`} 
+              className="view-details-btn"
+              aria-label={`View details for ${item.name}`}
+            >
               View Details
             </Link>
           </div>
@@ -46,7 +53,7 @@ const ProductCard = React.memo(({ item, category }) => {
         </div>
         
         <div className="product-info">
-          <h3 className="product-name">{item.name}</h3>
+          <h3 className="product-name" id={`product-${item.id}-name`}>{item.name}</h3>
           
           <div className="product-price-container">
             {formattedOriginalPrice && item.originalPrice > item.price ? (
@@ -60,7 +67,7 @@ const ProductCard = React.memo(({ item, category }) => {
           </div>
         </div>
       </div>
-    </div>
+    </article>
   );
 });
 

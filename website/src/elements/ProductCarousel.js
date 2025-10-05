@@ -111,8 +111,11 @@ const ProductCarousel = React.memo(({ items, category, title }) => {
   };
 
   return (
-    <section className={`category-section ${isLatestCollection ? 'latest-collection' : ''}`}>
-      <h2>{title}</h2>
+    <section 
+      className={`category-section ${isLatestCollection ? 'latest-collection' : ''}`}
+      aria-labelledby={`carousel-${title.replace(/\s+/g, '-').toLowerCase()}`}
+    >
+      <h2 id={`carousel-${title.replace(/\s+/g, '-').toLowerCase()}`}>{title}</h2>
       <div className="carousel-container">
         {showLeftArrow && (
           <button 
@@ -126,6 +129,9 @@ const ProductCarousel = React.memo(({ items, category, title }) => {
         <div 
           className="carousel-items" 
           ref={carouselRef}
+          role="region"
+          aria-label={`${title} product carousel`}
+          tabIndex="0"
           onScroll={debouncedCheckArrows}
           onMouseDown={handleMouseDown}
           onMouseMove={handleMouseMove}
@@ -135,8 +141,13 @@ const ProductCarousel = React.memo(({ items, category, title }) => {
           onTouchMove={handleTouchMove}
           onTouchEnd={handleDragEnd}
         >
-          {items.map(item => (
-            <div className="carousel-item" key={item.id}>
+          {items.map((item, index) => (
+            <div 
+              className="carousel-item" 
+              key={item.id}
+              role="group"
+              aria-label={`${index + 1} of ${items.length}`}
+            >
               <Link to={`/${category}/${item.id}`} className="category-link">
                 <ProductCard item={item} category={category} />
               </Link>

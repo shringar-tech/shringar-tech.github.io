@@ -34,8 +34,12 @@ const Navbar = React.memo(() => {
   }, []);
 
   return (
-    <nav className={`navbar ${scrolled ? 'navbar-scrolled' : ''}`}>
-      <div className="navbar-container">
+    <>
+      <a href="#main-content" className="skip-link">
+        Skip to main content
+      </a>
+      <nav className={`navbar ${scrolled ? 'navbar-scrolled' : ''}`} role="navigation" aria-label="Main navigation">
+        <div className="navbar-container">
         <Link to={ROUTES.HOME} className="navbar-logo">
           <span className="logo-text">Shringaarika</span>
         </Link>
@@ -73,8 +77,9 @@ const Navbar = React.memo(() => {
             </Link>
           </li>
         </ul>
-      </div>
-    </nav>
+        </div>
+      </nav>
+    </>
   );
 });
 

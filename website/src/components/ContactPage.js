@@ -45,6 +45,7 @@ function ContactPage() {
             <img 
               src="/images/saree/img_6.png" 
               alt="Shringar Office" 
+              loading="lazy"
               onError={handleImageError()}
             />
           </div>
