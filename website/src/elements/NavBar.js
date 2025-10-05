@@ -40,43 +40,47 @@ const Navbar = React.memo(() => {
       </a>
       <nav className={`navbar ${scrolled ? 'navbar-scrolled' : ''}`} role="navigation" aria-label="Main navigation">
         <div className="navbar-container">
-        <Link to={ROUTES.HOME} className="navbar-logo">
-          <span className="logo-text">Shringaarika</span>
-        </Link>
-        
-        <div className={`navbar-menu-icon ${mobileMenuOpen ? 'active' : ''}`} onClick={toggleMobileMenu}>
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        
-        <ul className={`navbar-menu ${mobileMenuOpen ? 'active' : ''}`}>
-          <li className="navbar-item">
-            <Link to={ROUTES.HOME} className={`navbar-link ${location.pathname === ROUTES.HOME ? 'active' : ''}`}>
-              Home
+          <div className="navbar-left">
+            <ul className="navbar-menu-left">
+              <li className="navbar-item">
+                <Link to={ROUTES.SAREES} className={`navbar-link ${location.pathname.includes(ROUTES.SAREES) ? 'active' : ''}`}>
+                  Sarees
+                </Link>
+              </li>
+              <li className="navbar-item">
+                <Link to={ROUTES.LEHENGAS} className={`navbar-link ${location.pathname.includes(ROUTES.LEHENGAS) ? 'active' : ''}`}>
+                  Lehengas
+                </Link>
+              </li>
+            </ul>
+          </div>
+          
+          <div className="navbar-center">
+            <Link to={ROUTES.HOME} className="navbar-logo">
+              <span className="logo-text">Shringaarika</span>
             </Link>
-          </li>
-          <li className="navbar-item">
-            <Link to={ROUTES.SAREES} className={`navbar-link ${location.pathname.includes(ROUTES.SAREES) ? 'active' : ''}`}>
-              Sarees
-            </Link>
-          </li>
-          <li className="navbar-item">
-            <Link to={ROUTES.LEHENGAS} className={`navbar-link ${location.pathname.includes(ROUTES.LEHENGAS) ? 'active' : ''}`}>
-              Lehengas
-            </Link>
-          </li>
-          <li className="navbar-item">
-            <Link to={ROUTES.KURTIS} className={`navbar-link ${location.pathname.includes(ROUTES.KURTIS) ? 'active' : ''}`}>
-              Kurtis
-            </Link>
-          </li>
-          <li className="navbar-item">
-            <Link to={ROUTES.CONTACT} className={`navbar-link ${location.pathname === ROUTES.CONTACT ? 'active' : ''}`}>
-              Contact
-            </Link>
-          </li>
-        </ul>
+          </div>
+          
+          <div className="navbar-right">
+            <ul className="navbar-menu-right">
+              <li className="navbar-item">
+                <Link to={ROUTES.KURTIS} className={`navbar-link ${location.pathname.includes(ROUTES.KURTIS) ? 'active' : ''}`}>
+                  Kurtis
+                </Link>
+              </li>
+              <li className="navbar-item">
+                <Link to={ROUTES.CONTACT} className={`navbar-link ${location.pathname === ROUTES.CONTACT ? 'active' : ''}`}>
+                  Contact
+                </Link>
+              </li>
+            </ul>
+          </div>
+          
+          <div className={`navbar-menu-icon ${mobileMenuOpen ? 'active' : ''}`} onClick={toggleMobileMenu}>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
         </div>
       </nav>
     </>

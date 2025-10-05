@@ -29,6 +29,7 @@ src/
 │   ├── NavBar.js         # Navigation bar
 │   ├── ProductCard.js    # Product display card
 │   ├── ProductCarousel.js # Horizontal product carousel
+│   ├── PromoBanner.js    # Rotating promotional banner
 │   └── ScrollToTop.js    # Scroll to top button
 ├── context/              # State management
 │   └── ProductContext.js # Global product state
@@ -46,7 +47,14 @@ src/
 
 ## Core Features
 
-### 1. State Management
+### 1. Promotional System
+- **PromoBanner Component**: Rotating promotional messages at top of site
+- **Auto-rotation**: 4-second intervals with smooth CSS transitions
+- **Message Management**: Easy to update promotional content array
+- **Responsive Design**: Optimized for mobile and desktop screens
+- **Accessibility**: ARIA live regions for screen reader announcements
+
+### 2. State Management
 - **ProductContext**: Centralized state using React Context API and useReducer
 - **Global State**: Products, loading states, and error handling
 - **Data Flow**: Unidirectional data flow with actions and reducers
@@ -63,7 +71,7 @@ src/
 }
 ```
 
-### 2. Performance Optimizations
+### 3. Performance Optimizations
 
 #### Code Splitting & Lazy Loading
 - **Route-based splitting**: CategoryPage, ItemDetailPage, ContactPage
@@ -75,13 +83,13 @@ src/
 - **Memoized callbacks**: useCallback for event handlers
 - **Optimized re-renders**: useMemo for expensive calculations
 
-### 3. Data Management
+### 4. Data Management
 - **JSON-based**: Static product data in `/public/data/`
 - **Async loading**: Promise.all for parallel data fetching
 - **Error handling**: Comprehensive try-catch with fallbacks
 - **Caching**: Browser-level caching for static assets
 
-### 4. Routing System
+### 5. Routing System
 ```javascript
 // Route structure
 /                    # Homepage with carousels
@@ -106,10 +114,18 @@ src/
 - **Image handling**: Error fallbacks and lazy loading
 - **Semantic HTML**: Article tags for better SEO
 
+### PromoBanner
+- **Auto-rotation**: Cycles through 3 promotional messages every 4 seconds
+- **Smooth transitions**: CSS animations for seamless message changes
+- **High visibility**: Positioned at very top with gradient background
+- **Mobile optimized**: Responsive text sizing and padding adjustments
+
 ### Navigation
-- **Sticky header**: Position sticky with scroll effects
-- **Mobile responsive**: Hamburger menu for mobile devices
-- **Active states**: Visual indication of current page
+- **Overlay design**: Transparent navigation positioned over hero image
+- **Grid layout**: Three-column layout (left: Sarees/Lehengas, center: Logo, right: Kurtis/Contact)
+- **Scrollable behavior**: Moves naturally with page content (non-sticky)
+- **Mobile responsive**: Simplified mobile layout with hamburger menu
+- **Active states**: Visual indication of current page with gold highlights
 - **Skip navigation**: Accessibility for keyboard users
 
 ## Performance Features
@@ -248,6 +264,17 @@ npm run deploy       # Deploy to GitHub Pages
 - **A/B testing**: Feature flag implementation
 - **User feedback**: Integrated feedback system
 
+## Recent Updates
+
+### Latest Features Added (Current Version)
+- **Promotional Banner**: Auto-rotating banner with marketing messages
+- **Enhanced Navigation**: Overlay design with three-column grid layout
+- **Performance Optimizations**: React.memo, useCallback, debouncing implementation
+- **Accessibility Improvements**: ARIA labels, semantic HTML, skip links
+- **SEO Enhancements**: Comprehensive meta tags, structured data, Open Graph
+- **Error Handling**: Global error boundaries and graceful fallbacks
+- **State Management**: Context API with useReducer for global state
+
 ## Future Enhancements
 
 ### Planned Features
@@ -264,6 +291,9 @@ npm run deploy       # Deploy to GitHub Pages
 - **TypeScript**: Type safety implementation
 - **Micro-frontends**: Modular architecture
 - **CDN integration**: Global content delivery
+- **Dynamic promotions**: Admin panel for banner message management
+- **A/B testing**: Promotional banner message optimization
+- **Analytics integration**: Banner click tracking and conversion metrics
 
 ## Troubleshooting
 
