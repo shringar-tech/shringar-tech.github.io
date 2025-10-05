@@ -9,7 +9,22 @@ function CategoryPage({ category }) {
 
   useEffect(() => {
     setLoading(true);
-    fetch(`/data/${category}.json`)
+    
+    // Map new categories to existing data files for now
+    const getDataFile = (cat) => {
+      switch(cat) {
+        case 'new-arrivals':
+          return 'latestcollection.json';
+        case 'best-sellers':
+          return 'sarees.json'; // Using sarees as best sellers for now
+        case 'shop-all':
+          return 'sarees.json'; // Using sarees for shop all for now
+        default:
+          return `${cat}.json`;
+      }
+    };
+
+    fetch(`/data/${getDataFile(category)}`)
       .then(response => response.json())
       .then(data => {
         setItems(data);
@@ -27,7 +42,7 @@ function CategoryPage({ category }) {
 
   return (
     <section className="category-section">
-      <h2>{category.charAt(0).toUpperCase() + category.slice(1)}</h2>
+      <h2>{category.replace('-', ' ').replace(/\b\w/g, l => l.toUpperCase())}</h2>
       <div className="category-container">
         {items.map(item => (
           <Link to={`/${category}/${item.id}`} className="category-link" key={item.id}>

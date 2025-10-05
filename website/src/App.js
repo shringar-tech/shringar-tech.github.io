@@ -45,6 +45,15 @@ const AppContent = () => {
             <Switch>
               <Route path="/contact" component={ContactPage} />
               <Route path="/:category/:id" component={ItemDetailPage} />
+              <Route path="/new-arrivals">
+                <CategoryPage category="new-arrivals" />
+              </Route>
+              <Route path="/best-sellers">
+                <CategoryPage category="best-sellers" />
+              </Route>
+              <Route path="/shop-all">
+                <CategoryPage category="shop-all" />
+              </Route>
               <Route path="/sarees">
                 <CategoryPage category="sarees" />
               </Route>

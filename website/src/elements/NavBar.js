@@ -44,13 +44,13 @@ const Navbar = React.memo(() => {
           <div className="navbar-left">
             <ul className="navbar-menu-left">
               <li className="navbar-item">
-                <Link to={ROUTES.SAREES} className={`navbar-link ${location.pathname.includes(ROUTES.SAREES) ? 'active' : ''}`}>
-                  Sarees
+                <Link to="/new-arrivals" className={`navbar-link ${location.pathname.includes('/new-arrivals') ? 'active' : ''}`}>
+                  New Arrivals
                 </Link>
               </li>
               <li className="navbar-item">
-                <Link to={ROUTES.LEHENGAS} className={`navbar-link ${location.pathname.includes(ROUTES.LEHENGAS) ? 'active' : ''}`}>
-                  Lehengas
+                <Link to="/best-sellers" className={`navbar-link ${location.pathname.includes('/best-sellers') ? 'active' : ''}`}>
+                  Best Sellers
                 </Link>
               </li>
             </ul>
@@ -65,8 +65,8 @@ const Navbar = React.memo(() => {
           <div className="navbar-right">
             <ul className="navbar-menu-right">
               <li className="navbar-item">
-                <Link to={ROUTES.KURTIS} className={`navbar-link ${location.pathname.includes(ROUTES.KURTIS) ? 'active' : ''}`}>
-                  Kurtis
+                <Link to="/shop-all" className={`navbar-link ${location.pathname.includes('/shop-all') ? 'active' : ''}`}>
+                  Shop All
                 </Link>
               </li>
               <li className="navbar-item">
