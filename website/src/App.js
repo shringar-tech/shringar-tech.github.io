@@ -2,6 +2,7 @@ import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { ProductProvider, useProducts } from './context/ProductContext';
 import './main.css';
+import PromoBanner from './elements/PromoBanner';
 import Navbar from './elements/NavBar';
 import HeroSection from './elements/HeroSection';
 import ProductCarousel from './elements/ProductCarousel';
@@ -35,6 +36,7 @@ const AppContent = () => {
 
   return (
       <div>
+        <PromoBanner />
         <Navbar />
         <main id="main-content">
           <Suspense fallback={<div style={{ textAlign: 'center', padding: '50px' }}>Loading...</div>}>
