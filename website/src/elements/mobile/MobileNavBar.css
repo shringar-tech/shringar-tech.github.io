@@ -1,0 +1,65 @@
+.mobile-navbar {
+  position: relative;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+  z-index: 1000;
+}
+
+.mobile-nav-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+}
+
+.mobile-logo {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #1976d2;
+  text-decoration: none;
+  letter-spacing: -0.5px;
+}
+
+.mobile-nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.mobile-search-btn,
+.mobile-menu-toggle {
+  background: none;
+  border: none;
+  font-size: 1.6rem;
+  cursor: pointer;
+  padding: 8px;
+  color: #1976d2;
+}
+
+.mobile-search-btn {
+  font-size: 1.2rem;
+}
+
+.mobile-search-btn .material-icons {
+  font-size: 20px;
+}
+
+.mobile-menu {
+  background: white;
+  border-top: 1px solid #eee;
+  padding: 16px;
+}
+
+.mobile-menu a {
+  display: block;
+  padding: 12px 0;
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.mobile-menu a:last-child {
+  border-bottom: none;
+}

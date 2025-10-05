@@ -2,6 +2,7 @@ import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Route, Switch, useLocation } from 'react-router-dom';
 import { ProductProvider, useProducts } from './context/ProductContext';
 import { WishlistProvider } from './context/WishlistContext';
+import { useMobile } from './utils/useMobile';
 import './main.css';
 import PromoBanner from './elements/PromoBanner';
 import Navbar from './elements/NavBar';
@@ -10,6 +11,8 @@ import ProductCarousel from './elements/ProductCarousel';
 import ScrollToTop from './elements/ScrollToTop';
 import Footer from './components/layout/Footer';
 import WhatsAppButton from './elements/WhatsAppButton';
+import MobileHomePage from './components/mobile/MobileHomePage';
+import MobileNavBar from './elements/mobile/MobileNavBar';
 
 // Lazy load components
 const ItemDetailPage = lazy(() => import('./components/ItemDetailPage'));
@@ -22,6 +25,7 @@ const AppContent = () => {
   const { sarees, lehengas, kurtis, latestCollection, loading, error } = state;
   const location = useLocation();
   const isHomePage = location.pathname === '/';
+  const isMobile = useMobile();
 
   if (loading) {
     return (
@@ -42,7 +46,7 @@ const AppContent = () => {
   return (
       <div>
         <PromoBanner />
-        <Navbar />
+        {isMobile ? <MobileNavBar /> : <Navbar />}
         <main id="main-content" className={isHomePage ? '' : 'main-content'}>
           <Suspense fallback={<div style={{ textAlign: 'center', padding: '50px' }}>Loading...</div>}>
             <Switch>
@@ -68,27 +72,33 @@ const AppContent = () => {
                 <CategoryPage category="kurtis" />
               </Route>
             <Route path="/">
-              <HeroSection />
-              <ProductCarousel 
-                items={latestCollection} 
-                category="sarees" 
-                title="Our Latest Collections" 
-              />
-              <ProductCarousel 
-                items={sarees} 
-                category="sarees" 
-                title="Sarees" 
-              />
-              <ProductCarousel 
-                items={lehengas} 
-                category="lehengas" 
-                title="Lehengas" 
-              />
-              <ProductCarousel 
-                items={kurtis} 
-                category="kurtis" 
-                title="Kurtis" 
-              />
+              {isMobile ? (
+                <MobileHomePage />
+              ) : (
+                <>
+                  <HeroSection />
+                  <ProductCarousel 
+                    items={latestCollection} 
+                    category="sarees" 
+                    title="Our Latest Collections" 
+                  />
+                  <ProductCarousel 
+                    items={sarees} 
+                    category="sarees" 
+                    title="Sarees" 
+                  />
+                  <ProductCarousel 
+                    items={lehengas} 
+                    category="lehengas" 
+                    title="Lehengas" 
+                  />
+                  <ProductCarousel 
+                    items={kurtis} 
+                    category="kurtis" 
+                    title="Kurtis" 
+                  />
+                </>
+              )}
             </Route>
             </Switch>
           </Suspense>

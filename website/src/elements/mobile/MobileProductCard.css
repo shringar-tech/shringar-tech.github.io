@@ -1,0 +1,58 @@
+.mobile-product-card {
+  display: block;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  width: 160px;
+  min-width: 160px;
+  flex-shrink: 0;
+}
+
+.mobile-product-image {
+  position: relative;
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+}
+
+.mobile-product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.mobile-discount {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  background: #f44336;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 8px;
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+.mobile-product-info {
+  padding: 12px;
+}
+
+.mobile-product-name {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin: 0 0 8px 0;
+  line-height: 1.3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.mobile-product-price {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1976d2;
+  margin: 0;
+}
