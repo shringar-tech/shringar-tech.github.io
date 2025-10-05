@@ -18,22 +18,41 @@ function App() {
   const [latestCollection, setLatestCollection] = useState([]);
 
   useEffect(() => {
-    fetch('/data/sarees.json')
-      .then(response => response.json())
-      .then(data => setSarees(data));
+    const fetchData = async () => {
+      try {
+        const [sareesRes, lehengasRes, kurtisRes, latestRes] = await Promise.all([
+          fetch('/data/sarees.json'),
+          fetch('/data/lehengas.json'),
+          fetch('/data/kurtis.json'),
+          fetch('/data/latestcollection.json')
+        ]);
 
-    fetch('/data/lehengas.json')
-      .then(response => response.json())
-      .then(data => setLehengas(data));
+        if (!sareesRes.ok || !lehengasRes.ok || !kurtisRes.ok || !latestRes.ok) {
+          throw new Error('Failed to fetch data');
+        }
 
-    fetch('/data/kurtis.json')
-      .then(response => response.json())
-      .then(data => setKurtis(data));
-    
-    fetch('/data/latestcollection.json')
-      .then(response => response.json())
-      .then(data => setLatestCollection(data));
+        const [sarees, lehengas, kurtis, latest] = await Promise.all([
+          sareesRes.json(),
+          lehengasRes.json(),
+          kurtisRes.json(),
+          latestRes.json()
+        ]);
 
+        setSarees(sarees || []);
+        setLehengas(lehengas || []);
+        setKurtis(kurtis || []);
+        setLatestCollection(latest || []);
+      } catch (error) {
+        console.error('Error loading product data:', error);
+        // Set empty arrays as fallback
+        setSarees([]);
+        setLehengas([]);
+        setKurtis([]);
+        setLatestCollection([]);
+      }
+    };
+
+    fetchData();
   }, []);
 
   return (

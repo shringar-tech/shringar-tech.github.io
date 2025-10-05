@@ -80,37 +80,29 @@ This project is an e-commerce website designed for showcasing and selling Indian
    ```bash
    git clone https://github.com/shringar-tech/shringar-tech.github.io.git
    ```
-2. Navigate to the project directory:
+2. Navigate to the website directory:
    ```bash
-   cd shringar-tech.github.io
+   cd shringar-tech.github.io/website
    ```
 3. Install dependencies:
    ```bash
    npm install
-   npm install gh-pages --save-dev
    ```
-4. Update package.json with:
-   ```json
-   {
-     "homepage": "https://shringar-tech.github.io",
-     "scripts": {
-       "predeploy": "npm run build",
-       "deploy": "gh-pages -d build",
-       // ...existing scripts...
-     }
-   }
-   ```
-5. Start development server:
+4. Start development server:
    ```bash
    npm start
    ```
 
 ## Build and Deploy
-1. Build the project:
+1. Navigate to website directory:
+   ```bash
+   cd website
+   ```
+2. Build the project:
    ```bash
    npm run build
    ```
-2. Deploy to GitHub Pages:
+3. Deploy to GitHub Pages:
    ```bash
    npm run deploy
    ```

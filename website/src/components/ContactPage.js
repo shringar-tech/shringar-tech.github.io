@@ -41,7 +41,14 @@ function ContactPage() {
 
         <div className="contact-card image-section">
           <div className="contact-image">
-            <img src="/images/saree/img_6.png" alt="Shringar Office" />
+            <img 
+              src="/images/saree/img_6.png" 
+              alt="Shringar Office" 
+              onError={(e) => {
+                e.target.style.display = 'none';
+                console.warn('Failed to load contact image');
+              }}
+            />
           </div>
         </div>
       </div>

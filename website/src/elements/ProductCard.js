@@ -21,7 +21,11 @@ const ProductCard = ({ item, category }) => {
           <img 
             src={item.img} 
             alt={item.name} 
-            className="product-image" 
+            className="product-image"
+            onError={(e) => {
+              e.target.src = '/images/placeholder.png';
+              console.warn(`Failed to load image for ${item.name}`);
+            }}
           />
           
           {/* Quick actions overlay */}

@@ -35,51 +35,70 @@ const ProductCarousel = ({ items, category, title }) => {
   }, [items]);
 
   const scroll = (direction) => {
-    if (carouselRef.current) {
+    if (!carouselRef.current) return;
+    
+    try {
       const clientWidth = carouselRef.current.clientWidth;
       const scrollAmount = direction === 'left' ? -clientWidth * 0.8 : clientWidth * 0.8;
-      
-      // Force a reflow to ensure the scroll happens
-      console.log('Scrolling', direction, scrollAmount);
       
       carouselRef.current.scrollBy({
         left: scrollAmount,
         behavior: 'smooth'
       });
       
-      // Check arrow visibility after scrolling with multiple checks to handle animation
+      // Check arrow visibility after scrolling
       setTimeout(checkArrowVisibility, 100);
       setTimeout(checkArrowVisibility, 400);
       setTimeout(checkArrowVisibility, 700);
+    } catch (error) {
+      console.error('Error during carousel scroll:', error);
     }
   };
 
   // Touch/Mouse drag handling
   const handleMouseDown = (e) => {
-    setIsDragging(true);
-    setStartX(e.pageX - carouselRef.current.offsetLeft);
-    setScrollLeft(carouselRef.current.scrollLeft);
+    if (!carouselRef.current) return;
+    try {
+      setIsDragging(true);
+      setStartX(e.pageX - carouselRef.current.offsetLeft);
+      setScrollLeft(carouselRef.current.scrollLeft);
+    } catch (error) {
+      console.error('Error in mouse down handler:', error);
+    }
   };
 
   const handleTouchStart = (e) => {
-    setIsDragging(true);
-    setStartX(e.touches[0].pageX - carouselRef.current.offsetLeft);
-    setScrollLeft(carouselRef.current.scrollLeft);
+    if (!carouselRef.current || !e.touches[0]) return;
+    try {
+      setIsDragging(true);
+      setStartX(e.touches[0].pageX - carouselRef.current.offsetLeft);
+      setScrollLeft(carouselRef.current.scrollLeft);
+    } catch (error) {
+      console.error('Error in touch start handler:', error);
+    }
   };
 
   const handleMouseMove = (e) => {
-    if (!isDragging) return;
-    e.preventDefault();
-    const x = e.pageX - carouselRef.current.offsetLeft;
-    const distance = x - startX;
-    carouselRef.current.scrollLeft = scrollLeft - distance;
+    if (!isDragging || !carouselRef.current) return;
+    try {
+      e.preventDefault();
+      const x = e.pageX - carouselRef.current.offsetLeft;
+      const distance = x - startX;
+      carouselRef.current.scrollLeft = scrollLeft - distance;
+    } catch (error) {
+      console.error('Error in mouse move handler:', error);
+    }
   };
 
   const handleTouchMove = (e) => {
-    if (!isDragging) return;
-    const x = e.touches[0].pageX - carouselRef.current.offsetLeft;
-    const distance = x - startX;
-    carouselRef.current.scrollLeft = scrollLeft - distance;
+    if (!isDragging || !carouselRef.current || !e.touches[0]) return;
+    try {
+      const x = e.touches[0].pageX - carouselRef.current.offsetLeft;
+      const distance = x - startX;
+      carouselRef.current.scrollLeft = scrollLeft - distance;
+    } catch (error) {
+      console.error('Error in touch move handler:', error);
+    }
   };
 
   const handleDragEnd = () => {
