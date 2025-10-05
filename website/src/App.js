@@ -1,5 +1,5 @@
 import React, { Suspense, lazy } from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch, useLocation } from 'react-router-dom';
 import { ProductProvider, useProducts } from './context/ProductContext';
 import './main.css';
 import PromoBanner from './elements/PromoBanner';
@@ -17,6 +17,8 @@ const ContactPage = lazy(() => import('./components/ContactPage'));
 const AppContent = () => {
   const { state } = useProducts();
   const { sarees, lehengas, kurtis, latestCollection, loading, error } = state;
+  const location = useLocation();
+  const isHomePage = location.pathname === '/';
 
   if (loading) {
     return (
@@ -38,7 +40,7 @@ const AppContent = () => {
       <div>
         <PromoBanner />
         <Navbar />
-        <main id="main-content">
+        <main id="main-content" className={isHomePage ? '' : 'main-content'}>
           <Suspense fallback={<div style={{ textAlign: 'center', padding: '50px' }}>Loading...</div>}>
             <Switch>
               <Route path="/contact" component={ContactPage} />

@@ -34,6 +34,33 @@
     background-color: rgba(255, 255, 255, 0.98);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   }
+
+  .navbar-other-pages {
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .navbar-other-pages .navbar-link {
+    color: #333;
+    text-shadow: none;
+  }
+
+  .navbar-other-pages .logo-text {
+    color: #1976d2;
+    text-shadow: none;
+  }
+
+  .navbar-other-pages .navbar-link:hover {
+    color: #1976d2;
+  }
+
+  .navbar-other-pages .navbar-link.active {
+    color: #1976d2;
+  }
+
+  .navbar-other-pages .navbar-link::after {
+    background-color: #1976d2;
+  }
   
   .navbar-container {
     max-width: 1200px;

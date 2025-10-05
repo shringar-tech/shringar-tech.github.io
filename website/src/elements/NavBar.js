@@ -8,6 +8,7 @@ const Navbar = React.memo(() => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
+  const isHomePage = location.pathname === '/';
   
   // Handle scroll effects with debouncing
   const handleScroll = useCallback(() => {
@@ -38,7 +39,7 @@ const Navbar = React.memo(() => {
       <a href="#main-content" className="skip-link">
         Skip to main content
       </a>
-      <nav className={`navbar ${scrolled ? 'navbar-scrolled' : ''}`} role="navigation" aria-label="Main navigation">
+      <nav className={`navbar ${scrolled ? 'navbar-scrolled' : ''} ${!isHomePage ? 'navbar-other-pages' : ''}`} role="navigation" aria-label="Main navigation">
         <div className="navbar-container">
           <div className="navbar-left">
             <ul className="navbar-menu-left">
