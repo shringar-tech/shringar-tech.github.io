@@ -15,6 +15,9 @@ const MobileNavBar = () => {
           <button className="mobile-search-btn" onClick={() => setSearchOpen(true)}>
             <span className="material-icons">search</span>
           </button>
+          <Link to="/wishlist" className="mobile-wishlist-btn">
+            <span className="material-icons">favorite_border</span>
+          </Link>
           <button 
             className="mobile-menu-toggle"
             onClick={() => setIsMenuOpen(!isMenuOpen)}

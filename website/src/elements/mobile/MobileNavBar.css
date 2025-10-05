@@ -28,6 +28,7 @@
 }
 
 .mobile-search-btn,
+.mobile-wishlist-btn,
 .mobile-menu-toggle {
   background: none;
   border: none;
@@ -35,13 +36,19 @@
   cursor: pointer;
   padding: 8px;
   color: #1976d2;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.mobile-search-btn {
+.mobile-search-btn,
+.mobile-wishlist-btn {
   font-size: 1.2rem;
 }
 
-.mobile-search-btn .material-icons {
+.mobile-search-btn .material-icons,
+.mobile-wishlist-btn .material-icons {
   font-size: 20px;
 }
 

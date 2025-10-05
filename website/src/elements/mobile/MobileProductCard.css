@@ -1,14 +1,18 @@
 .mobile-product-card {
-  display: block;
+  position: relative;
   background: white;
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   overflow: hidden;
-  text-decoration: none;
-  color: inherit;
   width: 160px;
   min-width: 160px;
   flex-shrink: 0;
+}
+
+.mobile-product-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
 }
 
 .mobile-product-image {
@@ -55,4 +59,30 @@
   font-weight: 700;
   color: #1976d2;
   margin: 0;
+}
+
+.mobile-wishlist-heart {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 2;
+  color: #666;
+}
+
+.mobile-wishlist-heart:hover,
+.mobile-wishlist-heart.wishlisted {
+  color: #ff6b6b;
+}
+
+.mobile-wishlist-heart .material-icons {
+  font-size: 16px;
 }
