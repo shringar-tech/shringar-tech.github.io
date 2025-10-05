@@ -1,6 +1,7 @@
 import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Route, Switch, useLocation } from 'react-router-dom';
 import { ProductProvider, useProducts } from './context/ProductContext';
+import { WishlistProvider } from './context/WishlistContext';
 import './main.css';
 import PromoBanner from './elements/PromoBanner';
 import Navbar from './elements/NavBar';
@@ -13,6 +14,7 @@ import Footer from './components/layout/Footer';
 const ItemDetailPage = lazy(() => import('./components/ItemDetailPage'));
 const CategoryPage = lazy(() => import('./components/CategoryPage'));
 const ContactPage = lazy(() => import('./components/ContactPage'));
+const WishlistPage = lazy(() => import('./components/WishlistPage'));
 
 const AppContent = () => {
   const { state } = useProducts();
@@ -43,6 +45,7 @@ const AppContent = () => {
         <main id="main-content" className={isHomePage ? '' : 'main-content'}>
           <Suspense fallback={<div style={{ textAlign: 'center', padding: '50px' }}>Loading...</div>}>
             <Switch>
+              <Route path="/wishlist" component={WishlistPage} />
               <Route path="/contact" component={ContactPage} />
               <Route path="/:category/:id" component={ItemDetailPage} />
               <Route path="/new-arrivals">
@@ -97,11 +100,13 @@ const AppContent = () => {
 
 function App() {
   return (
-    <ProductProvider>
-      <Router basename={process.env.PUBLIC_URL}>
-        <AppContent />
-      </Router>
-    </ProductProvider>
+    <WishlistProvider>
+      <ProductProvider>
+        <Router basename={process.env.PUBLIC_URL}>
+          <AppContent />
+        </Router>
+      </ProductProvider>
+    </WishlistProvider>
   );
 }
 

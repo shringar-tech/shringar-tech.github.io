@@ -16,7 +16,8 @@ export const ROUTES = {
   SAREES: '/sarees',
   LEHENGAS: '/lehengas',
   KURTIS: '/kurtis',
-  CONTACT: '/contact'
+  CONTACT: '/contact',
+  WISHLIST: '/wishlist'
 };
 
 export const FALLBACK_PRICE = 2999;

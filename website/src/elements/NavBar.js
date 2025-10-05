@@ -1,7 +1,8 @@
 import React, { useState, useEffect, useCallback, useMemo } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useHistory } from 'react-router-dom';
 import { debounce } from '../utils/helpers';
 import { NAVBAR_SCROLL_THRESHOLD, DEBOUNCE_DELAYS, ROUTES } from '../utils/constants';
+import { useWishlist } from '../context/WishlistContext';
 import SearchModal from '../components/SearchModal';
 import './NavBar.css';
 
@@ -10,7 +11,9 @@ const Navbar = React.memo(() => {
   const [scrolled, setScrolled] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
   const location = useLocation();
+  const history = useHistory();
   const isHomePage = location.pathname === '/';
+  const { wishlistCount } = useWishlist();
   
   // Handle scroll effects with debouncing
   const handleScroll = useCallback(() => {
@@ -39,6 +42,10 @@ const Navbar = React.memo(() => {
   const toggleSearch = useCallback(() => {
     setSearchOpen(prev => !prev);
   }, []);
+
+  const goToWishlist = useCallback(() => {
+    history.push('/wishlist');
+  }, [history]);
 
   return (
     <>
@@ -85,6 +92,13 @@ const Navbar = React.memo(() => {
           
           <button className="search-icon desktop-search-icon" onClick={toggleSearch} aria-label="Search products">
             <span className="material-icons">search</span>
+          </button>
+          
+          <button className="wishlist-icon desktop-wishlist-icon" onClick={goToWishlist} aria-label="Wishlist">
+            <span className="material-icons">favorite_border</span>
+            {wishlistCount > 0 && (
+              <span className="wishlist-count">{wishlistCount}</span>
+            )}
           </button>
           
           <div className={`navbar-menu-icon ${mobileMenuOpen ? 'active' : ''}`} onClick={toggleMobileMenu}>

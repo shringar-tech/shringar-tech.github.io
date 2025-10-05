@@ -80,6 +80,39 @@
     background-color: #1565c0;
 }
 
+.wishlist-heart {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 3;
+    transition: all 0.3s ease;
+    color: #666;
+}
+
+.wishlist-heart:hover {
+    background: rgba(255, 255, 255, 1);
+    transform: scale(1.1);
+    color: #ff6b6b;
+}
+
+.wishlist-heart.wishlisted {
+    color: #ff6b6b;
+    background: rgba(255, 255, 255, 1);
+}
+
+.wishlist-heart .material-icons {
+    font-size: 18px;
+}
+
 .product-tag {
     position: absolute;
     top: 12px;

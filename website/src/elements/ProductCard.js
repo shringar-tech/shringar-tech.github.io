@@ -2,10 +2,13 @@ import React, { useState, useCallback, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { formatPrice, handleImageError } from '../utils/helpers';
 import { FALLBACK_PRICE } from '../utils/constants';
+import { useWishlist } from '../context/WishlistContext';
 import './ProductCard.css';
 
 const ProductCard = React.memo(({ item, category }) => {
   const [isHovered, setIsHovered] = useState(false);
+  const { addToWishlist, removeFromWishlist, isInWishlist } = useWishlist();
+  const isWishlisted = isInWishlist(item.id, category);
 
   // Memoize price formatting
   const formattedPrice = useMemo(() => formatPrice(item.price || FALLBACK_PRICE), [item.price]);
@@ -15,6 +18,16 @@ const ProductCard = React.memo(({ item, category }) => {
   );
 
   const onImageError = useCallback(handleImageError(), []);
+
+  const handleWishlistClick = useCallback((e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    if (isWishlisted) {
+      removeFromWishlist(item.id, category);
+    } else {
+      addToWishlist({ ...item, category });
+    }
+  }, [isWishlisted, item, category, addToWishlist, removeFromWishlist]);
 
   return (
     <article 
@@ -44,6 +57,17 @@ const ProductCard = React.memo(({ item, category }) => {
               View Details
             </Link>
           </div>
+          
+          {/* Wishlist Heart */}
+          <button 
+            className={`wishlist-heart ${isWishlisted ? 'wishlisted' : ''}`}
+            onClick={handleWishlistClick}
+            aria-label={isWishlisted ? 'Remove from wishlist' : 'Add to wishlist'}
+          >
+            <span className="material-icons">
+              {isWishlisted ? 'favorite' : 'favorite_border'}
+            </span>
+          </button>
           
           {/* Tags */}
           {item.isNew && <span className="product-tag new-tag">New</span>}
