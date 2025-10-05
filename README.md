@@ -49,7 +49,14 @@ Shringaarika is a modern React-based e-commerce website for Indian ethnic clothe
     │   ├── HomePage.js
     │   ├── ItemDetailPage.css
     │   ├── ItemDetailPage.js
+    │   ├── SearchModal.css
+    │   ├── SearchModal.js
+    │   ├── WishlistPage.css
+    │   ├── WishlistPage.js
     │   └── layout
+    ├── context
+    │   ├── ProductContext.js
+    │   └── WishlistContext.js
     ├── data
     ├── elements
     │   ├── HeroSection.css
@@ -60,23 +67,32 @@ Shringaarika is a modern React-based e-commerce website for Indian ethnic clothe
     │   ├── ProductCard.js
     │   ├── ProductCarousel.css
     │   ├── ProductCarousel.js
+    │   ├── PromoBanner.css
+    │   ├── PromoBanner.js
     │   ├── ScrollToTop.css
     │   └── ScrollToTop.js
     ├── image
     │   └── hero
-    └── styles
-        ├── mixins.css
-        └── variables.css
+    ├── styles
+    │   ├── mixins.css
+    │   └── variables.css
+    └── utils
+        ├── constants.js
+        └── helpers.js
 ```
 
 ## Features
 - **Promotional Banner**: Auto-rotating banner with marketing messages
 - **Home Page**: Displays product categories in horizontally scrollable carousels with navigation arrows
-- **Navigation**: New Arrivals, Best Sellers, Shop All, and Contact sections
+- **Navigation**: New Arrivals, Best Sellers, Shop All, and Contact sections with search and wishlist icons
 - **Category Pages**: Shows items belonging to specific categories
 - **Item Detail Page**: Detailed product information with images, descriptions, and pricing
 - **Contact Page**: Professional contact information with elegant design
-- **Responsive Design**: Mobile-friendly layout with optimized performance
+- **Search Functionality**: Real-time product search across all categories with modal interface
+- **Wishlist System**: Add/remove items to wishlist with localStorage persistence and dedicated wishlist page
+- **State Management**: Context API with useReducer for global product and wishlist state
+- **Performance Optimization**: React.memo, lazy loading, debouncing, and memoized calculations
+- **Responsive Design**: Mobile-friendly layout with optimized performance and consistent card sizing
 - **Accessibility**: WCAG 2.1 AA compliant with screen reader support
 - **SEO Optimized**: Meta tags, structured data, and Open Graph integration
 
