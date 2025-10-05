@@ -22,6 +22,8 @@ src/
 │   ├── ContactPage.js    # Contact information
 │   ├── ItemDetailPage.js # Individual product details
 │   ├── ErrorBoundary.js  # Error handling
+│   ├── mobile/           # Mobile-specific pages
+│   │   └── MobileHomePage.js # Mobile-optimized homepage
 │   └── layout/
 │       └── Footer.js     # Site footer
 ├── elements/             # Reusable UI components
@@ -31,7 +33,11 @@ src/
 │   ├── ProductCarousel.js # Horizontal product carousel
 │   ├── PromoBanner.js    # Rotating promotional banner
 │   ├── ScrollToTop.js    # Scroll to top button
-│   └── WhatsAppButton.js # Fixed WhatsApp contact button
+│   ├── WhatsAppButton.js # Fixed WhatsApp contact button
+│   └── mobile/           # Mobile-optimized components
+│       ├── MobileNavBar.js    # Mobile navigation with hamburger menu
+│       ├── MobileCarousel.js  # Touch-optimized product carousel
+│       └── MobileProductCard.js # Compact mobile product cards
 ├── context/              # State management
 │   └── ProductContext.js # Global product state
 ├── utils/                # Shared utilities
@@ -48,7 +54,15 @@ src/
 
 ## Core Features
 
-### 1. WhatsApp Integration
+### 1. Mobile-First Architecture
+- **Responsive Detection**: useMobile hook detects screen size ≤ 768px
+- **Separate Mobile Components**: Dedicated mobile-optimized components
+- **Touch-Optimized**: Native scroll with snap behavior for carousels
+- **Mobile Navigation**: Hamburger menu with search and wishlist icons
+- **Compact Design**: 160px product cards vs 400px desktop cards
+- **Performance Focused**: Simplified animations and reduced complexity
+
+### 2. WhatsApp Integration
 - **WhatsAppButton Component**: Fixed position contact button on all pages
 - **Direct messaging**: Opens WhatsApp with predefined message
 - **Mobile optimized**: Responsive design for all screen sizes
@@ -56,14 +70,14 @@ src/
 - **Hover effects**: Scale animation and enhanced shadow on hover
 - **Customizable**: Easy to update phone number and default message
 
-### 2. Enhanced UI/UX Design
+### 3. Enhanced UI/UX Design
 - **Larger product cards**: Increased from 280px to 400px width for better screen utilization
 - **Improved spacing**: Enhanced gaps and padding throughout the interface
 - **Modern styling**: Updated border radius, shadows, and typography
 - **Better proportions**: Optimized card heights and content layout
 - **Enhanced home page**: Larger category cards with improved visual hierarchy
 
-### 3. Promotional System
+### 4. Promotional System
 - **PromoBanner Component**: Rotating promotional messages at top of site
 - **Auto-rotation**: 4-second intervals with smooth CSS transitions
 - **Message Management**: Easy to update promotional content array
@@ -283,6 +297,12 @@ npm run deploy       # Deploy to GitHub Pages
 ## Recent Updates
 
 ### Latest Features Added (Current Version)
+- **Mobile-First Design**: Complete mobile-optimized experience with separate components
+- **Responsive Architecture**: Conditional rendering based on screen size detection
+- **Mobile Navigation**: Hamburger menu with search, wishlist, and category links
+- **Touch-Optimized Carousels**: Native horizontal scrolling with snap behavior
+- **Mobile Wishlist**: Full wishlist functionality on mobile with heart icons
+- **Mobile Search**: Integrated SearchModal functionality for mobile devices
 - **WhatsApp Integration**: Fixed position WhatsApp button for instant customer contact
 - **Enhanced UI Design**: Larger product cards (400px width) and improved spacing
 - **Better Screen Utilization**: Increased container widths and optimized layouts
