@@ -1,4 +1,5 @@
 import React from 'react';
+import { handleImageError } from '../utils/helpers';
 import './ContactPage.css';
 
 function ContactPage() {
@@ -44,10 +45,7 @@ function ContactPage() {
             <img 
               src="/images/saree/img_6.png" 
               alt="Shringar Office" 
-              onError={(e) => {
-                e.target.style.display = 'none';
-                console.warn('Failed to load contact image');
-              }}
+              onError={handleImageError()}
             />
           </div>
         </div>

@@ -1,14 +1,20 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback, useMemo } from 'react';
 import { Link } from 'react-router-dom';
+import { formatPrice, handleImageError } from '../utils/helpers';
+import { FALLBACK_PRICE } from '../utils/constants';
 import './ProductCard.css';
 
-const ProductCard = ({ item, category }) => {
+const ProductCard = React.memo(({ item, category }) => {
   const [isHovered, setIsHovered] = useState(false);
 
-  // Format price with rupee symbol
-  const formatPrice = (price) => {
-    return `₹${price.toLocaleString('en-IN')}`;
-  };
+  // Memoize price formatting
+  const formattedPrice = useMemo(() => formatPrice(item.price || FALLBACK_PRICE), [item.price]);
+  const formattedOriginalPrice = useMemo(() => 
+    item.originalPrice ? formatPrice(item.originalPrice) : null, 
+    [item.originalPrice]
+  );
+
+  const onImageError = useCallback(handleImageError(), []);
 
   return (
     <div 
@@ -22,10 +28,7 @@ const ProductCard = ({ item, category }) => {
             src={item.img} 
             alt={item.name} 
             className="product-image"
-            onError={(e) => {
-              e.target.src = '/images/placeholder.png';
-              console.warn(`Failed to load image for ${item.name}`);
-            }}
+            onError={onImageError}
           />
           
           {/* Quick actions overlay */}
@@ -46,19 +49,19 @@ const ProductCard = ({ item, category }) => {
           <h3 className="product-name">{item.name}</h3>
           
           <div className="product-price-container">
-            {item.originalPrice && item.originalPrice > item.price ? (
+            {formattedOriginalPrice && item.originalPrice > item.price ? (
               <>
-                <span className="product-price">{formatPrice(item.price)}</span>
-                <span className="product-original-price">{formatPrice(item.originalPrice)}</span>
+                <span className="product-price">{formattedPrice}</span>
+                <span className="product-original-price">{formattedOriginalPrice}</span>
               </>
             ) : (
-              <span className="product-price">{formatPrice(item.price || 2999)}</span>
+              <span className="product-price">{formattedPrice}</span>
             )}
           </div>
         </div>
       </div>
     </div>
   );
-};
+});
 
 export default ProductCard;

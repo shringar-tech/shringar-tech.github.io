@@ -1,32 +1,33 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback, useMemo } from 'react';
+import { debounce } from '../utils/helpers';
+import { SCROLL_THRESHOLD, DEBOUNCE_DELAYS } from '../utils/constants';
 import './ScrollToTop.css';
 
-const ScrollToTop = () => {
+const ScrollToTop = React.memo(() => {
   const [isVisible, setIsVisible] = useState(false);
 
   // Show button when scrolled down enough
-  useEffect(() => {
-    const toggleVisibility = () => {
-      if (window.pageYOffset > 300) {
-        setIsVisible(true);
-      } else {
-        setIsVisible(false);
-      }
-    };
-
-    window.addEventListener('scroll', toggleVisibility);
-    
-    // Clean up the event listener
-    return () => window.removeEventListener('scroll', toggleVisibility);
+  const toggleVisibility = useCallback(() => {
+    setIsVisible(window.pageYOffset > SCROLL_THRESHOLD);
   }, []);
 
+  const debouncedToggleVisibility = useMemo(
+    () => debounce(toggleVisibility, DEBOUNCE_DELAYS.SCROLL),
+    [toggleVisibility]
+  );
+
+  useEffect(() => {
+    window.addEventListener('scroll', debouncedToggleVisibility);
+    return () => window.removeEventListener('scroll', debouncedToggleVisibility);
+  }, [debouncedToggleVisibility]);
+
   // Scroll to top function
-  const scrollToTop = () => {
+  const scrollToTop = useCallback(() => {
     window.scrollTo({
       top: 0,
       behavior: 'smooth'
     });
-  };
+  }, []);
 
   return (
     <>
@@ -41,6 +42,6 @@ const ScrollToTop = () => {
       )}
     </>
   );
-};
+});
 
 export default ScrollToTop;

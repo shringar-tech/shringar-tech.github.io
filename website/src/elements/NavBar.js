@@ -1,35 +1,42 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { debounce } from '../utils/helpers';
+import { NAVBAR_SCROLL_THRESHOLD, DEBOUNCE_DELAYS, ROUTES } from '../utils/constants';
 import './NavBar.css';
 
-const Navbar = () => {
+const Navbar = React.memo(() => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
   
-  // Handle scroll effects
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
-    };
-    
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+  // Handle scroll effects with debouncing
+  const handleScroll = useCallback(() => {
+    setScrolled(window.scrollY > NAVBAR_SCROLL_THRESHOLD);
   }, []);
+
+  const debouncedHandleScroll = useMemo(
+    () => debounce(handleScroll, DEBOUNCE_DELAYS.NAVBAR_SCROLL),
+    [handleScroll]
+  );
+
+  useEffect(() => {
+    window.addEventListener('scroll', debouncedHandleScroll);
+    return () => window.removeEventListener('scroll', debouncedHandleScroll);
+  }, [debouncedHandleScroll]);
   
   // Close mobile menu when route changes
   useEffect(() => {
     setMobileMenuOpen(false);
   }, [location]);
 
-  const toggleMobileMenu = () => {
-    setMobileMenuOpen(!mobileMenuOpen);
-  };
+  const toggleMobileMenu = useCallback(() => {
+    setMobileMenuOpen(prev => !prev);
+  }, []);
 
   return (
     <nav className={`navbar ${scrolled ? 'navbar-scrolled' : ''}`}>
       <div className="navbar-container">
-        <Link to="/" className="navbar-logo">
+        <Link to={ROUTES.HOME} className="navbar-logo">
           <span className="logo-text">Shringaarika</span>
         </Link>
         
@@ -41,27 +48,27 @@ const Navbar = () => {
         
         <ul className={`navbar-menu ${mobileMenuOpen ? 'active' : ''}`}>
           <li className="navbar-item">
-            <Link to="/" className={`navbar-link ${location.pathname === '/' ? 'active' : ''}`}>
+            <Link to={ROUTES.HOME} className={`navbar-link ${location.pathname === ROUTES.HOME ? 'active' : ''}`}>
               Home
             </Link>
           </li>
           <li className="navbar-item">
-            <Link to="/sarees" className={`navbar-link ${location.pathname.includes('/sarees') ? 'active' : ''}`}>
+            <Link to={ROUTES.SAREES} className={`navbar-link ${location.pathname.includes(ROUTES.SAREES) ? 'active' : ''}`}>
               Sarees
             </Link>
           </li>
           <li className="navbar-item">
-            <Link to="/lehengas" className={`navbar-link ${location.pathname.includes('/lehengas') ? 'active' : ''}`}>
+            <Link to={ROUTES.LEHENGAS} className={`navbar-link ${location.pathname.includes(ROUTES.LEHENGAS) ? 'active' : ''}`}>
               Lehengas
             </Link>
           </li>
           <li className="navbar-item">
-            <Link to="/kurtis" className={`navbar-link ${location.pathname.includes('/kurtis') ? 'active' : ''}`}>
+            <Link to={ROUTES.KURTIS} className={`navbar-link ${location.pathname.includes(ROUTES.KURTIS) ? 'active' : ''}`}>
               Kurtis
             </Link>
           </li>
           <li className="navbar-item">
-            <Link to="/contact" className={`navbar-link ${location.pathname === '/contact' ? 'active' : ''}`}>
+            <Link to={ROUTES.CONTACT} className={`navbar-link ${location.pathname === ROUTES.CONTACT ? 'active' : ''}`}>
               Contact
             </Link>
           </li>
@@ -69,6 +76,6 @@ const Navbar = () => {
       </div>
     </nav>
   );
-};
+});
 
 export default Navbar;

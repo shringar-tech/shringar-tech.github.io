@@ -1,9 +1,11 @@
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useRef, useState, useEffect, useCallback, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import ProductCard from './ProductCard';
+import { debounce } from '../utils/helpers';
+import { CAROUSEL_SCROLL_MULTIPLIER, ARROW_VISIBILITY_THRESHOLD, DEBOUNCE_DELAYS } from '../utils/constants';
 import './ProductCarousel.css';
 
-const ProductCarousel = ({ items, category, title }) => {
+const ProductCarousel = React.memo(({ items, category, title }) => {
   const carouselRef = useRef(null);
   const [showLeftArrow, setShowLeftArrow] = useState(false);
   const [showRightArrow, setShowRightArrow] = useState(true);
@@ -13,13 +15,18 @@ const ProductCarousel = ({ items, category, title }) => {
 
   const isLatestCollection = title === "Our Latest Collections";
   
-  const checkArrowVisibility = () => {
+  const checkArrowVisibility = useCallback(() => {
     if (carouselRef.current) {
       const { scrollLeft, scrollWidth, clientWidth } = carouselRef.current;
-      setShowLeftArrow(scrollLeft > 5); // Small threshold to account for browser differences
-      setShowRightArrow(scrollLeft < scrollWidth - clientWidth - 5); // Small threshold for end detection
+      setShowLeftArrow(scrollLeft > ARROW_VISIBILITY_THRESHOLD);
+      setShowRightArrow(scrollLeft < scrollWidth - clientWidth - ARROW_VISIBILITY_THRESHOLD);
     }
-  };
+  }, []);
+
+  const debouncedCheckArrows = useMemo(
+    () => debounce(checkArrowVisibility, DEBOUNCE_DELAYS.CAROUSEL_ARROW_CHECK),
+    [checkArrowVisibility]
+  );
 
   useEffect(() => {
     // Initial check after items are loaded and rendered
@@ -34,26 +41,23 @@ const ProductCarousel = ({ items, category, title }) => {
     return () => window.removeEventListener('resize', checkArrowVisibility);
   }, [items]);
 
-  const scroll = (direction) => {
+  const scroll = useCallback((direction) => {
     if (!carouselRef.current) return;
     
     try {
       const clientWidth = carouselRef.current.clientWidth;
-      const scrollAmount = direction === 'left' ? -clientWidth * 0.8 : clientWidth * 0.8;
+      const scrollAmount = direction === 'left' ? -clientWidth * CAROUSEL_SCROLL_MULTIPLIER : clientWidth * CAROUSEL_SCROLL_MULTIPLIER;
       
       carouselRef.current.scrollBy({
         left: scrollAmount,
         behavior: 'smooth'
       });
       
-      // Check arrow visibility after scrolling
-      setTimeout(checkArrowVisibility, 100);
-      setTimeout(checkArrowVisibility, 400);
-      setTimeout(checkArrowVisibility, 700);
+      setTimeout(checkArrowVisibility, 300);
     } catch (error) {
       console.error('Error during carousel scroll:', error);
     }
-  };
+  }, [checkArrowVisibility]);
 
   // Touch/Mouse drag handling
   const handleMouseDown = (e) => {
@@ -122,7 +126,7 @@ const ProductCarousel = ({ items, category, title }) => {
         <div 
           className="carousel-items" 
           ref={carouselRef}
-          onScroll={checkArrowVisibility}
+          onScroll={debouncedCheckArrows}
           onMouseDown={handleMouseDown}
           onMouseMove={handleMouseMove}
           onMouseUp={handleDragEnd}
@@ -151,6 +155,6 @@ const ProductCarousel = ({ items, category, title }) => {
       </div>
     </section>
   );
-};
+});
 
 export default ProductCarousel;
