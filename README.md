@@ -1,7 +1,7 @@
 # E-commerce Website for Indian Ethnic Clothes
 
 ## Overview
-This project is an e-commerce website designed for showcasing and selling Indian ethnic clothes, including categories like sarees and lehengas. The website allows users to browse items, view details, and make purchases.
+Shringaarika is a modern React-based e-commerce website for Indian ethnic clothes. Built with performance, accessibility, and SEO optimization in mind, featuring elegant Alice serif typography and a sophisticated user experience.
 
 ## Project Structure
 ```
@@ -70,10 +70,15 @@ This project is an e-commerce website designed for showcasing and selling Indian
 ```
 
 ## Features
-- **Home Page**: Displays product categories in horizontally scrollable carousels with navigation arrows, styled with an ethnic theme.
-- **Category Page**: Shows items belonging to a specific category (e.g., sarees, lehengas).
-- **Item Detail Page**: Provides detailed information about a selected item, including images, descriptions, and pricing.
-- **Interactive UI Elements**: Modern carousel navigation with custom-designed ethnic-themed controls.
+- **Promotional Banner**: Auto-rotating banner with marketing messages
+- **Home Page**: Displays product categories in horizontally scrollable carousels with navigation arrows
+- **Navigation**: New Arrivals, Best Sellers, Shop All, and Contact sections
+- **Category Pages**: Shows items belonging to specific categories
+- **Item Detail Page**: Detailed product information with images, descriptions, and pricing
+- **Contact Page**: Professional contact information with elegant design
+- **Responsive Design**: Mobile-friendly layout with optimized performance
+- **Accessibility**: WCAG 2.1 AA compliant with screen reader support
+- **SEO Optimized**: Meta tags, structured data, and Open Graph integration
 
 ## Setup Instructions
 1. Clone the repository:
@@ -94,6 +99,19 @@ This project is an e-commerce website designed for showcasing and selling Indian
    ```
 
 ## Build and Deploy
+
+### Option 1: Automated Build and Copy (Recommended)
+1. Navigate to website directory:
+   ```bash
+   cd website
+   ```
+2. Build and copy to root in one command:
+   ```bash
+   npm run build-and-copy
+   ```
+3. Commit and push changes to deploy
+
+### Option 2: Manual Process
 1. Navigate to website directory:
    ```bash
    cd website
@@ -102,14 +120,18 @@ This project is an e-commerce website designed for showcasing and selling Indian
    ```bash
    npm run build
    ```
-3. Deploy to GitHub Pages:
+3. Manually copy build folder contents to root directory
+4. Commit and push changes
+
+### Option 3: GitHub Pages Deploy
+1. Navigate to website directory:
+   ```bash
+   cd website
+   ```
+2. Deploy using gh-pages:
    ```bash
    npm run deploy
    ```
-3. Configure GitHub Pages:
-   - Go to repository Settings > Pages
-   - Select 'gh-pages' branch as source
-   - Save the changes
 
 The site will be available at https://shringar-tech.github.io after deployment.
 
