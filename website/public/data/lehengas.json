@@ -1,12 +1,22 @@
 [
   {
     "id": 1,
-    "name": "Bridal Lehenga",
-    "img": "../images/lehenga/img_6.png",
+    "name": "Orange Bridal Lehenga",
+    "img": "/images/lehenga/orange-lehenga-1/orange-lehenga-1.png",
+    "images": [
+      "/images/lehenga/orange-lehenga-1/orange-lehenga-1.png",
+      "/images/lehenga/orange-lehenga-1/orange-lehenga-2.png",
+      "/images/lehenga/orange-lehenga-1/orange-lehenga-3.png",
+      "/images/lehenga/orange-lehenga-1/orange-lehenga-4.png",
+      "/images/lehenga/orange-lehenga-1/orange-lehenga-5.png",
+      "/images/lehenga/orange-lehenga-1/orange-lehenga-6.png",
+      "/images/lehenga/orange-lehenga-1/orange-lehenga-7.png",
+      "/images/lehenga/orange-lehenga-1/orange-lehenga-8.png"
+    ],
     "price": 300,
     "dateOfManufacture": "2025-01-20",
     "material": "Silk and Velvet",
-    "description": "A stunning bridal lehenga with heavy embroidery."
+    "description": "A stunning orange bridal lehenga with heavy embroidery and intricate designs."
   },
   {
     "id": 2,

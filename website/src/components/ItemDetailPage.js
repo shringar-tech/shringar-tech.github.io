@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import ImageGallery from '../elements/ImageGallery';
 import './ItemDetailPage.css';
 
 function ItemDetailPage() {
@@ -23,15 +24,11 @@ function ItemDetailPage() {
     <div className="item-detail-container">
       <div className="item-card">
         <div className="item-image-container">
-          <div className="item-image">
-            <img src={item.img} alt={item.name} />
-          </div>
-          <div className="image-gallery-dots">
-            {/* Placeholder for multiple image dots */}
-            <span className="dot active"></span>
-            <span className="dot"></span>
-            <span className="dot"></span>
-          </div>
+          <ImageGallery 
+            images={item.images || [item.img]} 
+            alt={item.name}
+            className="item-gallery"
+          />
         </div>
         <div className="item-details">
           <div className="category-badge">{category}</div>
