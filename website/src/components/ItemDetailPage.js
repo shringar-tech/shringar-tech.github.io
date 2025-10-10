@@ -35,25 +35,22 @@ function ItemDetailPage() {
           <h1>{item.name}</h1>
           <div className="price-section">
             <div className="price-tag">${item.price}</div>
-            <button className="add-to-cart-btn">
-              Add to Cart
-              <span className="material-icons">shopping_cart</span>
-            </button>
           </div>
-          <div className="details-grid">
-            <div className="detail-item">
-              <span className="label">Date of Manufacture</span>
-              <span className="value">{item.dateOfManufacture}</span>
-            </div>
-            <div className="detail-item">
-              <span className="label">Material</span>
-              <span className="value">{item.material}</span>
-            </div>
-          </div>
+
           <div className="description">
             <h2>Description</h2>
             <p>{item.description}</p>
           </div>
+          {item.specifications && (
+            <div className="specifications">
+              <h2>Product Details</h2>
+              <ul>
+                {item.specifications.map((spec, index) => (
+                  <li key={index}>{spec}</li>
+                ))}
+              </ul>
+            </div>
+          )}
         </div>
       </div>
     </div>

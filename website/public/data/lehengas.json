@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "name": "Orange Bridal Lehenga",
+    "name": "The Roshni Lehenga Set",
     "img": "/images/lehenga/orange-lehenga-1/orange-lehenga-1.png",
     "images": [
       "/images/lehenga/orange-lehenga-1/orange-lehenga-1.png",
@@ -14,17 +14,27 @@
       "/images/lehenga/orange-lehenga-1/orange-lehenga-8.png"
     ],
     "price": 300,
-    "dateOfManufacture": "2025-01-20",
-    "material": "Silk and Velvet",
-    "description": "A stunning orange bridal lehenga with heavy embroidery and intricate designs."
+    "description": "Embrace vibrant elegance with this gorgeous bright orange Peplum top and lehenga set. Featuring a comfortable, flared peplum-style kurta and flared lehenga skirt, this set is crafted from a silk blend fabric that holds its shape beautifully. The look is completed with a matching organza dupatta, all subtly enhanced with delicate light golden gota work trim. It's a perfect statement piece for any festive occasion.\n\nIdeal for Mehendi ceremonies, festivals, or celebratory dinners. Pair it with bold gold or silver jewellery.",
+    "specifications": [
+      "Kurta & Pant - Silk Blend (Fabric)",
+      "Dupatta - Sheer Organza (Fabric)",
+      "Color - Bright Orange / Tangerine",
+      "No. of Components - Set of 3",
+      "Length of kurta - 32 inches (Approximate peplum length)",
+      "Length of skirt - 38 inches (Approximate)",
+      "Dupatta - 2.5 meter",
+      "Embroidery Details - Light Golden Gota Work on Borders",
+      "Product Highlight - Flattering Peplum Silhouette",
+      "Wash Care - Dry Clean Only",
+      "Delivery Time - 10-15 Days",
+      "Customization - Only Size and Length Of Product"
+    ]
   },
   {
     "id": 2,
     "name": "Party Wear Lehenga",
     "img": "../images/lehenga/img_5.png",
     "price": 200,
-    "dateOfManufacture": "2025-02-05",
-    "material": "Georgette",
     "description": "A stylish lehenga perfect for parties and events."
   },
   {
@@ -32,8 +42,6 @@
     "name": "Designer Lehenga",
     "img": "../images/lehenga/img_4.png",
     "price": 250,
-    "dateOfManufacture": "2025-03-10",
-    "material": "Silk",
     "description": "A designer lehenga with intricate patterns."
   },
   {
@@ -41,8 +49,6 @@
     "name": "Traditional Lehenga",
     "img": "../images/lehenga/img_3.png",
     "price": 220,
-    "dateOfManufacture": "2025-01-25",
-    "material": "Silk and Cotton",
     "description": "A traditional lehenga with rich cultural designs."
   },
   {
@@ -50,8 +56,6 @@
     "name": "Embroidered Lehenga",
     "img": "../images/lehenga/img_1.png",
     "price": 280,
-    "dateOfManufacture": "2025-02-15",
-    "material": "Velvet",
     "description": "An embroidered lehenga with detailed craftsmanship."
   },
   {
@@ -59,8 +63,6 @@
     "name": "Casual Lehenga",
     "img": "../images/lehenga/img_2.png",
     "price": 150,
-    "dateOfManufacture": "2025-03-05",
-    "material": "Cotton",
     "description": "A casual lehenga suitable for everyday wear."
   },
   {
@@ -68,8 +70,6 @@
     "name": "Festive Lehenga",
     "img": "../images/lehenga/img_3.png",
     "price": 230,
-    "dateOfManufacture": "2025-01-30",
-    "material": "Silk",
     "description": "A festive lehenga perfect for celebrations."
   },
   {
@@ -77,8 +77,6 @@
     "name": "Modern Lehenga",
     "img": "../images/lehenga/img_4.png",
     "price": 210,
-    "dateOfManufacture": "2025-02-20",
-    "material": "Georgette",
     "description": "A modern lehenga with contemporary designs."
   },
   {
@@ -86,8 +84,6 @@
     "name": "Printed Lehenga",
     "img": "../images/lehenga/img_1.png",
     "price": 170,
-    "dateOfManufacture": "2025-03-01",
-    "material": "Cotton",
     "description": "A printed lehenga with vibrant colors."
   },
   {
@@ -95,8 +91,6 @@
     "name": "Velvet Lehenga",
     "img": "../images/lehenga/img_2.png",
     "price": 260,
-    "dateOfManufacture": "2025-01-20",
-    "material": "Velvet",
     "description": "A luxurious velvet lehenga with elegant designs."
   }
 ]

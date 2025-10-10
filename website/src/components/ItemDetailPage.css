@@ -186,6 +186,45 @@
   color: #616161;
 }
 
+.specifications {
+  margin-top: 32px;
+}
+
+.specifications h2 {
+  font-size: 1.5rem;
+  color: #424242;
+  margin: 0 0 16px 0;
+  font-weight: 500;
+}
+
+.specifications ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.specifications li {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #616161;
+  padding: 8px 0;
+  border-bottom: 1px solid #f0f0f0;
+  position: relative;
+  padding-left: 20px;
+}
+
+.specifications li:before {
+  content: '•';
+  color: #1976d2;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+.specifications li:last-child {
+  border-bottom: none;
+}
+
 .loading {
   display: flex;
   justify-content: center;
