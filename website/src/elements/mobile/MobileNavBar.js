@@ -10,7 +10,13 @@ const MobileNavBar = () => {
   return (
     <nav className="mobile-navbar">
       <div className="mobile-nav-header">
-        <Link to="/" className="mobile-logo">Shringaarika</Link>
+        <Link to="/" className="mobile-logo">
+          <img 
+            src="/images/header-website.png" 
+            alt="Shringaarika" 
+            className="mobile-logo-image"
+          />
+        </Link>
         <div className="mobile-nav-actions">
           <button className="mobile-search-btn" onClick={() => setSearchOpen(true)}>
             <span className="material-icons">search</span>

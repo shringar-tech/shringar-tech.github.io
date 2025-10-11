@@ -71,7 +71,11 @@ const Navbar = React.memo(() => {
           
           <div className="navbar-center">
             <Link to={ROUTES.HOME} className="navbar-logo">
-              <span className="logo-text">Shringaarika</span>
+              <img 
+                src="/images/header-website.png" 
+                alt="Shringaarika" 
+                className="logo-image"
+              />
             </Link>
           </div>
           

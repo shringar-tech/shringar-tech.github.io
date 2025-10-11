@@ -19,6 +19,15 @@
   color: #1976d2;
   text-decoration: none;
   letter-spacing: -0.5px;
+  display: flex;
+  align-items: center;
+}
+
+.mobile-logo-image {
+  height: 50px;
+  width: auto;
+  max-width: 180px;
+  object-fit: contain;
 }
 
 .mobile-nav-actions {
