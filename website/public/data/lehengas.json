@@ -32,10 +32,36 @@
   },
   {
     "id": 2,
-    "name": "Party Wear Lehenga",
-    "img": "../images/lehenga/img_5.png",
+    "name": "GULABI JHALAK LEHENGA",
+    "img": "/images/lehenga/pink-lehenga-1/lehenga-pink-1.png",
+    "images": [
+      "/images/lehenga/pink-lehenga-1/lehenga-pink-1.png",
+      "/images/lehenga/pink-lehenga-1/lehenga-pink-2.png",
+      "/images/lehenga/pink-lehenga-1/lehenga-pink-3.png",
+      "/images/lehenga/pink-lehenga-1/lehenga-pink-4.png",
+      "/images/lehenga/pink-lehenga-1/lehenga-pink-5.png",
+      "/images/lehenga/pink-lehenga-1/lehenga-pink-6.png",
+      "/images/lehenga/pink-lehenga-1/lehenga-pink-7.png",
+      "/images/lehenga/pink-lehenga-1/lehenga-pink-8.png",
+      "/images/lehenga/pink-lehenga-1/lehenga-pink-9.png"
+    ],
     "price": 200,
-    "description": "A stylish lehenga perfect for parties and events."
+    "description": "Embrace pure exuberance with this magnificent Reddish Rani Pink Lehenga Set. Featuring a vibrant choli with an elegant V-cut back and a beautifully flared lehenga skirt, this set is crafted from luxurious Crepe fabric that provides excellent structure and drape. The choli sleeves are adorned with rich multicolored thread and mirror work, while the skirt features stunning panel-style embroidery with traditional motifs. The look is completed with a matching net dupatta trimmed with delicate border work. This set is a perfect statement piece for any celebratory occasion.\n\nIdeal for Sangeet, destination weddings, or any festive evening event. Pair it with traditional Kundan jewellery.",
+    "specifications": [
+      "Lehenga & Choli - Crepe (Fabric)",
+      "Dupatta - Soft Net (Fabric)",
+      "Color - Reddish Rani Pink / Cranberry Pink",
+      "No. of Components - Set of 3 (Lehenga, Choli, Dupatta)",
+      "Length of Choli - 14-15 inches (Approximate)",
+      "Length of Lehenga - 45 inches (Approximate)",
+      "Dupatta - 2.5 meter",
+      "Embroidery Details - Intricate Multicolor Thread and Mirror Work on Sleeves; Panel Embroidery on Skirt",
+      "Cancan - Yes",
+      "Product Highlight - Luxurious Crepe Fabric and Heavily Embroidered Sleeves",
+      "Wash Care - Dry Clean Only",
+      "Delivery Time - 10-15 Days",
+      "Customization - Only Size and Length Of Product"
+    ]
   },
   {
     "id": 3,
