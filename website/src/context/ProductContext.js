@@ -6,6 +6,8 @@ const initialState = {
   sarees: [],
   lehengas: [],
   kurtis: [],
+  anarkalis: [],
+  shararas: [],
   latestCollection: [],
   loading: true,
   error: null
@@ -37,23 +39,35 @@ export const ProductProvider = ({ children }) => {
       dispatch({ type: 'SET_LOADING', payload: true });
       
       try {
-        const [sareesRes, lehengasRes, kurtisRes, latestRes] = await Promise.all([
+        const [sareesRes, lehengasRes, kurtisRes, anarkalisRes, shararasRes, latestRes] = await Promise.all([
           fetch('/data/sarees.json'),
           fetch('/data/lehengas.json'),
           fetch('/data/kurtis.json'),
+          fetch('/data/anarkalis.json'),
+          fetch('/data/shararas.json'),
           fetch('/data/latestcollection.json')
         ]);
 
-        if (!sareesRes.ok || !lehengasRes.ok || !kurtisRes.ok || !latestRes.ok) {
+        if (!sareesRes.ok || !lehengasRes.ok || !kurtisRes.ok || !anarkalisRes.ok || !shararasRes.ok || !latestRes.ok) {
           throw new Error('Failed to fetch data');
         }
 
-        const [sarees, lehengas, kurtis, latestCollection] = await Promise.all([
+        const [sarees, lehengas, kurtis, anarkalis, shararas, latestRefs] = await Promise.all([
           sareesRes.json(),
           lehengasRes.json(),
           kurtisRes.json(),
+          anarkalisRes.json(),
+          shararasRes.json(),
           latestRes.json()
         ]);
+
+        // Resolve latest collection references
+        const allProducts = { sarees, lehengas, kurtis, anarkalis, shararas };
+        const latestCollection = latestRefs.map(ref => {
+          const categoryItems = allProducts[ref.category] || [];
+          const item = categoryItems.find(item => item.id === ref.id);
+          return item ? { ...item, category: ref.category } : null;
+        }).filter(Boolean);
 
         dispatch({
           type: 'SET_PRODUCTS',
@@ -61,6 +75,8 @@ export const ProductProvider = ({ children }) => {
             sarees: sarees || [],
             lehengas: lehengas || [],
             kurtis: kurtis || [],
+            anarkalis: anarkalis || [],
+            shararas: shararas || [],
             latestCollection: latestCollection || []
           }
         });

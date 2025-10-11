@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "name": "The Roshni Lehenga Set",
+    "name": "Roshni Lehenga Set",
     "img": "/images/lehenga/orange-lehenga-1/orange-lehenga-1.png",
     "images": [
       "/images/lehenga/orange-lehenga-1/orange-lehenga-1.png",
@@ -32,7 +32,7 @@
   },
   {
     "id": 2,
-    "name": "GULABI JHALAK LEHENGA",
+    "name": "Gulabi Jhalak Lehenga Set",
     "img": "/images/lehenga/pink-lehenga-1/lehenga-pink-1.png",
     "images": [
       "/images/lehenga/pink-lehenga-1/lehenga-pink-1.png",
@@ -65,58 +65,34 @@
   },
   {
     "id": 3,
-    "name": "Designer Lehenga",
-    "img": "../images/lehenga/img_4.png",
+    "name": "Rang-e-Resham Lehenga Set",
+    "img": "/images/lehenga/yellow-lehenga-1/yellow-lehenga-1.png",
+    "images": [
+      "/images/lehenga/yellow-lehenga-1/yellow-lehenga-1.png",
+      "/images/lehenga/yellow-lehenga-1/yellow-lehenga-2.png",
+      "/images/lehenga/yellow-lehenga-1/yellow-lehenga-3.png",
+      "/images/lehenga/yellow-lehenga-1/yellow-lehenga-4.png",
+      "/images/lehenga/yellow-lehenga-1/yellow-lehenga-5.png",
+      "/images/lehenga/yellow-lehenga-1/yellow-lehenga-6.png",
+      "/images/lehenga/yellow-lehenga-1/yellow-lehenga-7.png",
+      "/images/lehenga/yellow-lehenga-1/yellow-lehenga-8.png"
+    ],
     "price": 250,
-    "description": "A designer lehenga with intricate patterns."
-  },
-  {
-    "id": 4,
-    "name": "Traditional Lehenga",
-    "img": "../images/lehenga/img_3.png",
-    "price": 220,
-    "description": "A traditional lehenga with rich cultural designs."
-  },
-  {
-    "id": 5,
-    "name": "Embroidered Lehenga",
-    "img": "../images/lehenga/img_1.png",
-    "price": 280,
-    "description": "An embroidered lehenga with detailed craftsmanship."
-  },
-  {
-    "id": 6,
-    "name": "Casual Lehenga",
-    "img": "../images/lehenga/img_2.png",
-    "price": 150,
-    "description": "A casual lehenga suitable for everyday wear."
-  },
-  {
-    "id": 7,
-    "name": "Festive Lehenga",
-    "img": "../images/lehenga/img_3.png",
-    "price": 230,
-    "description": "A festive lehenga perfect for celebrations."
-  },
-  {
-    "id": 8,
-    "name": "Modern Lehenga",
-    "img": "../images/lehenga/img_4.png",
-    "price": 210,
-    "description": "A modern lehenga with contemporary designs."
-  },
-  {
-    "id": 9,
-    "name": "Printed Lehenga",
-    "img": "../images/lehenga/img_1.png",
-    "price": 170,
-    "description": "A printed lehenga with vibrant colors."
-  },
-  {
-    "id": 10,
-    "name": "Velvet Lehenga",
-    "img": "../images/lehenga/img_2.png",
-    "price": 260,
-    "description": "A luxurious velvet lehenga with elegant designs."
+    "description": "Embrace traditional artistry with this exquisite Crepe Lehenga Choli Set. Featuring a structured blouse and a dramatically flared Lehenga skirt, this set is crafted from luxurious Crepe fabric that offers a beautiful drape. The entire outfit is a canvas for intricate full Zari and thread embroidery, displaying a beautiful multicolored traditional motif. The look is completed with a bright Yellow Organza dupatta trimmed with Gota work. It's a perfect statement piece for any celebratory occasion.\n\nIdeal for Mehendi, Sangeet, or traditional wedding events. Pair it with layered beaded necklaces or heavy Kundan jewellery.",
+    "specifications": [
+      "Lehenga & Choli - Crepe with Silk Blend Lining (Fabric)",
+      "Dupatta - Sheer Organza (Fabric)",
+      "Color - Off-White/Ivory Base with Multicolored Embroidery",
+      "No. of Components - Set of 3 (Lehenga, Choli, Dupatta)",
+      "Length of Choli - 14-15 inches (Approximate)",
+      "Length of Lehenga - 45 inches (Approximate)",
+      "Dupatta - 2.5 meter",
+      "Embroidery Details - Full Zari and Thread Work with Intricate Motifs",
+      "Cancan - Yes",
+      "Product Highlight - Multicolored Traditional Embroidery and Deep Back Cut-out",
+      "Wash Care - Dry Clean Only",
+      "Delivery Time - 10-15 Days",
+      "Customization - Only Size and Length Of Product"
+    ]
   }
 ]

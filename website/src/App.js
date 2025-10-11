@@ -71,6 +71,12 @@ const AppContent = () => {
               <Route path="/kurtis">
                 <CategoryPage category="kurtis" />
               </Route>
+              <Route path="/anarkalis">
+                <CategoryPage category="anarkalis" />
+              </Route>
+              <Route path="/shararas">
+                <CategoryPage category="shararas" />
+              </Route>
             <Route path="/">
               {isMobile ? (
                 <MobileHomePage />
@@ -79,10 +85,10 @@ const AppContent = () => {
                   <HeroSection />
                   <ProductCarousel 
                     items={latestCollection} 
-                    category="sarees" 
+                    category="latest" 
                     title="Our Latest Collections" 
                   />
-                  <ProductCarousel 
+                  {/* <ProductCarousel 
                     items={sarees} 
                     category="sarees" 
                     title="Sarees" 
@@ -96,7 +102,7 @@ const AppContent = () => {
                     items={kurtis} 
                     category="kurtis" 
                     title="Kurtis" 
-                  />
+                  /> */}
                 </>
               )}
             </Route>

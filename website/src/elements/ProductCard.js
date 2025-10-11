@@ -50,7 +50,7 @@ const ProductCard = React.memo(({ item, category }) => {
           {/* Quick actions overlay */}
           <div className={`product-actions ${isHovered ? 'visible' : ''}`}>
             <Link 
-              to={`/${category}/${item.id}`} 
+              to={`/${item.category || category}/${item.id}`} 
               className="view-details-btn"
               aria-label={`View details for ${item.name}`}
             >

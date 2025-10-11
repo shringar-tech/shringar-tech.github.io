@@ -17,7 +17,7 @@ const MobileHomePage = () => {
         </div>
       </div>
       
-      <MobileCarousel items={latestCollection} category="sarees" title="New Collection" />
+      <MobileCarousel items={latestCollection} category="lehengas" title="New Collection" />
       <MobileCarousel items={sarees} category="sarees" title="Sarees" />
       <MobileCarousel items={lehengas} category="lehengas" title="Lehengas" />
       <MobileCarousel items={kurtis} category="kurtis" title="Kurtis" />

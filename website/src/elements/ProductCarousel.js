@@ -1,5 +1,4 @@
 import React, { useRef, useState, useEffect, useCallback, useMemo } from 'react';
-import { Link } from 'react-router-dom';
 import ProductCard from './ProductCard';
 import { debounce } from '../utils/helpers';
 import { CAROUSEL_SCROLL_MULTIPLIER, ARROW_VISIBILITY_THRESHOLD, DEBOUNCE_DELAYS } from '../utils/constants';
@@ -148,9 +147,7 @@ const ProductCarousel = React.memo(({ items, category, title }) => {
               role="group"
               aria-label={`${index + 1} of ${items.length}`}
             >
-              <Link to={`/${category}/${item.id}`} className="category-link">
-                <ProductCard item={item} category={category} />
-              </Link>
+              <ProductCard item={item} category={item.category || category} />
             </div>
           ))}
         </div>
