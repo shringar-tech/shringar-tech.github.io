@@ -1,16 +1,13 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import { BrowserRouter } from 'react-router-dom';
+import { createRoot } from 'react-dom/client';
 import App from './App';
 import ErrorBoundary from './components/ErrorBoundary';
 
-const basename = process.env.NODE_ENV === 'production' ? '/shringar-tech.github.io' : '';
+const container = document.getElementById('root');
+const root = createRoot(container);
 
-ReactDOM.render(
+root.render(
   <ErrorBoundary>
-    <BrowserRouter basename={basename}>
-      <App />
-    </BrowserRouter>
-  </ErrorBoundary>,
-  document.getElementById('root')
+    <App />
+  </ErrorBoundary>
 );

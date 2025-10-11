@@ -1,5 +1,5 @@
 import React, { Suspense, lazy } from 'react';
-import { BrowserRouter as Router, Route, Switch, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { ProductProvider, useProducts } from './context/ProductContext';
 import { WishlistProvider } from './context/WishlistContext';
 import { useMobile } from './utils/useMobile';
@@ -49,64 +49,33 @@ const AppContent = () => {
         {isMobile ? <MobileNavBar /> : <Navbar />}
         <main id="main-content" className={isHomePage ? '' : 'main-content'}>
           <Suspense fallback={<div style={{ textAlign: 'center', padding: '50px' }}>Loading...</div>}>
-            <Switch>
-              <Route path="/wishlist" component={WishlistPage} />
-              <Route path="/contact" component={ContactPage} />
-              <Route path="/:category/:id" component={ItemDetailPage} />
-              <Route path="/new-arrivals">
-                <CategoryPage category="new-arrivals" />
-              </Route>
-              <Route path="/best-sellers">
-                <CategoryPage category="best-sellers" />
-              </Route>
-              <Route path="/shop-all">
-                <CategoryPage category="shop-all" />
-              </Route>
-              <Route path="/sarees">
-                <CategoryPage category="sarees" />
-              </Route>
-              <Route path="/lehengas">
-                <CategoryPage category="lehengas" />
-              </Route>
-              <Route path="/kurtis">
-                <CategoryPage category="kurtis" />
-              </Route>
-              <Route path="/anarkalis">
-                <CategoryPage category="anarkalis" />
-              </Route>
-              <Route path="/shararas">
-                <CategoryPage category="shararas" />
-              </Route>
-            <Route path="/">
-              {isMobile ? (
-                <MobileHomePage />
-              ) : (
-                <>
-                  <HeroSection />
-                  <ProductCarousel 
-                    items={latestCollection} 
-                    category="latest" 
-                    title="Our Latest Collections" 
-                  />
-                  {/* <ProductCarousel 
-                    items={sarees} 
-                    category="sarees" 
-                    title="Sarees" 
-                  />
-                  <ProductCarousel 
-                    items={lehengas} 
-                    category="lehengas" 
-                    title="Lehengas" 
-                  />
-                  <ProductCarousel 
-                    items={kurtis} 
-                    category="kurtis" 
-                    title="Kurtis" 
-                  /> */}
-                </>
-              )}
-            </Route>
-            </Switch>
+            <Routes>
+              <Route path="/wishlist" element={<WishlistPage />} />
+              <Route path="/contact" element={<ContactPage />} />
+              <Route path="/:category/:id" element={<ItemDetailPage />} />
+              <Route path="/new-arrivals" element={<CategoryPage category="new-arrivals" />} />
+              <Route path="/best-sellers" element={<CategoryPage category="best-sellers" />} />
+              <Route path="/shop-all" element={<CategoryPage category="shop-all" />} />
+              <Route path="/sarees" element={<CategoryPage category="sarees" />} />
+              <Route path="/lehengas" element={<CategoryPage category="lehengas" />} />
+              <Route path="/kurtis" element={<CategoryPage category="kurtis" />} />
+              <Route path="/anarkalis" element={<CategoryPage category="anarkalis" />} />
+              <Route path="/shararas" element={<CategoryPage category="shararas" />} />
+              <Route path="/" element={
+                isMobile ? (
+                  <MobileHomePage />
+                ) : (
+                  <>
+                    <HeroSection />
+                    <ProductCarousel 
+                      items={latestCollection} 
+                      category="latest" 
+                      title="Our Latest Collections" 
+                    />
+                  </>
+                )
+              } />
+            </Routes>
           </Suspense>
         </main>
         <ScrollToTop />
@@ -120,7 +89,7 @@ function App() {
   return (
     <WishlistProvider>
       <ProductProvider>
-        <Router basename={process.env.PUBLIC_URL}>
+        <Router basename={process.env.NODE_ENV === 'production' ? '/shringar-tech.github.io' : ''}>
           <AppContent />
         </Router>
       </ProductProvider>

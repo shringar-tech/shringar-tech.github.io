@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback, useMemo } from 'react';
-import { Link, useLocation, useHistory } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { debounce } from '../utils/helpers';
 import { NAVBAR_SCROLL_THRESHOLD, DEBOUNCE_DELAYS, ROUTES } from '../utils/constants';
 import { useWishlist } from '../context/WishlistContext';
@@ -11,7 +11,7 @@ const Navbar = React.memo(() => {
   const [scrolled, setScrolled] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
   const location = useLocation();
-  const history = useHistory();
+  const navigate = useNavigate();
   const isHomePage = location.pathname === '/';
   const { wishlistCount } = useWishlist();
   
@@ -44,8 +44,8 @@ const Navbar = React.memo(() => {
   }, []);
 
   const goToWishlist = useCallback(() => {
-    history.push('/wishlist');
-  }, [history]);
+    navigate('/wishlist');
+  }, [navigate]);
 
   return (
     <>

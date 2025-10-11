@@ -1,8 +1,17 @@
 const API_BASE = '/data';
+const ALLOWED_CATEGORIES = ['sarees', 'lehengas', 'kurtis', 'latestcollection'];
+
+const validateCategory = (category) => {
+  if (!ALLOWED_CATEGORIES.includes(category)) {
+    throw new Error('Invalid category');
+  }
+  return category.replace(/[^a-zA-Z]/g, '');
+};
 
 export const productService = {
   async getProducts(category) {
-    const response = await fetch(`${API_BASE}/${category}.json`);
+    const validCategory = validateCategory(category);
+    const response = await fetch(`${API_BASE}/${validCategory}.json`);
     return response.json();
   },
 
