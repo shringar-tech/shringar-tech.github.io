@@ -125,6 +125,11 @@
   margin-bottom: 16px;
 }
 
+.product-header .wishlist-btn {
+  position: static;
+  margin-left: 16px;
+}
+
 .category-tag {
   font-size: 12px;
   text-transform: uppercase;
@@ -136,20 +141,33 @@
 .wishlist-btn {
   width: 40px;
   height: 40px;
-  border: none;
-  background: none;
+  border: 2px solid #ff6b6b;
+  background: white;
   cursor: pointer;
-  color: #ccc;
-  transition: color 0.3s ease;
+  color: #ff6b6b;
+  transition: all 0.3s ease;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+
+.wishlist-btn:hover {
+  background: rgba(255, 107, 107, 0.1);
+  transform: scale(1.15);
+  color: #ff6b6b;
+  box-shadow: 0 6px 20px rgba(255, 107, 107, 0.3);
 }
 
 .wishlist-btn.active {
-  color: #e91e63;
+  color: #ff6b6b;
+  background: rgba(255, 255, 255, 1);
 }
 
 .wishlist-btn svg {
-  width: 24px;
-  height: 24px;
+  width: 18px;
+  height: 18px;
 }
 
 .product-title {
@@ -414,7 +432,27 @@
   }
   
   .product-header {
-    margin-bottom: 50px;
+    margin-bottom: 20px;
+  }
+  
+  .wishlist-btn {
+    width: 48px;
+    height: 48px;
+    background: white !important;
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    color: #ff6b6b !important;
+    border: 1px solid #ddd;
+  }
+  
+  .wishlist-btn svg {
+    width: 28px;
+    height: 28px;
+  }
+  
+  .wishlist-btn.active {
+    color: #e91e63;
+    background: rgba(233, 30, 99, 0.1);
   }
   
   .product-title {

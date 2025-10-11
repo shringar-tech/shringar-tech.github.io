@@ -1,11 +1,15 @@
 import React from 'react';
 import { useProducts } from '../../context/ProductContext';
-import MobileCarousel from '../../elements/mobile/MobileCarousel';
+import ProductCard from '../../elements/ProductCard';
 import './MobileHomePage.css';
 
 const MobileHomePage = () => {
   const { state } = useProducts();
-  const { sarees, lehengas, kurtis, latestCollection } = state;
+  const { latestCollection, loading } = state;
+
+  if (loading) {
+    return <div className="mobile-loading">Loading...</div>;
+  }
 
   return (
     <div className="mobile-home">
@@ -17,10 +21,18 @@ const MobileHomePage = () => {
         </div>
       </div>
       
-      <MobileCarousel items={latestCollection} category="lehengas" title="New Collection" />
-      {/* <MobileCarousel items={sarees} category="sarees" title="Sarees" />
-      <MobileCarousel items={lehengas} category="lehengas" title="Lehengas" />
-      <MobileCarousel items={kurtis} category="kurtis" title="Kurtis" /> */}
+      <div className="mobile-products">
+        <h2>Our Collection</h2>
+        <div className="mobile-grid">
+          {latestCollection.map((item) => (
+            <ProductCard 
+              key={`${item.category}-${item.id}`} 
+              item={item} 
+              category={item.category}
+            />
+          ))}
+        </div>
+      </div>
     </div>
   );
 };
