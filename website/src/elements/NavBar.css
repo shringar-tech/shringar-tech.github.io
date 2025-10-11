@@ -369,3 +369,36 @@
       height: 3px;
     }
   }
+
+  @media (max-width: 480px) {
+    .navbar {
+      top: 5px;
+    }
+    
+    .navbar-container {
+      height: 45px;
+      padding: 2px 10px 0 10px;
+    }
+    
+    .navbar-center {
+      margin-top: -5px;
+    }
+    
+    .logo-image {
+      height: 50px;
+      max-width: 200px;
+    }
+    
+    .search-icon {
+      right: 40px;
+      font-size: 1rem;
+      padding: 6px;
+    }
+    
+    .navbar-menu-icon {
+      right: 8px;
+      width: 20px;
+      height: 15px;
+      padding: 4px;
+    }
+  }

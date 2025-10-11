@@ -2,15 +2,16 @@
   position: relative;
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(10px);
-  box-shadow: 0 2px 12px rgba(0,0,0,0.15);
   z-index: 1000;
+  margin: 0;
 }
 
 .mobile-nav-header {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  padding: 16px 20px;
+  padding: 4px 12px;
+  position: relative;
 }
 
 .mobile-logo {
@@ -24,16 +25,18 @@
 }
 
 .mobile-logo-image {
-  height: 50px;
+  height: 25px;
   width: auto;
-  max-width: 180px;
+  max-width: 100px;
   object-fit: contain;
 }
 
 .mobile-nav-actions {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 4px;
+  position: absolute;
+  right: 12px;
 }
 
 .mobile-search-btn,
@@ -41,9 +44,9 @@
 .mobile-menu-toggle {
   background: none;
   border: none;
-  font-size: 1.6rem;
+  font-size: 1.2rem;
   cursor: pointer;
-  padding: 8px;
+  padding: 4px;
   color: #1976d2;
   text-decoration: none;
   display: flex;
@@ -58,7 +61,7 @@
 
 .mobile-search-btn .material-icons,
 .mobile-wishlist-btn .material-icons {
-  font-size: 20px;
+  font-size: 16px;
 }
 
 .mobile-menu {

@@ -18,9 +18,9 @@ const MobileHomePage = () => {
       </div>
       
       <MobileCarousel items={latestCollection} category="lehengas" title="New Collection" />
-      <MobileCarousel items={sarees} category="sarees" title="Sarees" />
+      {/* <MobileCarousel items={sarees} category="sarees" title="Sarees" />
       <MobileCarousel items={lehengas} category="lehengas" title="Lehengas" />
-      <MobileCarousel items={kurtis} category="kurtis" title="Kurtis" />
+      <MobileCarousel items={kurtis} category="kurtis" title="Kurtis" /> */}
     </div>
   );
 };
