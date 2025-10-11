@@ -55,11 +55,13 @@ src/
 ## Core Features
 
 ### 1. Mobile-First Architecture
-- **Responsive Detection**: useMobile hook detects screen size ≤ 768px
-- **Separate Mobile Components**: Dedicated mobile-optimized components
+- **Responsive Detection**: CSS media queries detect screen size ≤ 768px
+- **Mobile Homepage**: Dedicated MobileHomePage component with optimized 5-item grid layout
+- **Fixed Navigation**: Mobile navbar fixed at top with logo, search, wishlist, and menu icons
 - **Touch-Optimized**: Native scroll with snap behavior for carousels
-- **Mobile Navigation**: Hamburger menu with search and wishlist icons
-- **Compact Design**: 160px product cards vs 400px desktop cards
+- **Mobile Navigation**: Clean horizontal layout with grouped action buttons
+- **Optimized Layouts**: Single/double column grids based on screen size
+- **Enhanced Visibility**: Wishlist buttons positioned in product headers for consistent access
 - **Performance Focused**: Simplified animations and reduced complexity
 
 ### 2. WhatsApp Integration
@@ -299,9 +301,10 @@ npm run deploy       # Deploy to GitHub Pages
 ### Latest Features Added (Current Version)
 - **Mobile-First Design**: Complete mobile-optimized experience with separate components
 - **Responsive Architecture**: Conditional rendering based on screen size detection
-- **Mobile Navigation**: Hamburger menu with search, wishlist, and category links
+- **Mobile Navigation**: Fixed navbar at top with search, wishlist, and hamburger menu
+- **Mobile Homepage**: Optimized grid layout displaying 5 featured items effectively
 - **Touch-Optimized Carousels**: Native horizontal scrolling with snap behavior
-- **Mobile Wishlist**: Full wishlist functionality on mobile with heart icons
+- **Mobile Wishlist**: Enhanced wishlist functionality with visible heart icons in product headers
 - **Mobile Search**: Integrated SearchModal functionality for mobile devices
 - **WhatsApp Integration**: Fixed position WhatsApp button for instant customer contact
 - **Enhanced UI Design**: Larger product cards (400px width) and improved spacing
@@ -309,12 +312,14 @@ npm run deploy       # Deploy to GitHub Pages
 - **Improved Typography**: Larger font sizes and better visual hierarchy
 - **Modern Styling**: Updated border radius, shadows, and hover effects
 - **Promotional Banner**: Auto-rotating banner with marketing messages
-- **Enhanced Navigation**: Overlay design with three-column grid layout
+- **Enhanced Navigation**: Fixed mobile navbar with clean horizontal layout
 - **Performance Optimizations**: React.memo, useCallback, debouncing implementation
 - **Accessibility Improvements**: ARIA labels, semantic HTML, skip links
 - **SEO Enhancements**: Comprehensive meta tags, structured data, Open Graph
 - **Error Handling**: Global error boundaries and graceful fallbacks
 - **State Management**: Context API with useReducer for global state
+- **Mobile Item Details**: Wishlist button positioned in product header for consistent visibility
+- **Hero Image Restoration**: Maintained original hero image with overlay design on mobile
 
 ## Future Enhancements
 

@@ -53,6 +53,9 @@ Shringaarika is a modern React-based e-commerce website for Indian ethnic clothe
     │   ├── SearchModal.js
     │   ├── WishlistPage.css
     │   ├── WishlistPage.js
+    │   ├── mobile
+    │   │   ├── MobileHomePage.css
+    │   │   └── MobileHomePage.js
     │   └── layout
     ├── context
     │   ├── ProductContext.js
@@ -82,18 +85,20 @@ Shringaarika is a modern React-based e-commerce website for Indian ethnic clothe
 ```
 
 ## Features
+- **Mobile-First Design**: Dedicated mobile components with optimized layouts and fixed navigation
 - **Promotional Banner**: Auto-rotating banner with marketing messages
-- **Home Page**: Displays product categories in horizontally scrollable carousels with navigation arrows
-- **Navigation**: New Arrivals, Best Sellers, Shop All, and Contact sections with search and wishlist icons
-- **Category Pages**: Shows items belonging to specific categories
-- **Item Detail Page**: Detailed product information with images, descriptions, and pricing
+- **Home Page**: Desktop carousels and mobile grid layout showcasing 5 featured items
+- **Enhanced Navigation**: Fixed mobile navbar with search, wishlist, and hamburger menu
+- **Category Pages**: Shows items belonging to specific categories with responsive grid layouts
+- **Item Detail Page**: Multi-image gallery, size selection, wishlist integration, and WhatsApp ordering
 - **Contact Page**: Professional contact information with elegant design
 - **Search Functionality**: Real-time product search across all categories with modal interface
-- **Wishlist System**: Add/remove items to wishlist with localStorage persistence and dedicated wishlist page
+- **Wishlist System**: Heart icon integration with localStorage persistence and dedicated page
+- **WhatsApp Integration**: Direct product ordering via WhatsApp with pre-filled details
 - **State Management**: Context API with useReducer for global product and wishlist state
 - **Performance Optimization**: React.memo, lazy loading, debouncing, and memoized calculations
-- **Responsive Design**: Mobile-friendly layout with optimized performance and consistent card sizing
-- **Accessibility**: WCAG 2.1 AA compliant with screen reader support
+- **Responsive Design**: Mobile-first approach with breakpoints at 768px and 480px
+- **Accessibility**: WCAG 2.1 AA compliant with screen reader support and keyboard navigation
 - **SEO Optimized**: Meta tags, structured data, and Open Graph integration
 
 ## Setup Instructions
@@ -152,9 +157,14 @@ Shringaarika is a modern React-based e-commerce website for Indian ethnic clothe
 The site will be available at https://shringar-tech.github.io after deployment.
 
 ## Usage
-- Navigate to the home page to browse categories.
-- Click on a category to view items within that category.
-- Select an item to view its details and make a purchase.
+- **Desktop**: Navigate horizontally scrollable carousels on the home page to browse categories
+- **Mobile**: Browse the optimized 5-item grid layout with single/double column display
+- Click on a category to view items within that category with responsive grid layouts
+- Select an item to view detailed information including multiple images, size selection, and specifications
+- Use the heart icon to add/remove items from your wishlist
+- Search for products using the search icon in the navigation bar
+- Place orders directly via WhatsApp integration from product detail pages
+- Access your saved items through the wishlist page
 
 ## License
 This project is licensed under the MIT License.
