@@ -1,0 +1,40 @@
+.whatsapp-order-btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 24px;
+  background-color: #25d366;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+}
+
+.whatsapp-order-btn:hover:not(.disabled) {
+  background-color: #128c7e;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(37, 211, 102, 0.4);
+}
+
+.whatsapp-order-btn.disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.whatsapp-order-btn svg {
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .whatsapp-order-btn {
+    padding: 14px 20px;
+    font-size: 0.95rem;
+  }
+}

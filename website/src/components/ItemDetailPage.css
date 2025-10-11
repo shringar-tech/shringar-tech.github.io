@@ -75,6 +75,72 @@
   font-weight: 600;
 }
 
+.size-chart {
+  margin-bottom: 32px;
+}
+
+.size-chart h3 {
+  font-size: 1.2rem;
+  color: #424242;
+  margin: 0 0 16px 0;
+  font-weight: 600;
+}
+
+.size-options {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+}
+
+.size-option {
+  min-width: 40px;
+  height: 40px;
+  border: 2px solid #e0e0e0;
+  background: white;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #424242;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.size-option:hover {
+  border-color: #1976d2;
+  background-color: #f3f8ff;
+}
+
+.size-option.selected {
+  border-color: #1976d2;
+  background-color: #1976d2;
+  color: white;
+}
+
+.size-guide-btn {
+  background: none;
+  border: none;
+  color: #1976d2;
+  font-size: 0.9rem;
+  text-decoration: underline;
+  cursor: pointer;
+  padding: 0;
+  font-weight: 500;
+}
+
+.size-guide-btn:hover {
+  color: #1565c0;
+}
+
+.order-actions {
+  margin-bottom: 32px;
+}
+
 .add-to-cart-btn {
   display: flex;
   align-items: center;
@@ -299,6 +365,28 @@
   .description p {
     font-size: 1rem;
     line-height: 1.5;
+  }
+
+  .size-chart {
+    margin-bottom: 24px;
+  }
+
+  .size-chart h3 {
+    font-size: 1.1rem;
+  }
+
+  .size-options {
+    gap: 6px;
+  }
+
+  .size-option {
+    min-width: 36px;
+    height: 36px;
+    font-size: 0.75rem;
+  }
+
+  .order-actions {
+    margin-bottom: 24px;
   }
 }
 
