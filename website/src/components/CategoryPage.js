@@ -14,30 +14,50 @@ function CategoryPage({ category }) {
   useEffect(() => {
     setLoading(true);
     
-    // Map new categories to existing data files for now
-    const getDataFile = (cat) => {
-      switch(cat) {
-        case 'new-arrivals':
-          return 'latestcollection.json';
-        case 'best-sellers':
-          return 'sarees.json'; // Using sarees as best sellers for now
-        case 'shop-all':
-          return 'sarees.json'; // Using sarees for shop all for now
-        default:
-          return `${cat}.json`;
-      }
-    };
-
-    fetch(`/data/${getDataFile(category)}`)
-      .then(response => response.json())
-      .then(data => {
-        setItems(data);
+    const fetchCategoryData = async () => {
+      try {
+        if (['new-arrivals', 'best-sellers', 'shop-all'].includes(category)) {
+          // For these categories, fetch and resolve latest collection references
+          const [latestRes, sareesRes, lehengasRes, kurtisRes, anarkalisRes, shararasRes] = await Promise.all([
+            fetch('/data/latestcollection.json'),
+            fetch('/data/sarees.json'),
+            fetch('/data/lehengas.json'),
+            fetch('/data/kurtis.json'),
+            fetch('/data/anarkalis.json'),
+            fetch('/data/shararas.json')
+          ]);
+          
+          const [latestRefs, sarees, lehengas, kurtis, anarkalis, shararas] = await Promise.all([
+            latestRes.json(),
+            sareesRes.json(),
+            lehengasRes.json(),
+            kurtisRes.json(),
+            anarkalisRes.json(),
+            shararasRes.json()
+          ]);
+          
+          const allProducts = { sarees, lehengas, kurtis, anarkalis, shararas };
+          const resolvedItems = latestRefs.map(ref => {
+            const categoryItems = allProducts[ref.category] || [];
+            const item = categoryItems.find(item => item.id === ref.id);
+            return item ? { ...item, category: ref.category } : null;
+          }).filter(Boolean);
+          
+          setItems(resolvedItems);
+        } else {
+          // For regular categories, fetch directly
+          const response = await fetch(`/data/${category}.json`);
+          const data = await response.json();
+          setItems(data);
+        }
         setLoading(false);
-      })
-      .catch(error => {
+      } catch (error) {
         console.error('Error fetching data:', error);
         setLoading(false);
-      });
+      }
+    };
+    
+    fetchCategoryData();
   }, [category]);
 
   const filterOptions = useMemo(() => getFilterOptions(items), [items]);
@@ -78,9 +98,7 @@ function CategoryPage({ category }) {
       
       <div className="category-container">
         {filteredAndSortedItems.map(item => (
-          <Link to={`/${category}/${item.id}`} className="category-link" key={item.id}>
-            <ProductCard item={item} category={category} />
-          </Link>
+          <ProductCard item={item} category={item.category || category} key={item.id} />
         ))}
       </div>
       
