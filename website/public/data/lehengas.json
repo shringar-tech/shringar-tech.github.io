@@ -1,5 +1,37 @@
 [
   {
+    "id": 5,
+    "name": "Shahi Bagh Lehenga",
+    "img": "/images/lehenga/maroon-lehenga-1/lehenga-maroon-1.png",
+    "images": [
+      "/images/lehenga/maroon-lehenga-1/lehenga-maroon-1.png",
+      "/images/lehenga/maroon-lehenga-1/lehenga-maroon-2.png",
+      "/images/lehenga/maroon-lehenga-1/lehenga-maroon-3.png",
+      "/images/lehenga/maroon-lehenga-1/lehenga-maroon-4.png",
+      "/images/lehenga/maroon-lehenga-1/lehenga-maroon-5.png",
+      "/images/lehenga/maroon-lehenga-1/lehenga-maroon-6.png",
+      "/images/lehenga/maroon-lehenga-1/lehenga-maroon-7.png",
+      "/images/lehenga/maroon-lehenga-1/lehenga-maroon-8.png",
+      "/images/lehenga/maroon-lehenga-1/lehenga-maroon-9.png"
+    ],
+    "price": 350,
+    "description": "Drape yourself in heritage with this magnificent Maroon and Gold Lehenga Set. Featuring a rich maroon choli with a classic neckline and a supremely voluminous, flared lehenga skirt, this set is an absolute heirloom piece. The set is crafted from luxurious heavy crepe fabric that provides a stately structure and opulent drape. The entire lehenga and choli are adorned with intricate traditional gold and multi-colored Zari and thread embroidery, featuring elaborate floral and geometric motifs. The striking navy blue border adds a dramatic finish. The look is completed with a soft net dupatta featuring delicate scattered work and a matching trim. This set is a perfect statement piece for any grand, high-profile event.\n\nIdeal for bridal wear, wedding receptions, or major family celebrations. Pair it with layered Polki or heavy Kundan jewellery.",
+    "specifications": [
+      "Lehenga & Choli - Embroidered Crepe (Fabric)",
+      "Dupatta - Soft Net with Border Work (Fabric)",
+      "Color - Deep Maroon with Navy Blue & Gold Accents",
+      "No. of Components - Set of 3 (Lehenga, Choli, Dupatta)",
+      "Length of Choli - 14-15 inches (Approximate)",
+      "Length of Lehenga - 42 inches (Approximate)",
+      "Dupatta - 2.5 meter",
+      "Embroidery Details - Heavy Intricate Gold Zari, and Multi-color Thread Work",
+      "Product Highlight - Extreme Volume (Gher) and Opulent, Full-Body Traditional Embroidery",
+      "Wash Care - Dry Clean Only",
+      "Delivery Time - 10-15 Days",
+      "Customization - Only Size and Length Of Product"
+    ]
+  },
+  {
     "id": 4,
     "name": "Rani Haar Lehenga Set",
     "img": "/images/lehenga/pink-lehenga-2/lehenga-pink-1.png",
