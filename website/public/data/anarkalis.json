@@ -1,5 +1,37 @@
 [
   {
+    "id": 7,
+    "name": "Siyah Anarkali Set",
+    "img": "/images/anarkali/black-anarkali-1/black-anarkali-1.png",
+    "images": [
+      "/images/anarkali/black-anarkali-1/black-anarkali-1.png",
+      "/images/anarkali/black-anarkali-1/black-anarkali-2.png",
+      "/images/anarkali/black-anarkali-1/black-anarkali-3.png",
+      "/images/anarkali/black-anarkali-1/black-anarkali-4.png",
+      "/images/anarkali/black-anarkali-1/black-anarkali-5.png",
+      "/images/anarkali/black-anarkali-1/black-anarkali-6.png",
+      "/images/anarkali/black-anarkali-1/black-anarkali-7.png",
+      "/images/anarkali/black-anarkali-1/black-anarkali-8.png",
+      "/images/anarkali/black-anarkali-1/black-anarkali-9.png"
+    ],
+    "price": 200,
+    "description": "Drape yourself in drama with this magnificent black Anarkali Suit Set. Featuring a gracefully flowing, calf-length Anarkali kurta with a round neckline, this set is crafted from luxurious Silk-blend fabric that catches the light and offers an elegant, weighty drape. The kurta is kept minimalistic, highlighting the richness of the fabric, and is detailed with a subtle gold lace trim on the cuff. The look is completed with complementing straight pants, which feature delicate gold embroidered motifs, and a soft, sheer black dupatta finished with a simple gold border. This set is a perfect blend of timeless tradition and modern subtlety.\n\nIdeal for formal dinners, evening engagements, or office festive parties. Pair it with oxidized silver jhumkas for a perfect contrast.",
+    "specifications": [
+      "Anarkali & Dupatta - Silk Blend with Self-Stripes (Kurta), Soft Organza (Dupatta)",
+      "Pants - Silk Blend with Subtle Motif Embroidery",
+      "Color - Classic Jet Black with Minimal Gold Accents",
+      "No. of Components - Set of 3 (Kurta, Pants, Dupatta)",
+      "Length of Kurta - 48-50 inches (Approximate)",
+      "Length of Pants - 38 inches (Approximate)",
+      "Dupatta - 2.5 meter",
+      "Embroidery Details - Minimal Gold Embroidery on Kurta Hem/Sleeve; Scattered Gold Motifs on Pants; Gold Trim on Dupatta",
+      "Product Highlight - Elegant Silhouette, Rich Self-Weave Fabric, and Minimalist Gold Detailing",
+      "Wash Care - Dry Clean Only",
+      "Delivery Time - 10-15 Days",
+      "Customization - Only Size and Length Of Product"
+    ]
+  },
+  {
     "id": 6,
     "name": "Kanak Anarkali Suit",
     "img": "/images/anarkali/yellow-anarkali-1/anarkali-yellow-1.png",
