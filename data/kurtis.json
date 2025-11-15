@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "name": "Casual Kurti",
+    "img": "../images/kurti/img_6.png",
+    "price": 50,
+    "dateOfManufacture": "2025-01-25",
+    "material": "Cotton",
+    "description": "A casual kurti suitable for everyday wear."
+  },
+  {
+    "id": 2,
+    "name": "Designer Kurti",
+    "img": "../images/kurti/img_5.png",
+    "price": 100,
+    "dateOfManufacture": "2025-02-15",
+    "material": "Silk",
+    "description": "A designer kurti with beautiful patterns."
+  },
+  {
+    "id": 3,
+    "name": "Printed Kurti",
+    "img": "../images/kurti/img_3.png",
+    "price": 60,
+    "dateOfManufacture": "2025-03-05",
+    "material": "Cotton",
+    "description": "A printed kurti with vibrant designs."
+  },
+  {
+    "id": 6,
+    "name": "Embroidered Kurti",
+    "img": "../images/kurti/img_4.png",
+    "price": 80,
+    "dateOfManufacture": "2025-01-30",
+    "material": "Georgette",
+    "description": "An embroidered kurti with intricate details."
+  },
+  {
+    "id": 7,
+    "name": "Long Kurti",
+    "img": "../images/kurti/img_1.png",
+    "price": 70,
+    "dateOfManufacture": "2025-02-20",
+    "material": "Cotton",
+    "description": "A long kurti perfect for formal occasions."
+  },
+  {
+    "id": 8,
+    "name": "Short Kurti",
+    "img": "../images/kurti/img_2.png",
+    "price": 55,
+    "dateOfManufacture": "2025-03-10",
+    "material": "Linen",
+    "description": "A short kurti suitable for casual wear."
+  }
+]
