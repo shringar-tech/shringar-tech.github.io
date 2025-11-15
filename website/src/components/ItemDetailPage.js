@@ -91,6 +91,7 @@ function ItemDetailPage() {
   const { addToWishlist, removeFromWishlist, isInWishlist } = useWishlist();
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     fetch(`/data/${category}.json`)
       .then(response => response.json())
       .then(data => {

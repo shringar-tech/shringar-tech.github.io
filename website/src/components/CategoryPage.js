@@ -18,25 +18,27 @@ function CategoryPage({ category }) {
       try {
         if (['new-arrivals', 'best-sellers', 'shop-all'].includes(category)) {
           // For these categories, fetch and resolve latest collection references
-          const [latestRes, sareesRes, lehengasRes, kurtisRes, anarkalisRes, shararasRes] = await Promise.all([
+          const [latestRes, sareesRes, lehengasRes, kurtisRes, anarkalisRes, shararasRes, suitsRes] = await Promise.all([
             fetch('/data/latestcollection.json'),
             fetch('/data/sarees.json'),
             fetch('/data/lehengas.json'),
             fetch('/data/kurtis.json'),
             fetch('/data/anarkalis.json'),
-            fetch('/data/shararas.json')
+            fetch('/data/shararas.json'),
+            fetch('/data/suits.json')
           ]);
           
-          const [latestRefs, sarees, lehengas, kurtis, anarkalis, shararas] = await Promise.all([
+          const [latestRefs, sarees, lehengas, kurtis, anarkalis, shararas, suits] = await Promise.all([
             latestRes.json(),
             sareesRes.json(),
             lehengasRes.json(),
             kurtisRes.json(),
             anarkalisRes.json(),
-            shararasRes.json()
+            shararasRes.json(),
+            suitsRes.json()
           ]);
           
-          const allProducts = { sarees, lehengas, kurtis, anarkalis, shararas };
+          const allProducts = { sarees, lehengas, kurtis, anarkalis, shararas, suits };
           const resolvedItems = latestRefs.map(ref => {
             const categoryItems = allProducts[ref.category] || [];
             const item = categoryItems.find(item => item.id === ref.id);
