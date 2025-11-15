@@ -1,5 +1,36 @@
 [
   {
+    "id": 4,
+    "name": "Rani Haar Lehenga Set",
+    "img": "/images/lehenga/pink-lehenga-2/lehenga-pink-1.png",
+    "images": [
+      "/images/lehenga/pink-lehenga-2/lehenga-pink-1.png",
+      "/images/lehenga/pink-lehenga-2/lehenga-pink-2.png",
+      "/images/lehenga/pink-lehenga-2/lehenga-pink-3.png",
+      "/images/lehenga/pink-lehenga-2/lehenga-pink-4.png",
+      "/images/lehenga/pink-lehenga-2/lehenga-pink-5.png",
+      "/images/lehenga/pink-lehenga-2/lehenga-pink-6.png",
+      "/images/lehenga/pink-lehenga-2/lehenga-pink-7.png",
+      "/images/lehenga/pink-lehenga-2/lehenga-pink-8.png",
+      "/images/lehenga/pink-lehenga-2/lehenga-pink-9.png"
+    ],
+    "price": 250,
+    "description": "Capture the spotlight with this magnificent Fuschia Rani Pink Lehenga Set. Featuring a vibrant hand embroidered V- neckline choli and a beautifully flared A-line lehenga skirt, this set commands attention. The skirt is crafted from a luxurious woven brocade fabric that features a stunning, multicoloured, horizontal striped pattern, giving it an exceptional structure and rich drape. The silk blend choli and matching soft net dupatta provide a vibrant contrast to the heavy skirt. The look is completed with a soft net dupatta trimmed with delicate, subtle handwork border. This set is a perfect statement piece for any celebratory occasion.\n\nIdeal for festive gatherings, Haldi, Mehendi, Sangeet, or pre-wedding functions. Pair it with an elegant Maang Tikka and Kundan jewellery.",
+    "specifications": [
+      "Lehenga & Choli - Woven Brocade (Skirt), Silk blend Fabric with hand embroidered neckline (Choli), Dupatta Soft Net (Fabric)",
+      "Color - Bright Fuschia Pink (Top/Dupatta) / Multicolour (Skirt)",
+      "No. of Components - Set of 3 (Lehenga, Choli, Dupatta)",
+      "Length of Choli - 14-15 inches (Approximate)",
+      "Length of Lehenga - 42 inches (Approximate)",
+      "Dupatta - 2.5 meter",
+      "Embroidery/Work Details - Woven Brocade Fabric with Horizontal Patterned Stripes on Skirt; Subtle Handwork Embellishment/Beadwork on Choli and Dupatta Trim",
+      "Product Highlight - Striking Contrast of Solid Fuschia Pink and Vibrant Multicolour Brocade Skirt",
+      "Wash Care - Dry Clean Only",
+      "Delivery Time - 10-15 Days",
+      "Customization - Only Size and Length Of Product"
+    ]
+  },
+  {
     "id": 1,
     "name": "Roshni Lehenga Set",
     "img": "/images/lehenga/orange-lehenga-1/orange-lehenga-1.png",
