@@ -1,5 +1,36 @@
 [
   {
+    "id": 6,
+    "name": "Kanak Anarkali Suit",
+    "img": "/images/anarkali/yellow-anarkali-1/anarkali-yellow-1.png",
+    "images": [
+      "/images/anarkali/yellow-anarkali-1/anarkali-yellow-1.png",
+      "/images/anarkali/yellow-anarkali-1/anarkali-yellow-2.png",
+      "/images/anarkali/yellow-anarkali-1/anarkali-yellow-3.png",
+      "/images/anarkali/yellow-anarkali-1/anarkali-yellow-4.png",
+      "/images/anarkali/yellow-anarkali-1/anarkali-yellow-5.png",
+      "/images/anarkali/yellow-anarkali-1/anarkali-yellow-6.png",
+      "/images/anarkali/yellow-anarkali-1/anarkali-yellow-7.png"
+    ],
+    "price": 180,
+    "description": "Illuminate your occasion with this striking, vibrant yellow Anarkali Suit Set. The kurta features a classic full-sleeve design with a round neck and an elegant flair, creating a beautiful, light silhouette. It is crafted from a bright, flowing Silk-blend fabric that gives it a beautiful, crisp structure and shine. The rich yellow is perfectly complemented by the contrasting white lace trim detailing the cuff, neckline, and dupatta edges. The set includes matching white straight-fit pants, which feature delicate lace or Schiffli embroidery at the hem. This ensemble is designed for comfort and maximum visual impact.\n\nIdeal for Haldi ceremonies, festive gatherings, or daytime celebrations. Pair it with simple gold or pearl jewellery.",
+    "specifications": [
+      "Anarkali - Silk Blend (Fabric), Flared A-Line Cut",
+      "Pants - Silk Blend with Lace Detail (Fabric), Straight Fit",
+      "Dupatta - Organza with Lace Border (Fabric)",
+      "Color - Bright, Luminous Yellow with Crisp White Accents",
+      "No. of Components - Set of 3 (Kurta, Pants, Dupatta)",
+      "Length of Kurta - 48-50 inches (Approximate, Calf-length)",
+      "Length of Pants - 38 inches (Approximate)",
+      "Dupatta - 2.5 meter",
+      "Embroidery Details - White Lace Trim on Kurta/Dupatta; Hemline Embroidery on Pants",
+      "Product Highlight - Vibrant Colour, Flowing Flare, and Contrast White Detailing",
+      "Wash Care - Dry Clean Only",
+      "Delivery Time - 10-15 Days",
+      "Customization - Only Size and Length Of Product"
+    ]
+  },
+  {
     "id": 5,
     "name": "Parijaat Angrakha Suit Set",
     "img": "/images/anarkali/grey-anarkali-1/grey-anarkali-1.png",
