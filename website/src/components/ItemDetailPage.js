@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { useWishlist } from '../context/WishlistContext';
+import { formatPrice } from '../utils/helpers';
 import WhatsAppOrder from './WhatsAppOrder';
 import SizeChartModal from './SizeChartModal';
 import './ItemDetailPage.css';
@@ -142,7 +143,7 @@ function ItemDetailPage() {
           </div>
           
           <h1 className="product-title">{item.name}</h1>
-          <div className="price-display">${item.price}</div>
+          <div className="price-display">{formatPrice(item.price)}</div>
           
 
 
