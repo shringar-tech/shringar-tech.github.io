@@ -8,6 +8,7 @@ const initialState = {
   kurtis: [],
   anarkalis: [],
   shararas: [],
+  suits: [],
   latestCollection: [],
   loading: true,
   error: null
@@ -39,30 +40,32 @@ export const ProductProvider = ({ children }) => {
       dispatch({ type: 'SET_LOADING', payload: true });
       
       try {
-        const [sareesRes, lehengasRes, kurtisRes, anarkalisRes, shararasRes, latestRes] = await Promise.all([
+        const [sareesRes, lehengasRes, kurtisRes, anarkalisRes, shararasRes, suitsRes, latestRes] = await Promise.all([
           fetch('/data/sarees.json'),
           fetch('/data/lehengas.json'),
           fetch('/data/kurtis.json'),
           fetch('/data/anarkalis.json'),
           fetch('/data/shararas.json'),
+          fetch('/data/suits.json'),
           fetch('/data/latestcollection.json')
         ]);
 
-        if (!sareesRes.ok || !lehengasRes.ok || !kurtisRes.ok || !anarkalisRes.ok || !shararasRes.ok || !latestRes.ok) {
+        if (!sareesRes.ok || !lehengasRes.ok || !kurtisRes.ok || !anarkalisRes.ok || !shararasRes.ok || !suitsRes.ok || !latestRes.ok) {
           throw new Error('Failed to fetch data');
         }
 
-        const [sarees, lehengas, kurtis, anarkalis, shararas, latestRefs] = await Promise.all([
+        const [sarees, lehengas, kurtis, anarkalis, shararas, suits, latestRefs] = await Promise.all([
           sareesRes.json(),
           lehengasRes.json(),
           kurtisRes.json(),
           anarkalisRes.json(),
           shararasRes.json(),
+          suitsRes.json(),
           latestRes.json()
         ]);
 
         // Resolve latest collection references
-        const allProducts = { sarees, lehengas, kurtis, anarkalis, shararas };
+        const allProducts = { sarees, lehengas, kurtis, anarkalis, shararas, suits };
         const latestCollection = latestRefs.map(ref => {
           const categoryItems = allProducts[ref.category] || [];
           const item = categoryItems.find(item => item.id === ref.id);
@@ -77,6 +80,7 @@ export const ProductProvider = ({ children }) => {
             kurtis: kurtis || [],
             anarkalis: anarkalis || [],
             shararas: shararas || [],
+            suits: suits || [],
             latestCollection: latestCollection || []
           }
         });
