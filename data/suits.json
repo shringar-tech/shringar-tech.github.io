@@ -1,5 +1,37 @@
 [
   {
+    "id": 2,
+    "name": "Nazneen Suit Set",
+    "img": "/images/suit/black-suit-1/black-suit-1.png",
+    "images": [
+      "/images/suit/black-suit-1/black-suit-1.png",
+      "/images/suit/black-suit-1/black-suit-2.png",
+      "/images/suit/black-suit-1/black-suit-3.png",
+      "/images/suit/black-suit-1/black-suit-4.png",
+      "/images/suit/black-suit-1/black-suit-5.png",
+      "/images/suit/black-suit-1/black-suit-6.png",
+      "/images/suit/black-suit-1/black-suit-7.png",
+      "/images/suit/black-suit-1/black-suit-8.png",
+      "/images/suit/black-suit-1/black-suit-9.png",
+      "/images/suit/black-suit-1/black-suit-10.png"
+    ],
+    "price": 6499,
+    "description": "A sleek, straight-cut long kurta in a deep Midnight Black. Crafted from Dupion silk, it features a textured finish that catches the light beautifully. The design is highlighted by a striking V-neckline adorned with intricate cream-and-gold gota-patti work, with vertical lace detailing that adds structure and length to the silhouette. Matching straight-fit trousers in the same rich fabric, maintaining a seamless, monochromatic look from the neck down to ensure the focus remains on the exquisite dupatta. Breathtaking Rani Pink organza dupatta that provides a high-contrast pop of color. It features delicate floral bootis scattered throughout and is finished with a fine gold scalloped border, adding an ethereal and feminine touch to the bold suit. Sharp, regal, and authoritative. This set is for the woman who loves a 'power-dressing' approach to ethnic wear—combining traditional craftsmanship with a very modern, clean aesthetic.",
+    "specifications": [
+      "Fabric - Dupion Silk (Kurta & Pants); Lightweight Soft net (Dupatta)",
+      "Color - Midnight Black (Base) with Rani Pink (Dupatta)",
+      "No. of Components - Set of 3 (Kurta, Pants, Dupatta)",
+      "Length of Kurta - 44–46 inches (Approximate)",
+      "Length of Pants - 38 inches (Approximate)",
+      "Dupatta - 2.5 meters",
+      "Embroidery/Work Details - Intricate Gota-Patti neckline and sleeve borders; Vertical lace inserts; Floral embroidered bootis on the dupatta",
+      "Product Highlight - The stunning contrast between the structured black silk and the airy, vibrant pink organza",
+      "Wash Care - Dry Clean Only",
+      "Delivery Time - 10–15 Days",
+      "Customization - Only Size and Length of Product"
+    ]
+  },
+  {
     "id": 1,
     "name": "Gul Suit Set",
     "img": "/images/suit/pink-suit-1/pink-suit-1.png",

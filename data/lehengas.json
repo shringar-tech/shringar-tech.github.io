@@ -1,5 +1,35 @@
 [
   {
+    "id": 9,
+    "name": "Peetambari Meher Lehenga",
+    "img": "/images/lehenga/yellow-lehenga-2/yellow-lehenga-2-1.png",
+    "images": [
+      "/images/lehenga/yellow-lehenga-2/yellow-lehenga-2-1.png",
+      "/images/lehenga/yellow-lehenga-2/yellow-lehenga-2-2.png",
+      "/images/lehenga/yellow-lehenga-2/yellow-lehenga-2-3.png",
+      "/images/lehenga/yellow-lehenga-2/yellow-lehenga-2-4.png",
+      "/images/lehenga/yellow-lehenga-2/yellow-lehenga-2-5.png",
+      "/images/lehenga/yellow-lehenga-2/yellow-lehenga-2-6.png",
+      "/images/lehenga/yellow-lehenga-2/yellow-lehenga-2-7.png",
+      "/images/lehenga/yellow-lehenga-2/yellow-lehenga-2-8.png"
+    ],
+    "price": 16999,
+    "description": "A full-flared skirt in a rich mustard yellow base, adorned with an all-over floral and botanical print. The fabric is meticulously highlighted with delicate sequins and zari work, which follow the lines of the print to give it a shimmering, three-dimensional texture. A matching cropped blouse with a classic scoop neckline and mid-length sleeves. It carries the same intricate floral embroidery and sequin highlights as the skirt, creating a cohesive, high-fashion look. A solid, sheer georgette dupatta in a matching yellow shade. Its simplicity balances the busy, ornate pattern of the lehenga, draped elegantly to complete the traditional ensemble. Joyful, radiant, and traditional yet trendy. This outfit is designed for the woman who wants to stand out at a summer wedding or a lively Haldi celebration.",
+    "specifications": [
+      "Fabric - Premium Satin Crepe blend (Skirt & Choli) with intricate print and sequin highlights; Soft Chiffon(Dupatta)",
+      "Color - Mustard Yellow with multi-colored floral accents (Pink, Green, and Silver)",
+      "No. of Components - Set of 3 (Lehenga, Choli, Dupatta)",
+      "Length of Choli - 14–15 inches (Approximate)",
+      "Length of Lehenga - 42 inches (Approximate)",
+      "Dupatta - 2.5 meters",
+      "Embroidery/Work Details - Digital Floral Print with hand-guided sequin highlights and delicate zari border work",
+      "Product Highlight - A vibrant yellow palette that is both photogenic and festive, featuring a comfortable yet voluminous flare",
+      "Wash Care - Dry Clean Only",
+      "Delivery Time - 10–15 Days",
+      "Customization - Only Size and Length of Product"
+    ]
+  },
+  {
     "id": 8,
     "name": "Sharvari Lehenga",
     "img": "/images/lehenga/black-lehenga-1/black-lehenga-1.png",
