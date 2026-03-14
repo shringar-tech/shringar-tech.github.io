@@ -1,5 +1,38 @@
 [
   {
+    "id": 8,
+    "name": "Amayaa Anarkali Sharara Set",
+    "img": "/images/anarkali/peach-anarkali-1/peach-anarkali-1.png",
+    "images": [
+      "/images/anarkali/peach-anarkali-1/peach-anarkali-1.png",
+      "/images/anarkali/peach-anarkali-1/peach-anarkali-2.png",
+      "/images/anarkali/peach-anarkali-1/peach-anarkali-3.png",
+      "/images/anarkali/peach-anarkali-1/peach-anarkali-4.png",
+      "/images/anarkali/peach-anarkali-1/peach-anarkali-5.png",
+      "/images/anarkali/peach-anarkali-1/peach-anarkali-6.png",
+      "/images/anarkali/peach-anarkali-1/peach-anarkali-7.png",
+      "/images/anarkali/peach-anarkali-1/peach-anarkali-8.png",
+      "/images/anarkali/peach-anarkali-1/peach-anarkali-9.png"
+    ],
+    "price": 7500,
+    "description": "A classic Anarkali-style long kurta in a vibrant bubblegum or peachy-pink hue. It appears to be crafted from a chanderi or raw silk blend, giving it a subtle, sophisticated sheen. The clean lines and minimal surface ornamentation on the kurta allow the silhouette to take center stage. A matching flared sharara, which adds a voluminous, regal touch to the lower half of the ensemble, creating graceful movement as one walks. This is the statement piece. It's a sheer organza dupatta featuring a delicate yellow floral print. It is finished with a heavy zari-embroidered border and a surprising pop of lime green piping on the underside, which adds a contemporary twist to the traditional pink.",
+    "specifications": [
+      "Anarkali- Silk Blend (Fabric), Flared A-Line Cut",
+      "Pants - Silk Blend with Lace Detail (Fabric), Straight Fit",
+      "Dupatta - Organza with Lace Border (Fabric)",
+      "Color - Bright, Luminous Peach with Crisp Gold Accents",
+      "No. of Components - Set of 3 (Kurta, Pallazo, Dupatta)",
+      "Length of Kurta - 48-50 inches (Approximate, Calf-length)",
+      "Length of Pants - 38 inches (Approximate)",
+      "Dupatta - 2.5 meter",
+      "Embroidery Details - Golden Zari Embroidery on Peach Lace Trim on Dupatta",
+      "Product Highlight - Vibrant Colour, Flowing Flare, and Contrast Detailing",
+      "Wash Care - Dry Clean Only",
+      "Delivery Time - 10-15 Days",
+      "Customization - Only Size and Length Of Product"
+    ]
+  },
+  {
     "id": 7,
     "name": "Siyah Anarkali Suit Set",
     "img": "/images/anarkali/black-anarkali-1/black-anarkali-1.png",

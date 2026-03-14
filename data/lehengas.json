@@ -1,5 +1,96 @@
 [
   {
+    "id": 8,
+    "name": "Sharvari Lehenga",
+    "img": "/images/lehenga/black-lehenga-1/black-lehenga-1.png",
+    "images": [
+      "/images/lehenga/black-lehenga-1/black-lehenga-1.png",
+      "/images/lehenga/black-lehenga-1/black-lehenga-2.png",
+      "/images/lehenga/black-lehenga-1/black-lehenga-3.png",
+      "/images/lehenga/black-lehenga-1/black-lehenga-4.png",
+      "/images/lehenga/black-lehenga-1/black-lehenga-5.png",
+      "/images/lehenga/black-lehenga-1/black-lehenga-6.png",
+      "/images/lehenga/black-lehenga-1/black-lehenga-7.png",
+      "/images/lehenga/black-lehenga-1/black-lehenga-8.png"
+    ],
+    "price": 17599,
+    "description": "A breathtaking, high-waist flared skirt drenched in monochromatic black sequins. The embellishments are arranged in sophisticated linear and chevron patterns, creating a shimmering 'rain' effect that elongates the silhouette and captures light with every movement. A matching cropped blouse featuring a flattering V-neckline and short sleeves. It mirrors the intricate vertical sequin work of the skirt, ensuring a seamless and regal transition from top to bottom. A sheer, lightweight black georgette or net dupatta that adds an ethereal layer. It is kept minimal with a delicate beaded or scalloped border to allow the heavy work on the lehenga to remain the focal point. Bold, glamorous, and undeniably 'after-dark.' This ensemble is designed for high-octane evening events like glamorous Receptions, Sangeet nights, or cocktail galas.",
+    "specifications": [
+      "Fabric - Faux Georgette or Satin Crepe base with dense all-over Sequin and Thread embroidery (Skirt & Choli), Soft Net/Georgette (Dupatta)",
+      "Color - Jet Black (Noir) with tonal black shimmering embellishments",
+      "No. of Components - Set of 3 (Lehenga, Choli, Dupatta)",
+      "Length of Choli - 14–15 inches (Approximate)",
+      "Length of Lehenga - 42–44 inches (Approximate)",
+      "Dupatta - 2.5 meters",
+      "Embroidery/Work Details - Intricate linear sequin embroidery with geometric chevron motifs and tonal thread work",
+      "Product Highlight - High-shine monochromatic look that offers a slimming silhouette and a modern 'Red Carpet' ethnic appeal",
+      "Wash Care - Dry Clean Only",
+      "Delivery Time - 10–15 Days",
+      "Customization - Only Size and Length of Product"
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Shahi Mehendi Lehenga",
+    "img": "/images/lehenga/green-lehenga-1/green-lehenga-1.png",
+    "images": [
+      "/images/lehenga/green-lehenga-1/green-lehenga-1.png",
+      "/images/lehenga/green-lehenga-1/green-lehenga-2.png",
+      "/images/lehenga/green-lehenga-1/green-lehenga-3.png",
+      "/images/lehenga/green-lehenga-1/green-lehenga-4.png",
+      "/images/lehenga/green-lehenga-1/green-lehenga-5.png",
+      "/images/lehenga/green-lehenga-1/green-lehenga-6.png",
+      "/images/lehenga/green-lehenga-1/green-lehenga-7.png",
+      "/images/lehenga/green-lehenga-1/green-lehenga-8.png",
+      "/images/lehenga/green-lehenga-1/green-lehenga-9.png",
+      "/images/lehenga/green-lehenga-1/green-lehenga-10.png"
+    ],
+    "price": 17999,
+    "description": "Designed as a true heirloom piece, this magnificent Emerald and Multi-color Satin Crepe Lehenga ensemble balances the weight of tradition with a vibrant, modern soul. The skirt features a supremely voluminous flare. It is intricately adorned with traditional gold Zari and multi-coloured thread embroidery, showcasing elaborate floral and paisley motifs that dance across the emerald base. A rich, solid emerald green choli with a classic square neckline and half-sleeves, providing a stately structure that allows the heavy work of the skirt to remain the centerpiece. The look is completed with a unique Two Shaded Organza Dupatta. From a sunny mustard yellow to a deep Rani pink, it adds a soft, ethereal layer to the opulent silk. This set is a perfect statement piece for grand, high-profile events like a Sangeet or a Mehendi. To complete the royal look, pair it with heavy Kundan Jhumkas and a stack of multi-coloured glass bangles as seen in the photo.",
+    "specifications": [
+      "Lehenga & Choli - Satin Crepe zari embroidery (Skirt), Satin Crepe blend Fabric embroidered sleeves (Choli), Organza (Fabric)",
+      "Color - Emerald Green with pink and yellow design(Top/Skirt) / Mustard yellow and Rani pink (Dupatta)",
+      "No. of Components - Set of 3 (Lehenga, Choli, Dupatta)",
+      "Length of Choli - 14-15 inches (Approximate)",
+      "Length of Lehenga - 42 inches (Approximate)",
+      "Dupatta - 2.5 meter",
+      "Embroidery/Work Details - Antique Zari Embroidery Fabric with Paisley work",
+      "Product Highlight - Striking Contrast of Emerald Green, Mustard yellow and Rani pink Shades",
+      "Wash Care - Dry Clean Only",
+      "Delivery Time - 10-15 Days",
+      "Customization - Only Size and Length Of Product"
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Meher Lilac Lehenga",
+    "img": "/images/lehenga/lilac-lehenga-1/lilac-lehenga-1.png",
+    "images": [
+      "/images/lehenga/lilac-lehenga-1/lilac-lehenga-1.png",
+      "/images/lehenga/lilac-lehenga-1/lilac-lehenga-2.png",
+      "/images/lehenga/lilac-lehenga-1/lilac-lehenga-3.png",
+      "/images/lehenga/lilac-lehenga-1/lilac-lehenga-4.png",
+      "/images/lehenga/lilac-lehenga-1/lilac-lehenga-5.png",
+      "/images/lehenga/lilac-lehenga-1/lilac-lehenga-6.png",
+      "/images/lehenga/lilac-lehenga-1/lilac-lehenga-7.png"
+    ],
+    "price": 17599,
+    "description": "Heavily embellished lehenga with intricate white or silver thread work and beadings. The embroidery features a mix of striking geometric lines, chevron patterns, and delicate floral or paisley-like motifs that give it a rich, textured look. The matching cropped top features a flattering V-neckline and short sleeves. It mirrors the skirt's elegance with vertical and horizontal linear embellishments that create a flattering silhouette. The set is tied together with a sheer, lightweight dupatta in the same lavender shade, finished with a subtle, delicate white lace or scalloped border. The overall look is graceful, modern, and perfect for daytime weddings, sangeets, or festive celebrations.",
+    "specifications": [
+      "Lehenga & Choli - Net with white threads embroidery (Skirt & Blouse), Chiffon (Dupatta)",
+      "Color - Lilac",
+      "No. of Components - Set of 3 (Lehenga, Choli, Dupatta)",
+      "Length of Choli - 14-15 inches (Approximate)",
+      "Length of Lehenga - 42 inches (Approximate)",
+      "Dupatta - 2.5 meter",
+      "Embroidery/Work Details - White thread Embroidery with beads",
+      "Product Highlight - Beautiful Lilac shade with white beads and threadwork",
+      "Wash Care - Dry Clean Only",
+      "Delivery Time - 10-15 Days",
+      "Customization - Only Size and Length Of Product"
+    ]
+  },
+  {
     "id": 5,
     "name": "Shahi Bagh Lehenga Set",
     "img": "/images/lehenga/maroon-lehenga-1/lehenga-maroon-1.png",
