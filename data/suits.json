@@ -1,5 +1,32 @@
 [
   {
+    "id": 3,
+    "name": "Aadhya Royal Blue Maxi Suit Set",
+    "img": "/images/suit/blue-suit-1/blue-suit-1.png",
+    "images": [
+      "/images/suit/blue-suit-1/blue-suit-1.png",
+      "/images/suit/blue-suit-1/blue-suit-2.png",
+      "/images/suit/blue-suit-1/blue-suit-3.png",
+      "/images/suit/blue-suit-1/blue-suit-4.png",
+      "/images/suit/blue-suit-1/blue-suit-5.png",
+      "/images/suit/blue-suit-1/blue-suit-6.png"
+    ],
+    "price": 15499,
+    "description": "A floor-length, sleeveless maxi featuring a vibrant Cobalt and Azure Blue base. The skirt is a canvas of intricate Kalamkari-inspired digital prints and embroidery, showcasing traditional 'Jharokha' (palace window) motifs, floral creepers, and architectural elements in shades of Rani pink, turquoise, and gold. The fitted bodice is adorned with a delicate floral border along the neckline and waist, creating a structured look that transitions into a voluminous, high-flare skirt. A Navy Blue sheer net dupatta that adds a layer of mystery and elegance. It is finished with a simple, shimmering gold border, allowing the heavy storytelling patterns on the dress to remain the focal point. Majestic, artistic, and whimsical. This maxi suit is perfect for a festive reception, an ethnic-themed gala, or a high-profile sangeet where you want to blend traditional art with a contemporary gown-like feel.",
+    "specifications": [
+      "Fabric - High quality Satin Crepe for a fluid drape; Soft Net (Dupatta)",
+      "Color - Multi-tonal Blue base with accents of Pink, Green, and Mustard",
+      "No. of Components - Set of 2 (Full-length Maxi Dress, Dupatta)",
+      "Length of Maxi - 58–60 inches (Approximate)",
+      "Dupatta - 2.5 meters",
+      "Embroidery/Work Details - Comprehensive Digital Heritage Print with Gota-patti highlights, Zari border work, and detailed architectural motifs",
+      "Product Highlight - The 'Palace Motif' print on the hemline provides a unique, artisanal touch that feels like wearable art",
+      "Wash Care - Dry Clean Only",
+      "Delivery Time - 10–15 Days",
+      "Customization - Only Size and Length of Product"
+    ]
+  },
+  {
     "id": 2,
     "name": "Nazneen Suit Set",
     "img": "/images/suit/black-suit-1/black-suit-1.png",
