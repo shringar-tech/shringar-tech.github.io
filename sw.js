@@ -14,14 +14,14 @@
 //
 // CACHE_VERSION is injected automatically at build time. The production build
 // runs scripts/inject-sw-version.js after Vite, which replaces the
-// 'ffcda026' placeholder below with a deterministic content hash derived
+// '7cda7b95' placeholder below with a deterministic content hash derived
 // from the built asset filenames — so the cache invalidates whenever the app's
 // assets change, with no manual bump required.
 //
-// In `npm run dev` (unbuilt) the literal 'ffcda026' string is used as-is.
+// In `npm run dev` (unbuilt) the literal '7cda7b95' string is used as-is.
 // That is harmless: it just becomes a stable cache-name suffix during local dev.
 // ---------------------------------------------------------------------------
-const CACHE_VERSION = 'ffcda026';
+const CACHE_VERSION = '7cda7b95';
 const STATIC_CACHE = `shringaarika-static-${CACHE_VERSION}`;
 const DYNAMIC_CACHE = `shringaarika-dynamic-${CACHE_VERSION}`;
 
@@ -116,6 +116,39 @@ function networkFirst(request, cacheName, offlineFallback) {
     );
 }
 
+// NAVIGATION handler: network-first, but ALWAYS resolves to a valid Response so
+// a navigation FetchEvent can never end in a network error. On network failure
+// (or an error/opaque network response) it falls back to the cached request, the
+// cached app shell ('/index.html' then '/'), and finally a synthetic offline page.
+function handleNavigation(request) {
+  return fetch(request)
+    .then((response) => {
+      // A valid navigation response is a same-origin/basic response we can use.
+      if (response && (response.ok || response.type === 'basic' || response.type === 'default')) {
+        putInCache(DYNAMIC_CACHE, request, response);
+        return response;
+      }
+      // Bad network response (opaque/error/etc.) -> fall back to the shell.
+      return navigationFallback(request);
+    })
+    .catch(() => navigationFallback(request));
+}
+
+function navigationFallback(request) {
+  return caches
+    .match(request)
+    .then((cached) => cached || caches.match('/index.html'))
+    .then((cached) => cached || caches.match('/'))
+    .then(
+      (cached) =>
+        cached ||
+        new Response(
+          '<!DOCTYPE html><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Offline</title><body style="font-family:sans-serif;text-align:center;padding:2rem">You appear to be offline. Please check your connection and try again.</body>',
+          { status: 200, headers: { 'Content-Type': 'text/html; charset=utf-8' } }
+        )
+    );
+}
+
 // CACHE-FIRST: serve cache if present, otherwise fetch and populate.
 function cacheFirst(request, cacheName) {
   return caches.match(request).then((cached) => {
@@ -155,10 +188,10 @@ self.addEventListener('fetch', (event) => {
 
   const url = new URL(request.url);
 
-  // 1. Navigations -> network-first (avoids the stale-app trap), fall back to
-  //    the cached shell ('/') when offline.
+  // 1. Navigations -> network-first (avoids the stale-app trap), always resolving
+  //    to a valid Response (cached shell / synthetic offline page) when offline.
   if (isNavigationRequest(request)) {
-    event.respondWith(networkFirst(request, DYNAMIC_CACHE, '/'));
+    event.respondWith(handleNavigation(request));
     return;
   }
 

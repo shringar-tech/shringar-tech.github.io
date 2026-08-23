@@ -46,8 +46,8 @@
     <meta name="apple-mobile-web-app-title" content="Shringaarika">
 
     <!-- Theme Color -->
-    <meta name="theme-color" content="#1976d2">
-    <meta name="msapplication-TileColor" content="#1976d2">
+    <meta name="theme-color" content="#2d3436">
+    <meta name="msapplication-TileColor" content="#2d3436">
 
     <!-- Favicon -->
     <link rel="icon" type="image/jpeg" href="/images/website-icon.jpeg">
@@ -63,9 +63,10 @@
     <noscript><link href="https://fonts.googleapis.com/icon?family=Material+Icons&display=swap" rel="stylesheet"></noscript>
 
     <!-- Critical Resource Preloads -->
-    <link rel="preload" href="/images/website-icon.webp" as="image">
+    <!-- Only the above-the-fold mobile LCP hero is preloaded. The logo and a
+         product thumbnail were removed: they aren't the LCP and triggered
+         "preloaded but not used" warnings / wasted mobile data. -->
     <link rel="preload" href="/images/hero_image-mobile.webp" as="image" fetchpriority="high">
-    <link rel="preload" href="/images/lehenga/yellow-lehenga-2/yellow-lehenga-2-1-sm.webp" as="image">
 
     <!-- Structured Data -->
     <script type="application/ld+json">
@@ -127,8 +128,8 @@
     <!-- Facebook Domain Verification -->
     <meta name="facebook-domain-verification" content="b3gfuv1gpi582thwprw5hupslufz4e" />
 
-  <script type="module" crossorigin src="/assets/index-Bl_tk5Ap.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/index-BGYrT85Z.css">
+  <script type="module" crossorigin src="/assets/index-DZ52fW_i.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-CaDhSPl-.css">
 </head>
 <body>
     <div id="root"></div>
