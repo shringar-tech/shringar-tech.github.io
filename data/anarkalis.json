@@ -1,5 +1,65 @@
 [
   {
+    "id": 5,
+    "name": "Parijaat Angrakha Suit Set",
+    "img": "/images/anarkali/grey-anarkali-1/grey-anarkali-1.png",
+    "images": [
+      "/images/anarkali/grey-anarkali-1/grey-anarkali-1.png",
+      "/images/anarkali/grey-anarkali-1/grey-anarkali-2.png",
+      "/images/anarkali/grey-anarkali-1/grey-anarkali-3.png",
+      "/images/anarkali/grey-anarkali-1/grey-anarkali-4.png",
+      "/images/anarkali/grey-anarkali-1/grey-anarkali-5.png",
+      "/images/anarkali/grey-anarkali-1/grey-anarkali-6.png"
+    ],
+    "price": 12499,
+    "description": "Step into a serene garden with this exquisitely printed Anarkali Suit Set. The long, full-sleeved Anarkali kurta features a delicate floral print in shades of pink, green, and lavender set against a soft blue-grey dupion silk fabric with light golden zari embroidery. The fitted bodice flows out into a lovely flared ghera. It is complemented by matching blue-grey straight pants and finished with a striking sheer lavender organza dupatta that features a subtle gold trim along the border. This set is the perfect embodiment of graceful, soft femininity.\n\nIdeal for formal brunches, daytime celebrations, or relaxed festive occasions. Pair it with simple antique silver earrings to complete the look.",
+    "specifications": [
+      "Anarkali & Pants - Dupion Silk Blend (Fabric), Flared Anarkali Cut",
+      "Dupatta - Sheer Lavender Organza",
+      "Color - Blue-Grey Base with Multi-Color Floral Print, Lavender Dupatta",
+      "No. of Components - Set of 3 (Kurta, Pants, Dupatta)",
+      "Length of Kurta - 40 inches (Approximate)",
+      "Length of Pants - 38 inches (Approximate)",
+      "Dupatta - 2.5 meter",
+      "Embroidery Details - All-over Floral Digital with light zari embroidery, Border Trim on Dupatta",
+      "Product Highlight - Pastel Color Palette and Elegant Print Contrast with Lavender Dupatta",
+      "Wash Care - Dry Clean Only",
+      "Delivery Time - 10-15 Days",
+      "Customization - Only Size and Length Of Product"
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Kanak Anarkali Suit Set",
+    "img": "/images/anarkali/yellow-anarkali-1/anarkali-yellow-1.png",
+    "images": [
+      "/images/anarkali/yellow-anarkali-1/anarkali-yellow-1.png",
+      "/images/anarkali/yellow-anarkali-1/anarkali-yellow-2.png",
+      "/images/anarkali/yellow-anarkali-1/anarkali-yellow-3.png",
+      "/images/anarkali/yellow-anarkali-1/anarkali-yellow-4.png",
+      "/images/anarkali/yellow-anarkali-1/anarkali-yellow-5.png",
+      "/images/anarkali/yellow-anarkali-1/anarkali-yellow-6.png",
+      "/images/anarkali/yellow-anarkali-1/anarkali-yellow-7.png"
+    ],
+    "price": 8499,
+    "description": "Illuminate your occasion with this striking, vibrant yellow Anarkali Suit Set. The kurta features a classic full-sleeve design with a round neck and an elegant flair, creating a beautiful, light silhouette. It is crafted from a bright, flowing Silk-blend fabric that gives it a beautiful, crisp structure and shine. The rich yellow is perfectly complemented by the contrasting white lace trim detailing the cuff, neckline, and dupatta edges. The set includes matching white straight-fit pants, which feature delicate lace or Schiffli embroidery at the hem. This ensemble is designed for comfort and maximum visual impact.\n\nIdeal for Haldi ceremonies, festive gatherings, or daytime celebrations. Pair it with simple gold or pearl jewellery.",
+    "specifications": [
+      "Anarkali - Silk Blend (Fabric), Flared A-Line Cut",
+      "Pants - Silk Blend with Lace Detail (Fabric), Straight Fit",
+      "Dupatta - Organza with Lace Border (Fabric)",
+      "Color - Bright, Luminous Yellow with Crisp White Accents",
+      "No. of Components - Set of 3 (Kurta, Pants, Dupatta)",
+      "Length of Kurta - 48-50 inches (Approximate, Calf-length)",
+      "Length of Pants - 38 inches (Approximate)",
+      "Dupatta - 2.5 meter",
+      "Embroidery Details - White Lace Trim on Kurta/Dupatta; Hemline Embroidery on Pants",
+      "Product Highlight - Vibrant Colour, Flowing Flare, and Contrast White Detailing",
+      "Wash Care - Dry Clean Only",
+      "Delivery Time - 10-15 Days",
+      "Customization - Only Size and Length Of Product"
+    ]
+  },
+  {
     "id": 8,
     "name": "Amayaa Anarkali Sharara Set",
     "img": "/images/anarkali/peach-anarkali-1/peach-anarkali-1.png",
@@ -59,66 +119,6 @@
       "Dupatta - 2.5 meter",
       "Embroidery Details - Minimal Gold Embroidery on Kurta Hem/Sleeve; Scattered Gold Motifs on Pants; Gold Trim on Dupatta",
       "Product Highlight - Elegant Silhouette, Rich Self-Weave Fabric, and Minimalist Gold Detailing",
-      "Wash Care - Dry Clean Only",
-      "Delivery Time - 10-15 Days",
-      "Customization - Only Size and Length Of Product"
-    ]
-  },
-  {
-    "id": 6,
-    "name": "Kanak Anarkali Suit Set",
-    "img": "/images/anarkali/yellow-anarkali-1/anarkali-yellow-1.png",
-    "images": [
-      "/images/anarkali/yellow-anarkali-1/anarkali-yellow-1.png",
-      "/images/anarkali/yellow-anarkali-1/anarkali-yellow-2.png",
-      "/images/anarkali/yellow-anarkali-1/anarkali-yellow-3.png",
-      "/images/anarkali/yellow-anarkali-1/anarkali-yellow-4.png",
-      "/images/anarkali/yellow-anarkali-1/anarkali-yellow-5.png",
-      "/images/anarkali/yellow-anarkali-1/anarkali-yellow-6.png",
-      "/images/anarkali/yellow-anarkali-1/anarkali-yellow-7.png"
-    ],
-    "price": 8499,
-    "description": "Illuminate your occasion with this striking, vibrant yellow Anarkali Suit Set. The kurta features a classic full-sleeve design with a round neck and an elegant flair, creating a beautiful, light silhouette. It is crafted from a bright, flowing Silk-blend fabric that gives it a beautiful, crisp structure and shine. The rich yellow is perfectly complemented by the contrasting white lace trim detailing the cuff, neckline, and dupatta edges. The set includes matching white straight-fit pants, which feature delicate lace or Schiffli embroidery at the hem. This ensemble is designed for comfort and maximum visual impact.\n\nIdeal for Haldi ceremonies, festive gatherings, or daytime celebrations. Pair it with simple gold or pearl jewellery.",
-    "specifications": [
-      "Anarkali - Silk Blend (Fabric), Flared A-Line Cut",
-      "Pants - Silk Blend with Lace Detail (Fabric), Straight Fit",
-      "Dupatta - Organza with Lace Border (Fabric)",
-      "Color - Bright, Luminous Yellow with Crisp White Accents",
-      "No. of Components - Set of 3 (Kurta, Pants, Dupatta)",
-      "Length of Kurta - 48-50 inches (Approximate, Calf-length)",
-      "Length of Pants - 38 inches (Approximate)",
-      "Dupatta - 2.5 meter",
-      "Embroidery Details - White Lace Trim on Kurta/Dupatta; Hemline Embroidery on Pants",
-      "Product Highlight - Vibrant Colour, Flowing Flare, and Contrast White Detailing",
-      "Wash Care - Dry Clean Only",
-      "Delivery Time - 10-15 Days",
-      "Customization - Only Size and Length Of Product"
-    ]
-  },
-  {
-    "id": 5,
-    "name": "Parijaat Angrakha Suit Set",
-    "img": "/images/anarkali/grey-anarkali-1/grey-anarkali-1.png",
-    "images": [
-      "/images/anarkali/grey-anarkali-1/grey-anarkali-1.png",
-      "/images/anarkali/grey-anarkali-1/grey-anarkali-2.png",
-      "/images/anarkali/grey-anarkali-1/grey-anarkali-3.png",
-      "/images/anarkali/grey-anarkali-1/grey-anarkali-4.png",
-      "/images/anarkali/grey-anarkali-1/grey-anarkali-5.png",
-      "/images/anarkali/grey-anarkali-1/grey-anarkali-6.png"
-    ],
-    "price": 12499,
-    "description": "Step into a serene garden with this exquisitely printed Anarkali Suit Set. The long, full-sleeved Anarkali kurta features a delicate floral print in shades of pink, green, and lavender set against a soft blue-grey dupion silk fabric with light golden zari embroidery. The fitted bodice flows out into a lovely flared ghera. It is complemented by matching blue-grey straight pants and finished with a striking sheer lavender organza dupatta that features a subtle gold trim along the border. This set is the perfect embodiment of graceful, soft femininity.\n\nIdeal for formal brunches, daytime celebrations, or relaxed festive occasions. Pair it with simple antique silver earrings to complete the look.",
-    "specifications": [
-      "Anarkali & Pants - Dupion Silk Blend (Fabric), Flared Anarkali Cut",
-      "Dupatta - Sheer Lavender Organza",
-      "Color - Blue-Grey Base with Multi-Color Floral Print, Lavender Dupatta",
-      "No. of Components - Set of 3 (Kurta, Pants, Dupatta)",
-      "Length of Kurta - 40 inches (Approximate)",
-      "Length of Pants - 38 inches (Approximate)",
-      "Dupatta - 2.5 meter",
-      "Embroidery Details - All-over Floral Digital with light zari embroidery, Border Trim on Dupatta",
-      "Product Highlight - Pastel Color Palette and Elegant Print Contrast with Lavender Dupatta",
       "Wash Care - Dry Clean Only",
       "Delivery Time - 10-15 Days",
       "Customization - Only Size and Length Of Product"
