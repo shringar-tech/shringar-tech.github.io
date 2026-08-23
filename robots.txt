@@ -1,0 +1,5 @@
+# Shringaarika - robots.txt
+User-agent: *
+Allow: /
+
+Sitemap: https://www.shringaarikabyshalinijha.com/sitemap.xml

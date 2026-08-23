@@ -1,7 +1,7 @@
 {
   "name": "Shringaarika - Ethnic Wear Collection",
   "short_name": "Shringaarika",
-  "description": "Premium ethnic wear collection featuring lehengas, anarkalis, suits and more",
+  "description": "Premium Indian ethnic wear featuring sarees, lehengas, anarkalis, kurtis, shararas and suits",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
@@ -10,15 +10,15 @@
   "icons": [
     {
       "src": "/images/website-icon.webp",
-      "sizes": "192x192",
+      "sizes": "955x966",
       "type": "image/webp",
-      "purpose": "any maskable"
+      "purpose": "any"
     },
     {
-      "src": "/images/website-icon.webp",
-      "sizes": "512x512",
-      "type": "image/webp",
-      "purpose": "any maskable"
+      "src": "/images/website-icon.jpeg",
+      "sizes": "955x966",
+      "type": "image/jpeg",
+      "purpose": "any"
     }
   ],
   "categories": ["shopping", "lifestyle"],
