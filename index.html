@@ -136,18 +136,18 @@
 
     <!-- App entry (Vite) -->
 
-    <!-- Service Worker Registration -->
+    <!-- Service worker intentionally NOT registered.
+         The site is served by a CDN and is always fresh; a caching SW was serving
+         stale/broken content. This snippet proactively removes any service worker and
+         caches left on returning visitors' devices so they always load fresh. -->
     <script>
         if ('serviceWorker' in navigator) {
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register('/sw.js')
-                    .then((registration) => {
-                        console.log('SW registered: ', registration);
-                    })
-                    .catch((registrationError) => {
-                        console.log('SW registration failed: ', registrationError);
-                    });
-            });
+            navigator.serviceWorker.getRegistrations()
+                .then((regs) => regs.forEach((r) => r.unregister()))
+                .catch(() => {});
+            if (window.caches && caches.keys) {
+                caches.keys().then((keys) => keys.forEach((k) => caches.delete(k))).catch(() => {});
+            }
         }
     </script>
 </body>
