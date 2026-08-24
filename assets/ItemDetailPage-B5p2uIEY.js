@@ -1,4 +1,4 @@
-import{j as e,t as v,a as S,r as o,b as k,c as C,u as $,d as I,e as y,S as L,f as X,O as N,g as W}from"./index-DZ52fW_i.js";const P=({productName:i,selectedSize:n,disabled:s=!1,product:r=null})=>{const c=()=>{if(!n){alert("Please select a size before placing your order.");return}r?v(r,n):v({name:i},n),S("whatsapp_order");const a=n?` in size ${n}`:"",p=`Hi! 👋
+import{j as e,t as v,a as S,r as o,b as k,c as C,u as $,d as I,e as y,S as L,f as X,O as N,g as W}from"./index-Cgljxtt5.js";const P=({productName:i,selectedSize:n,disabled:s=!1,product:r=null})=>{const c=()=>{if(!n){alert("Please select a size before placing your order.");return}r?v(r,n):v({name:i},n),S("whatsapp_order");const a=n?` in size ${n}`:"",p=`Hi! 👋
 
 I am interested in ${i}${a}.
 
